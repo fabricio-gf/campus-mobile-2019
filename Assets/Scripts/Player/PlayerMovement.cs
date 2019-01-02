@@ -23,13 +23,13 @@ public class PlayerMovement : MonoBehaviour
     // Private Attibutes
     private Vector3 joystickDirection;
     private Vector3 nextPosition;
-    private Directions currentDirection;
+    //private Directions currentDirection;
     private Directions nextDirection;
     private bool canMove;
 
     void Awake(){
         canMove = true;
-        currentDirection = Directions.UP;
+        //currentDirection = Directions.UP;
         nextPosition = transform.position;
     }
 
