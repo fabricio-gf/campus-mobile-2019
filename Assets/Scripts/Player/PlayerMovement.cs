@@ -12,18 +12,19 @@ public class PlayerMovement : MonoBehaviour
         LEFT,
         NONE
     }
-    [SerializeField] private float movementSpeed;
-    private Vector3 nextPosition;
 
-    private Vector3 joystickDirection;
-
+    [Header("References")]
     [SerializeField] private FloatingJoystick joystick;
-
-    private Directions currentDirection;
-    private Directions nextDirection;
-
+    
+    [Header("Serialized Attributes")]
+    [SerializeField] private float movementSpeed;
     [SerializeField] private float inputDeadZone;
 
+    // Private Attibutes
+    private Vector3 joystickDirection;
+    private Vector3 nextPosition;
+    private Directions currentDirection;
+    private Directions nextDirection;
     private bool canMove;
 
     void Awake(){
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         nextPosition = transform.position;
     }
 
+    // moves the player sprite in the game world
     void FixedUpdate(){
         if(Vector3.Distance(transform.position, nextPosition) >= 0.005){
             canMove = false;
@@ -42,21 +44,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // checks the analog input and updates which direction the player must move
     void Update()
     {
         joystickDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
         if(Mathf.Abs(joystickDirection.x) > inputDeadZone){
             if(Mathf.Abs(joystickDirection.x) > Mathf.Abs(joystickDirection.y)){
                 nextDirection = (Directions)(2-(int)Mathf.Sign(joystickDirection.x)*1);
-                print("entrou1");
                 print(nextDirection);
             }
         }
         if(Mathf.Abs(joystickDirection.y) > inputDeadZone){
             if(Mathf.Abs(joystickDirection.y) > Mathf.Abs(joystickDirection.x)){
                 nextDirection = (Directions)(1-(int)Mathf.Sign(joystickDirection.y)*1);
-                print("entrou2");
                 print(nextDirection);
             }
         }
@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // updates the next position the player should move
     void SetNextMovement(Directions nextDirection){
         Vector3 movementVector;
         switch (nextDirection)
