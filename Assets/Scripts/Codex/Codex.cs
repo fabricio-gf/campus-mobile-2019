@@ -7,7 +7,7 @@ public class Codex : ScriptableObject
 {
     [System.Serializable] public struct Chapter{
         public int ChapterNumber;
-        public int ChapterTitle;
+        public string ChapterTitle;
         public int NumberOfPages;
         public Page[] Pages;
     }
