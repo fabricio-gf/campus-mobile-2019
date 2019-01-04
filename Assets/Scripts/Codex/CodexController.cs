@@ -10,6 +10,7 @@ public class CodexController : MonoBehaviour
     [SerializeField] private Codex codex;
     private int currentChapter;
     private int currentPage;
+    private bool isInIndex = true;
 
     [Header("References")]
     [SerializeField] private Text TitleText;
@@ -17,6 +18,8 @@ public class CodexController : MonoBehaviour
     [SerializeField] private Image ContentImage;
     [SerializeField] private GameObject PreviousPageButton;
     [SerializeField] private GameObject NextPageButton;
+    [SerializeField] private GameObject PageObject;
+    [SerializeField] private GameObject IndexObject;
 
     // Start is called before the first frame update
     void Start(){
@@ -32,7 +35,7 @@ public class CodexController : MonoBehaviour
         if(currentPage == 0){
             if(currentChapter>0){
                 currentChapter--;
-                currentPage = codex.Chapters[currentChapter].NumberOfPages-1;
+                currentPage = codex.Chapters[currentChapter].Pages.Length-1;
             }
         }
         else{
@@ -42,7 +45,7 @@ public class CodexController : MonoBehaviour
     }
 
     public void NextPage(){
-        if(currentPage == codex.Chapters[currentChapter].NumberOfPages-1){
+        if(currentPage == codex.Chapters[currentChapter].Pages.Length-1){
             if(currentChapter<codex.Chapters.Length-1){
                 currentChapter++;
                 currentPage = 0;
@@ -57,6 +60,10 @@ public class CodexController : MonoBehaviour
     // METHODS FOR GENERAL PAGES
 
     public void GoToChapter(int chapterNumber){
+        if(isInIndex){
+            IndexObject.SetActive(false);
+            PageObject.SetActive(true);
+        }
         currentChapter = chapterNumber;
         currentPage = 0;
         UpdatePage(currentChapter, currentPage);
@@ -76,10 +83,10 @@ public class CodexController : MonoBehaviour
     void UpdateBookmarks(int chapterNumber){
         for(int i = 0; i < BookmarkButtons.Length; i++){
             if(i == chapterNumber){
-                BookmarkButtons[i].enabled = false;
+                BookmarkButtons[i].interactable = false;
             }
             else{
-                BookmarkButtons[i].enabled = true;
+                BookmarkButtons[i].interactable = true;
             }
         }
     }
@@ -89,10 +96,10 @@ public class CodexController : MonoBehaviour
     }
 
     void UpdatePageButtons(int chapterNumber, int pageNumber){
-        if(chapterNumber == codex.Chapters.Length-1 && pageNumber == codex.Chapters[chapterNumber].NumberOfPages-1){
+        if(chapterNumber == codex.Chapters.Length-1 && pageNumber == codex.Chapters[chapterNumber].Pages.Length-1){
             NextPageButton.SetActive(false);
         }
-        else if(pageNumber == 0){
+        else if(chapterNumber == 0 && pageNumber == 0){
             PreviousPageButton.SetActive(false);
         }
         else{
@@ -104,6 +111,7 @@ public class CodexController : MonoBehaviour
     // METHODS FOR INDEX PAGE
 
     public void GoToIndex(){
-        
+        PageObject.SetActive(false);
+        IndexObject.SetActive(true);
     }
 }
