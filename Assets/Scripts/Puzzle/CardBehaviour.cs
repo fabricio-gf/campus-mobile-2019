@@ -33,7 +33,8 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             transform.position = Input.GetTouch(0).position;
         #endif
         #if UNITY_EDITOR
-            transform.position = Input.mousePosition;
+            print(Input.mousePosition);
+            transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ZPosition);
         #endif
     }
 

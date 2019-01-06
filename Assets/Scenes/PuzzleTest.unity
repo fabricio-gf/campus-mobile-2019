@@ -146,7 +146,7 @@ RectTransform:
   - {fileID: 1368771079}
   - {fileID: 1172647666}
   m_Father: {fileID: 1845550935}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -681,7 +681,7 @@ RectTransform:
   - {fileID: 1518635675}
   - {fileID: 1801622991}
   m_Father: {fileID: 1845550935}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1346,6 +1346,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 949085177}
+    - target: {fileID: 223013618934670668, guid: bd4353e146947214eb21f44bc9273cb3,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd4353e146947214eb21f44bc9273cb3, type: 3}
 --- !u!224 &1845550935 stripped
