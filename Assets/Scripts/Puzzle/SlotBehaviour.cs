@@ -21,15 +21,14 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
 
     public void OnDrop (PointerEventData eventData){
         if(!Item){
-            CardBehaviour.ItemBeingDragged.transform.SetParent(transform);
+            PuzzleReferee.ItemBeingDragged.transform.SetParent(transform);
         }
         else{
-            NewParent = CardBehaviour.ItemBeingDragged.GetComponent<CardBehaviour>().StartParent;
+            NewParent = PuzzleReferee.ItemBeingDragged.GetComponent<CardBehaviour>().StartParent;
             ItemReference = Item;
             Item.transform.SetParent(NewParent);
             ItemReference.GetComponent<CardBehaviour>().UpdatePosition();
-            CardBehaviour.ItemBeingDragged.transform.SetParent(transform);
+            PuzzleReferee.ItemBeingDragged.transform.SetParent(transform);
         }
-        
     }
 }

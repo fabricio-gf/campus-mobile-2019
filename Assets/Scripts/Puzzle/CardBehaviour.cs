@@ -5,29 +5,25 @@ using UnityEngine.EventSystems;
 
 public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-
-    public static GameObject ItemBeingDragged;
+    //public static GameObject ItemBeingDragged;
     private Vector3 StartPosition;
     [HideInInspector] public Transform StartParent;
     private CanvasGroup Group;
     private float ZPosition;
     [SerializeField] private Transform DraggingParent;
 
+    public char CardValue;
+
     // Start is called before the first frame update
     void Start()
     {
         ZPosition = transform.position.z;
         Group = GetComponent<CanvasGroup>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DraggingParent = GameObject.FindGameObjectWithTag("Drag").transform;
     }
 
     public void OnBeginDrag(PointerEventData eventData){
-        ItemBeingDragged = gameObject;
+        PuzzleReferee.ItemBeingDragged = gameObject;
         StartPosition = transform.position;
         StartParent = transform.parent;
         transform.SetParent(DraggingParent);
@@ -37,21 +33,21 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData){
         
         #if UNITY_ANDROID
-            transform.position = Input.GetTouch(0).position;
-        #endif
-        #if UNITY_EDITOR
+            transform.position = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).y, ZPosition);
+        #elif UNITY_EDITOR
             transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ZPosition);
         #endif
     }
 
     public void OnEndDrag(PointerEventData eventData){
-        ItemBeingDragged = null;
+        PuzzleReferee.ItemBeingDragged = null;
         if(transform.parent == DraggingParent){
             transform.SetParent(StartParent);
             transform.position = StartPosition;
         }
         else{
             transform.localPosition = Vector3.zero;
+            
         }
         Group.blocksRaycasts = true;
     }
