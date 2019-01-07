@@ -30,5 +30,6 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
             ItemReference.GetComponent<CardBehaviour>().UpdatePosition();
             CardBehaviour.ItemBeingDragged.transform.SetParent(transform);
         }
+        
     }
 }
