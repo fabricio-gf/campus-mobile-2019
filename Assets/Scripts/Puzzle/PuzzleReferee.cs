@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PuzzleReferee : MonoBehaviour, IHasChanged
+public class PuzzleReferee : MonoBehaviour
 {
     public static GameObject ItemBeingDragged;
     public Puzzle CurrentPuzzle;
@@ -217,13 +217,5 @@ public class PuzzleReferee : MonoBehaviour, IHasChanged
                 RemoveLetter(i);
             }
         }
-    }
-}
-
-namespace UnityEngine.EventSystems
-{
-    public interface IHasChanged: IEventSystemHandler
-    {
-        void HasChanged();
     }
 }
