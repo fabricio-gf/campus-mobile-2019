@@ -46,8 +46,7 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             transform.position = StartPosition;
         }
         else{
-            transform.localPosition = Vector3.zero;
-            
+            transform.localPosition = Vector3.zero;  
         }
         Group.blocksRaycasts = true;
     }

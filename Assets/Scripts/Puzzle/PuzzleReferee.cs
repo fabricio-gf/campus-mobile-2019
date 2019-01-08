@@ -13,8 +13,17 @@ public class PuzzleReferee : MonoBehaviour
 
     [SerializeField] private List<Transform> AnswerSlots;
     [SerializeField] private List<Transform> CardSlots;
+
+    [SerializeField] private Transform AnswerArea;
+    [SerializeField] private Transform CardsArea;
+
     private List<Transform> CardObjects;
+
     [SerializeField] private GameObject CardPrefab;
+    [SerializeField] private GameObject SlotPrefab;
+
+    [SerializeField] private Sprite[] LetterSprites;
+    [SerializeField] private Sprite[] SignSprites;
 
     private bool FirstTime = true;
 
@@ -24,6 +33,8 @@ public class PuzzleReferee : MonoBehaviour
         ResetAlphabet();
 
         CardObjects = new List<Transform>();
+        AnswerSlots = new List<Transform>();
+        CardSlots = new List<Transform>();
     }
 
     // Start is called before the first frame update
@@ -37,12 +48,20 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
+        for(int i = 0; i < AnswerSlots.Count; i++)
+        {
+            Destroy(AnswerSlots[i].gameObject);
+        }
+        AnswerSlots.Clear();
         for(int i = 0; i < CardObjects.Count; i++)
         {
             Destroy(CardObjects[i].gameObject);
+            Destroy(CardSlots[i].gameObject);
         }
         CardObjects.Clear();
+        CardSlots.Clear();
 
+        InitializeSlots();
         FillNecessaryLetters();
         FillRemainingLetters();
         ShuffleLetters();
@@ -52,6 +71,26 @@ public class PuzzleReferee : MonoBehaviour
     {
         Alphabet.Clear();
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz");
+    }
+
+    void InitializeSlots()
+    {
+        int slotNumber = CalculateCardSlots();
+        GameObject obj;
+        
+        for(int i = 0; i < Answer.Length; i++)
+        {
+            obj = Instantiate(SlotPrefab, AnswerArea);
+            AnswerSlots.Add(obj.transform);
+        }
+        for(int i = 0; i < slotNumber; i++)
+        {
+            obj = Instantiate(SlotPrefab, CardsArea);
+
+            //change size/parameters of slot
+
+            CardSlots.Add(obj.transform);
+        }
     }
 
     void FillNecessaryLetters()
@@ -68,7 +107,7 @@ public class PuzzleReferee : MonoBehaviour
             obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
             //TEMP
 
-            Alphabet.Remove(Answer[i]);
+            //Alphabet.Remove(Answer[i]);
 
             //obj.sprite = 
             
@@ -90,7 +129,7 @@ public class PuzzleReferee : MonoBehaviour
             obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
             //TEMP
 
-            Alphabet.RemoveAt(randomIndex);
+            //Alphabet.RemoveAt(randomIndex);
 
             //obj.sprite = 
             
@@ -128,17 +167,30 @@ public class PuzzleReferee : MonoBehaviour
 
     void CheckAnswer()
     {
-        string answer, currentAnswer;
-        answer = new string(Answer);
-        currentAnswer = new string(CurrentAnswer);
-        if(string.Compare(answer, currentAnswer) == 0)
+        int incorrectLetters = 0;
+        for(int i = 0; i < Answer.Length; i++)
         {
-            //correct
+            if (Answer[i] == CurrentAnswer[i]){
+                //incorrect visual in slot
+            }
+            else
+            {
+                incorrectLetters++;
+            }
+        }
+
+        if(incorrectLetters == 0)
+        {
+            //winner
         }
         else
         {
-            //incorrect
-            //check incorrect letters
+            //loser sound
         }
+    }
+
+    int CalculateCardSlots()
+    {
+        return Answer.Length * 2;
     }
 }
