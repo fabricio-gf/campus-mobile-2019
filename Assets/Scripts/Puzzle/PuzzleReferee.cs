@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class PuzzleReferee : MonoBehaviour
+public class PuzzleReferee : MonoBehaviour, IHasChanged
 {
     public static GameObject ItemBeingDragged;
     public Puzzle CurrentPuzzle;
@@ -27,6 +28,8 @@ public class PuzzleReferee : MonoBehaviour
 
     private bool FirstTime = true;
 
+    private int TriesLeft;
+
     private void Awake()
     {
         Alphabet = new List<char>();
@@ -41,6 +44,7 @@ public class PuzzleReferee : MonoBehaviour
     void Start()
     {
         Answer = CurrentPuzzle.answer;
+        CurrentAnswer = new char[Answer.Length];
 
         SetupPuzzle();
     }
@@ -48,6 +52,8 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
+        TriesLeft = CurrentPuzzle.tries;
+
         for(int i = 0; i < AnswerSlots.Count; i++)
         {
             Destroy(AnswerSlots[i].gameObject);
@@ -81,11 +87,13 @@ public class PuzzleReferee : MonoBehaviour
         for(int i = 0; i < Answer.Length; i++)
         {
             obj = Instantiate(SlotPrefab, AnswerArea);
+            obj.GetComponent<SlotBehaviour>().Referee = this;
             AnswerSlots.Add(obj.transform);
         }
         for(int i = 0; i < slotNumber; i++)
         {
             obj = Instantiate(SlotPrefab, CardsArea);
+            obj.GetComponent<SlotBehaviour>().Referee = this;
 
             //change size/parameters of slot
 
@@ -155,33 +163,33 @@ public class PuzzleReferee : MonoBehaviour
         }
     }
 
-    public void AddLetter(int position, char letter)
+    void AddLetter(int position, char letter)
     {
         CurrentAnswer[position] = letter;
     }
 
-    public void RemoveLetter(int position)
+    void RemoveLetter(int position)
     {
         CurrentAnswer[position] = ' ';
     }
 
-    void CheckAnswer()
+    public void CheckAnswer()
     {
         int incorrectLetters = 0;
         for(int i = 0; i < Answer.Length; i++)
         {
-            if (Answer[i] == CurrentAnswer[i]){
-                //incorrect visual in slot
-            }
-            else
+            if (Answer[i] != CurrentAnswer[i])
             {
                 incorrectLetters++;
+                //incorrect visual in slot
+                print("wrong in position " + i);
             }
         }
 
         if(incorrectLetters == 0)
         {
             //winner
+            print("winner");
         }
         else
         {
@@ -192,5 +200,30 @@ public class PuzzleReferee : MonoBehaviour
     int CalculateCardSlots()
     {
         return Answer.Length * 2;
+    }
+
+    public void HasChanged()
+    {
+        print("entrou");
+        for(int i = 0; i < AnswerSlots.Count; i++)
+        {
+            GameObject item = AnswerSlots[i].GetComponent<SlotBehaviour>().Item;
+            if (item)
+            {
+                AddLetter(i, item.GetComponent<CardBehaviour>().CardValue);
+            }
+            else
+            {
+                RemoveLetter(i);
+            }
+        }
+    }
+}
+
+namespace UnityEngine.EventSystems
+{
+    public interface IHasChanged: IEventSystemHandler
+    {
+        void HasChanged();
     }
 }

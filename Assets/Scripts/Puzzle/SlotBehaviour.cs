@@ -16,11 +16,13 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
         }
     }
 
+    [HideInInspector] public PuzzleReferee Referee;
     private Transform NewParent = null;
     private GameObject ItemReference = null;
 
     public void OnDrop (PointerEventData eventData){
         if(!Item){
+
             PuzzleReferee.ItemBeingDragged.transform.SetParent(transform);
         }
         else{
@@ -30,5 +32,6 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
             ItemReference.GetComponent<CardBehaviour>().UpdatePosition();
             PuzzleReferee.ItemBeingDragged.transform.SetParent(transform);
         }
+        Referee.HasChanged();
     }
 }

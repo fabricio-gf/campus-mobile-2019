@@ -13,4 +13,5 @@ public class Puzzle : ScriptableObject
 
     public string question;
     public char[] answer;
+    public int tries;
 }
