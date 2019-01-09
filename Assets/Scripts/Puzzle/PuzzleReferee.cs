@@ -1,43 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class PuzzleReferee : MonoBehaviour
 {
+    // PUBLIC STATIC ATTRIBUTES
     public static GameObject ItemBeingDragged;
-    public Puzzle CurrentPuzzle;
+    
+    // PUBLIC ATTRIBUTES
+    [HideInInspector] public Puzzle CurrentPuzzle;
 
-    private List<char> Alphabet;
+    // PRIVATE ATTRIBUTES
     private char[] Answer;
     private char[] CurrentAnswer;
 
-    [SerializeField] private List<Transform> AnswerSlots;
-    [SerializeField] private List<Transform> CardSlots;
-
-    [SerializeField] private Transform AnswerArea;
-    [SerializeField] private Transform CardsArea;
-
     private List<Transform> CardObjects;
 
-    [SerializeField] private GameObject CardPrefab;
-    [SerializeField] private GameObject SlotPrefab;
+    private List<char> Alphabet;
 
-    [SerializeField] private Sprite[] LetterSprites;
-    [SerializeField] private Sprite[] SignSprites;
+    private int TriesLeft = 5;
 
-    private bool FirstTime = true;
+    // PRIVATE REFERENCES
+    [SerializeField] private List<Transform> AnswerSlots = null;
+    [SerializeField] private List<Transform> CardSlots = null;
 
-    private int TriesLeft;
+    [SerializeField] private Transform AnswerArea = null;
+    [SerializeField] private Transform CardsArea = null;
 
+
+    [SerializeField] private GameObject CardPrefab = null;
+    [SerializeField] private GameObject SlotPrefab = null;
+
+    [SerializeField] private Sprite[] LetterSprites = null;
+    [SerializeField] private Sprite[] SignSprites = null;
+    
     private void Awake()
     {
         Alphabet = new List<char>();
         ResetAlphabet();
 
-        CardObjects = new List<Transform>();
         AnswerSlots = new List<Transform>();
         CardSlots = new List<Transform>();
+        CardObjects = new List<Transform>();
     }
 
     // Start is called before the first frame update
@@ -199,12 +203,12 @@ public class PuzzleReferee : MonoBehaviour
 
     int CalculateCardSlots()
     {
+        // change probably
         return Answer.Length * 2;
     }
 
     public void HasChanged()
     {
-        print("entrou");
         for(int i = 0; i < AnswerSlots.Count; i++)
         {
             GameObject item = AnswerSlots[i].GetComponent<SlotBehaviour>().Item;

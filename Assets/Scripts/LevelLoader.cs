@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
 
-    [SerializeField] private Animator LoadingAnimator;
-    [SerializeField] private AnimationClip LoadingClip;
+    // PRIVATE REFERENCES
+    [Header("References")]
+    [SerializeField] private Animator LoadingAnimator = null;
+    [SerializeField] private AnimationClip LoadingClip = null;
 
+    // PRIVATE ATTRIBUTES
     private float time = 0;
 
     private void Update()

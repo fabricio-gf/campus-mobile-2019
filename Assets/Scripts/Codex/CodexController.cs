@@ -1,72 +1,60 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CodexController : MonoBehaviour
 {
-
     // PRIVATE ATTRIBUTES
-    [SerializeField] private Codex codex;
-    private int currentChapter;
-    private int currentPage;
-    private bool isInIndex = true;
+    private int CurrentChapter = 0;
+    private int CurrentPage = 0;
+    private bool IsInIndex = true;
 
+    // PRIVATE REFERENCES
     [Header("References")]
-    [SerializeField] private Text TitleText;
-    [SerializeField] private Button[] BookmarkButtons;
-    [SerializeField] private Image ContentImage;
-    [SerializeField] private GameObject PreviousPageButton;
-    [SerializeField] private GameObject NextPageButton;
-    [SerializeField] private GameObject PageObject;
-    [SerializeField] private GameObject IndexObject;
-
-    // Start is called before the first frame update
-    void Start(){
-        
-    }
-
-    // Update is called once per frame
-    void Update(){
-        
-    }
+    [SerializeField] private Codex codex = null;
+    [SerializeField] private Text TitleText = null;
+    [SerializeField] private Button[] BookmarkButtons = null;
+    [SerializeField] private Image ContentImage = null;
+    [SerializeField] private GameObject PreviousPageButton = null;
+    [SerializeField] private GameObject NextPageButton = null;
+    [SerializeField] private GameObject PageObject = null;
+    [SerializeField] private GameObject IndexObject = null;
 
     public void PreviousPage(){
-        if(currentPage == 0){
-            if(currentChapter>0){
-                currentChapter--;
-                currentPage = codex.Chapters[currentChapter].Pages.Length-1;
+        if(CurrentPage == 0){
+            if(CurrentChapter>0){
+                CurrentChapter--;
+                CurrentPage = codex.Chapters[CurrentChapter].Pages.Length-1;
             }
         }
         else{
-            currentPage--;
+            CurrentPage--;
         }
-        UpdatePage(currentChapter, currentPage);
+        UpdatePage(CurrentChapter, CurrentPage);
     }
 
     public void NextPage(){
-        if(currentPage == codex.Chapters[currentChapter].Pages.Length-1){
-            if(currentChapter<codex.Chapters.Length-1){
-                currentChapter++;
-                currentPage = 0;
+        if(CurrentPage == codex.Chapters[CurrentChapter].Pages.Length-1){
+            if(CurrentChapter<codex.Chapters.Length-1){
+                CurrentChapter++;
+                CurrentPage = 0;
             }
         }
         else{
-            currentPage++;
+            CurrentPage++;
         }
-        UpdatePage(currentChapter, currentPage);
+        UpdatePage(CurrentChapter, CurrentPage);
     }
 
-    // METHODS FOR GENERAL PAGES
+    // METHODS FOR GENERAL CHAPTERS
 
     public void GoToChapter(int chapterNumber){
-        if(isInIndex){
+        if(IsInIndex){
             IndexObject.SetActive(false);
             PageObject.SetActive(true);
         }
-        currentChapter = chapterNumber;
-        currentPage = 0;
-        UpdatePage(currentChapter, currentPage);
+        CurrentChapter = chapterNumber;
+        CurrentPage = 0;
+        UpdatePage(CurrentChapter, CurrentPage);
     }
 
     void UpdatePage(int chapterNumber, int pageNumber){
@@ -108,7 +96,7 @@ public class CodexController : MonoBehaviour
         }
     }
 
-    // METHODS FOR INDEX PAGE
+    // METHODS FOR INDEX CHAPTER
 
     public void GoToIndex(){
         PageObject.SetActive(false);

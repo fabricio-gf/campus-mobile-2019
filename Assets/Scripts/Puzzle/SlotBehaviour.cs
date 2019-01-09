@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class SlotBehaviour : MonoBehaviour, IDropHandler
 {
+
+    // PUBLIC ATTRIBUTES
     public GameObject Item{
         get{
             if(transform.childCount>0){
@@ -17,6 +17,8 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
     }
 
     [HideInInspector] public PuzzleReferee Referee;
+
+    // PRIVATE ATTRIBUTES
     private Transform NewParent = null;
     private GameObject ItemReference = null;
 

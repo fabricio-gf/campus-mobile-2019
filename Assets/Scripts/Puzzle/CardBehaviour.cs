@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    //public static GameObject ItemBeingDragged;
-    private Vector3 StartPosition;
+
+    // PUBLIC ATTRIBUTES
     [HideInInspector] public Transform StartParent;
+    [HideInInspector] public char CardValue;
+    
+    // PRIVATE ATTRIBUTES
+    private Vector3 StartPosition;
     private CanvasGroup Group;
     private float ZPosition;
-    [SerializeField] private Transform DraggingParent;
 
-    public char CardValue;
+    // PRIVATE REFERENCES
+    [Header("References")]
+    [SerializeField] private Transform DraggingParent;
 
     // Start is called before the first frame update
     void Start()

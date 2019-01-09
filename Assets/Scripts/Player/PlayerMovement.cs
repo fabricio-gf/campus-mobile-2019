@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,58 +12,57 @@ public class PlayerMovement : MonoBehaviour
     }
 
     [Header("References")]
-    [SerializeField] private FloatingJoystick joystick;
+    [SerializeField] private FloatingJoystick Joystick = null;
     
     [Header("Serialized Attributes")]
-    [SerializeField] private float movementSpeed;
-    [SerializeField] private float inputDeadZone;
+    [SerializeField] private float MovementSpeed = 0;
+    [SerializeField] private float InputDeadZone = 0;
 
-    // Private Attibutes
-    private Vector3 joystickDirection;
-    private Vector3 nextPosition;
-    //private Directions currentDirection;
-    private Directions nextDirection;
-    private bool canMove;
+    // PRIVATE ATTRIBUTES
+    private Vector3 JoystickDirection;
+    private Vector3 NextPosition;
+    private Directions NextDirection;
+    private bool CanMove;
 
     void Awake(){
-        canMove = true;
+        CanMove = true;
         //currentDirection = Directions.UP;
-        nextPosition = transform.position;
+        NextPosition = transform.position;
     }
 
     // moves the player sprite in the game world
     void FixedUpdate(){
-        if(Vector3.Distance(transform.position, nextPosition) >= 0.005){
-            canMove = false;
-            transform.position = Vector3.MoveTowards(transform.position, nextPosition, movementSpeed*Time.deltaTime);
+        if(Vector3.Distance(transform.position, NextPosition) >= 0.005){
+            CanMove = false;
+            transform.position = Vector3.MoveTowards(transform.position, NextPosition, MovementSpeed*Time.deltaTime);
         }
         else{
-            canMove = true;
+            CanMove = true;
         }
     }
 
     // checks the analog input and updates which direction the player must move
     void Update()
     {
-        joystickDirection = (Vector3.right * joystick.Horizontal + Vector3.up * joystick.Vertical);
-        if(Mathf.Abs(joystickDirection.x) > inputDeadZone){
-            if(Mathf.Abs(joystickDirection.x) > Mathf.Abs(joystickDirection.y)){
-                nextDirection = (Directions)(2-(int)Mathf.Sign(joystickDirection.x)*1);
-                print(nextDirection);
+        JoystickDirection = (Vector3.right * Joystick.Horizontal + Vector3.up * Joystick.Vertical);
+        if(Mathf.Abs(JoystickDirection.x) > InputDeadZone){
+            if(Mathf.Abs(JoystickDirection.x) > Mathf.Abs(JoystickDirection.y)){
+                NextDirection = (Directions)(2-(int)Mathf.Sign(JoystickDirection.x)*1);
+                print(NextDirection);
             }
         }
-        if(Mathf.Abs(joystickDirection.y) > inputDeadZone){
-            if(Mathf.Abs(joystickDirection.y) > Mathf.Abs(joystickDirection.x)){
-                nextDirection = (Directions)(1-(int)Mathf.Sign(joystickDirection.y)*1);
-                print(nextDirection);
+        if(Mathf.Abs(JoystickDirection.y) > InputDeadZone){
+            if(Mathf.Abs(JoystickDirection.y) > Mathf.Abs(JoystickDirection.x)){
+                NextDirection = (Directions)(1-(int)Mathf.Sign(JoystickDirection.y)*1);
+                print(NextDirection);
             }
         }
-        if(Mathf.Abs(joystickDirection.x) <= inputDeadZone && Mathf.Abs(joystickDirection.y) <= inputDeadZone){
-            nextDirection = Directions.NONE;
+        if(Mathf.Abs(JoystickDirection.x) <= InputDeadZone && Mathf.Abs(JoystickDirection.y) <= InputDeadZone){
+            NextDirection = Directions.NONE;
         }
 
-        if(canMove && nextDirection != Directions.NONE){
-            SetNextMovement(nextDirection);
+        if(CanMove && NextDirection != Directions.NONE){
+            SetNextMovement(NextDirection);
         }
     }
 
@@ -90,6 +87,6 @@ public class PlayerMovement : MonoBehaviour
                 movementVector = new Vector3(0,0,0);
             break;
         }
-        nextPosition = transform.position + movementVector;
+        NextPosition = transform.position + movementVector;
     }
 }

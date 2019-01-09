@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 public class MenuAnimations : MonoBehaviour {
 
-	private Animator animator;
+    // PRIVATE ATTRIBUTES
+	private Animator animator = null;
 
 	void Awake () {
 		animator = GetComponent<Animator>();		
