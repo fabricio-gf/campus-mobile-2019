@@ -9,14 +9,14 @@ public class SFXController : MonoBehaviour
     
 
     // PRIVATE REFERENCES
-    [SerializeField] private AudioSource Source;
+    [SerializeField] private AudioSource Source = null;
 
     // PRIVATE ATTRIBUTES
-    private Dictionary<string, AudioClip> Clips;
+    private Dictionary<string, AudioClip> Clips = null;
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(Source.gameObject);
         Clips = new Dictionary<string, AudioClip>();
         FillClips();
     }

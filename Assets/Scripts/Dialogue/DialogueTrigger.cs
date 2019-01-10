@@ -15,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour {
 
     public void TriggerDialogue ()
 	{
-		Manager.StartDialogue(Dialogue);
+		Manager.StartDialogue(gameObject, Dialogue);
 	}
 
 }

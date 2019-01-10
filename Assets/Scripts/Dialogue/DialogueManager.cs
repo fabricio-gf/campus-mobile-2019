@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour {
 
     // PRIVATE REFERENCES
     [Header("References")]
+    [SerializeField] private FloatingJoystick Joystick = null;
+
 	[SerializeField] private Text nameText = null;
 	[SerializeField] private Text dialogueText = null;
 
@@ -14,6 +16,7 @@ public class DialogueManager : MonoBehaviour {
 
     // PRIVATE ATTRIBUTES
 	private Queue<string> sentences;
+    private GameObject CurrentDialogue;
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +24,10 @@ public class DialogueManager : MonoBehaviour {
 		animator.SetBool("IsOpen", false);
 	}
 
-	public void StartDialogue (Dialogue dialogue)
+	public void StartDialogue (GameObject dialogueObject, Dialogue dialogue)
 	{
+        CurrentDialogue = dialogueObject;
+        
         // trigger animation
 		animator.SetBool("IsOpen", true);
 
@@ -82,6 +87,10 @@ public class DialogueManager : MonoBehaviour {
     /// </summary>
 	void EndDialogue()
 	{
-		animator.SetBool("IsOpen", false);
+        animator.SetBool("IsOpen", false);
+        Joystick.ResumeMovement();
+
+        Destroy(CurrentDialogue);
+        //CurrentDialogue.SetActive(false);
 	}
 }

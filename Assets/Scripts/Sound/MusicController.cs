@@ -10,20 +10,20 @@ public class MusicController : MonoBehaviour
     public AudioClip MusicTrack;
 
     // PRIVATE REFERENCES
-    [SerializeField] private Transform SourceReference;
-    [SerializeField] private float FadeDuration;
-    [SerializeField] private float BlendDuration;
+    [SerializeField] private Transform SourceReference = null;
+    [SerializeField] private float FadeDuration = 0;
+    [SerializeField] private float BlendDuration = 0;
 
     // PRIVATE ATTRIBUTES
-    private AudioSource Source1;
-    private AudioSource Source2;
+    private AudioSource Source1 = null;
+    private AudioSource Source2 = null;
     private int CurrentSource = 1;
     private bool IsFading = false;
     private bool IsBlending = false;
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(SourceReference.gameObject);
         Source1 = SourceReference.GetChild(0).GetComponent<AudioSource>();
         Source2 = SourceReference.GetChild(1).GetComponent<AudioSource>();
     }

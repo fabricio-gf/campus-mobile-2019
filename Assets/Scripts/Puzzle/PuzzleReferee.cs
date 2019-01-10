@@ -21,6 +21,8 @@ public class PuzzleReferee : MonoBehaviour
     private int TriesLeft = 5;
 
     // PRIVATE REFERENCES
+    [SerializeField] private GameObject PuzzleObject = null;
+
     [SerializeField] private List<Transform> AnswerSlots = null;
     [SerializeField] private List<Transform> CardSlots = null;
 
@@ -44,9 +46,12 @@ public class PuzzleReferee : MonoBehaviour
         CardObjects = new List<Transform>();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void StartPuzzle(Puzzle newPuzzle)
     {
+        PuzzleObject.SetActive(true);
+
+        CurrentPuzzle = newPuzzle;
+
         Answer = CurrentPuzzle.answer;
         CurrentAnswer = new char[Answer.Length];
 
@@ -58,23 +63,28 @@ public class PuzzleReferee : MonoBehaviour
     {
         TriesLeft = CurrentPuzzle.tries;
 
-        for(int i = 0; i < AnswerSlots.Count; i++)
+        DestroySlots();
+
+        InitializeSlots();
+        FillNecessaryLetters();
+        FillRemainingLetters();
+        ShuffleLetters();
+    }
+
+    void DestroySlots()
+    {
+        for (int i = 0; i < AnswerSlots.Count; i++)
         {
             Destroy(AnswerSlots[i].gameObject);
         }
         AnswerSlots.Clear();
-        for(int i = 0; i < CardObjects.Count; i++)
+        for (int i = 0; i < CardObjects.Count; i++)
         {
             Destroy(CardObjects[i].gameObject);
             Destroy(CardSlots[i].gameObject);
         }
         CardObjects.Clear();
         CardSlots.Clear();
-
-        InitializeSlots();
-        FillNecessaryLetters();
-        FillRemainingLetters();
-        ShuffleLetters();
     }
 
     void ResetAlphabet()
@@ -221,5 +231,13 @@ public class PuzzleReferee : MonoBehaviour
                 RemoveLetter(i);
             }
         }
+    }
+
+    public void ClosePuzzle()
+    {
+        // delete objects
+        CurrentPuzzle = null;
+        DestroySlots();
+        PuzzleObject.SetActive(false);
     }
 }
