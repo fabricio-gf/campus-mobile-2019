@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         TargetPosition = transform.position;
         NextPosition = transform.position;
 
-        ImpassableLayerIndex = LayerMask.NameToLayer("Impassable");
+        ImpassableLayerIndex = LayerMask.GetMask("Impassable");
     }
 
     // moves the player sprite in the game world
@@ -51,12 +51,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         JoystickDirection = (Vector3.right * Joystick.Horizontal + Vector3.up * Joystick.Vertical);
-        Debug.DrawRay(transform.position, Vector2.right, Color.red);
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1f, ImpassableLayerIndex);
-        print(hit.point);
+        Debug.DrawRay(transform.position, JoystickDirection, Color.red);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, JoystickDirection, 1f, ImpassableLayerIndex);
         if (hit)
         {
-            print("hit");
+            NextDirection = Directions.NONE;
         }
         else
         {
