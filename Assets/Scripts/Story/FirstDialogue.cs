@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FirstDialogue : MonoBehaviour
 {
-    [SerializeField] private GameObject DialogueTrigger;
-    [SerializeField] private float DialogueDelay;
+    [SerializeField] private GameObject DialogueTrigger = null;
+    [SerializeField] private float DialogueDelay = 0;
 
     // Start is called before the first frame update
     void Start()

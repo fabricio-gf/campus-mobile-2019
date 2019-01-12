@@ -827,7 +827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1975199736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1121,6 +1121,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3468372722682441339}
+    - target: {fileID: 1908753390893519826, guid: 2e187669f4bc3f04eaccd97bd3f98ee7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e187669f4bc3f04eaccd97bd3f98ee7, type: 3}
 --- !u!1001 &2283119190857715287
