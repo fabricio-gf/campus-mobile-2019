@@ -23,7 +23,17 @@ public class MusicController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(SourceReference.gameObject);
+        GameObject obj = GameObject.FindGameObjectWithTag("MusicSource");
+        if(obj)
+        {
+            Destroy(SourceReference.gameObject);
+            SourceReference = obj.transform;
+        }
+        else
+        {
+            DontDestroyOnLoad(SourceReference.gameObject);
+            SourceReference.tag = "MusicSource";
+        }
         Source1 = SourceReference.GetChild(0).GetComponent<AudioSource>();
         Source2 = SourceReference.GetChild(1).GetComponent<AudioSource>();
     }

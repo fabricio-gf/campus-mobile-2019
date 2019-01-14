@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PuzzleReferee : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class PuzzleReferee : MonoBehaviour
     public static GameObject ItemBeingDragged;
     
     // PUBLIC ATTRIBUTES
-    [HideInInspector] public Puzzle CurrentPuzzle;
+    //[HideInInspector]
+    public Puzzle CurrentPuzzle;
 
     // PRIVATE ATTRIBUTES
     private char[] Answer;
@@ -61,6 +63,12 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
+        //testing
+        PuzzleObject.SetActive(true);
+        Answer = CurrentPuzzle.answer;
+        CurrentAnswer = new char[Answer.Length];
+        //testing
+
         TriesLeft = CurrentPuzzle.tries;
 
         DestroySlots();
@@ -118,43 +126,91 @@ public class PuzzleReferee : MonoBehaviour
     void FillNecessaryLetters()
     {
         GameObject obj;
-        for(int i = 0; i < Answer.Length; i++)
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
         {
-            obj = Instantiate(CardPrefab);
-            CardObjects.Add(obj.transform);
+            for (int i = 0; i < Answer.Length; i++)
+            {
+                obj = Instantiate(CardPrefab);
+                CardObjects.Add(obj.transform);
 
-            obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
+                obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
 
-            //TEMP
-            obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
-            //TEMP
+                //TEMP
+                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
+                //TEMP
 
-            //Alphabet.Remove(Answer[i]);
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i]-97)];
 
-            //obj.sprite = 
-            
+                //Alphabet.Remove(Answer[i]);
+
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Answer.Length; i++)
+            {
+                obj = Instantiate(CardPrefab);
+                CardObjects.Add(obj.transform);
+
+                obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
+
+                //TEMP
+                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
+                //TEMP
+
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
+
+                //Alphabet.Remove(Answer[i]);
+
+            }
         }
     }
 
     void FillRemainingLetters()
     {
         GameObject obj;
-        for (int i = Answer.Length; i < CardSlots.Count; i++)
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
         {
-            obj = Instantiate(CardPrefab);
-            CardObjects.Add(obj.transform);
+            for (int i = Answer.Length; i < CardSlots.Count; i++)
+            {
+                obj = Instantiate(CardPrefab);
+                CardObjects.Add(obj.transform);
 
-            int randomIndex = Random.Range(0, Alphabet.Count);
-            obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
+                int randomIndex = Random.Range(0, Alphabet.Count);
+                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
 
-            //TEMP
-            obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
-            //TEMP
+                //TEMP
+                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
+                //TEMP
 
-            //Alphabet.RemoveAt(randomIndex);
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[randomIndex];
 
-            //obj.sprite = 
-            
+
+                //Alphabet.RemoveAt(randomIndex);
+
+
+            }
+        }
+        else 
+        {
+            for (int i = Answer.Length; i < CardSlots.Count; i++)
+            {
+                obj = Instantiate(CardPrefab);
+                CardObjects.Add(obj.transform);
+
+                int randomIndex = Random.Range(0, Alphabet.Count);
+                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
+
+                //TEMP
+                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
+                //TEMP
+
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[randomIndex];
+
+
+                //Alphabet.RemoveAt(randomIndex);
+
+            }
         }
     }
 

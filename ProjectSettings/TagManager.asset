@@ -8,6 +8,8 @@ TagManager:
   - Dialogue
   - Impassable
   - Joystick
+  - MusicSource
+  - SFXSource
   layers:
   - Default
   - TransparentFX

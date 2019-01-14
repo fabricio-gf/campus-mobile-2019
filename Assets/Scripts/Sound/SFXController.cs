@@ -16,7 +16,18 @@ public class SFXController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(Source.gameObject);
+        GameObject obj = GameObject.FindGameObjectWithTag("SFXSource");
+        if (obj)
+        {
+            Destroy(Source.gameObject);
+            Source = obj.GetComponent<AudioSource>();
+        }
+        else
+        {
+            DontDestroyOnLoad(Source.gameObject);
+            Source.tag = "SFXSource";
+        }
+
         Clips = new Dictionary<string, AudioClip>();
         FillClips();
     }
