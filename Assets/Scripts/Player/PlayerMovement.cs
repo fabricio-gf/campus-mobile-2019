@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     [Header("References")]
-    [SerializeField] private FloatingJoystick Joystick = null;
+    //[SerializeField]
+    private FloatingJoystick Joystick = null;
     
     [Header("Serialized Attributes")]
     [SerializeField] private float MovementSpeed = 0;
@@ -29,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         CanMove = true;
+
+        Joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FloatingJoystick>();
+
         //currentDirection = Directions.UP;
         TargetPosition = transform.position;
         NextPosition = transform.position;

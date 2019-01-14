@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
-    [SerializeField] private FloatingJoystick Joystick = null;
+    //[SerializeField]
+    private FloatingJoystick Joystick = null;
 
     // Start is called before the first frame update
     void Awake()
     {
-
+        Joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FloatingJoystick>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

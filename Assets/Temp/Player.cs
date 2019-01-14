@@ -1,26 +1,24 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Actor : MonoBehaviour
+public class Player : MonoBehaviour
 {
-
-    public ActorData data = new ActorData();
+    public GameData data = new GameData();
 
     public void StoreData()
     {
-        data.pos = transform.position;
+        data.playerPos = transform.position;
     }
 
     public void LoadData()
     {
-        transform.position = data.pos;
+        transform.position = data.playerPos;
     }
 
     public void ApplyData()
     {
-        //SaveData.AddActorData(data);
+        SaveData.AddPlayerData(data.playerPos);
     }
 
     public void OnEnable()
@@ -36,11 +34,4 @@ public class Actor : MonoBehaviour
         SaveData.OnBeforeSave -= StoreData;
         SaveData.OnBeforeSave -= ApplyData;
     }
-}
-
-[Serializable]
-public class ActorData
-{
-    public Vector3 pos;
-    // dialogue
 }
