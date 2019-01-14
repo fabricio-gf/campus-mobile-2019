@@ -37,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
         TargetPosition = transform.position;
         NextPosition = transform.position;
 
-        ImpassableLayerIndex = LayerMask.GetMask("Impassable");
-    }
+        ImpassableLayerIndex = LayerMask.GetMask("Impassable") | LayerMask.GetMask("Interactable");
+    }   
 
     // moves the player sprite in the game world
     void FixedUpdate(){

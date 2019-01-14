@@ -16,7 +16,6 @@ public class SaveData
     public static void Load(string path)
     {
         gameData = LoadFromJson(path);
-        Debug.Log(gameData);
 
         /*foreach(ActorData data in actorContainer.actors)
         {
@@ -24,7 +23,6 @@ public class SaveData
         }*/
 
         //spawn player at pos
-        Debug.Log(GameController.playerPath);
         GameController.SpawnPlayer(GameController.playerPath, gameData.playerPos, Quaternion.identity);
 
         //set progress in map/game

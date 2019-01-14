@@ -63,12 +63,6 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
-        //testing
-        PuzzleObject.SetActive(true);
-        Answer = CurrentPuzzle.answer;
-        CurrentAnswer = new char[Answer.Length];
-        //testing
-
         TriesLeft = CurrentPuzzle.tries;
 
         DestroySlots();

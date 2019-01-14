@@ -41,7 +41,7 @@ public class MusicController : MonoBehaviour
     private void Start()
     {
         Source1.clip = MusicTrack;
-        Source1.Play();
+        if(!Source1.isPlaying) Source1.Play();
     }
 
     public void ChangeTrackInstantly(AudioClip newTrack)
