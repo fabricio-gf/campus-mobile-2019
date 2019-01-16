@@ -21,9 +21,12 @@ public class MusicController : MonoBehaviour
     private bool IsFading = false;
     private bool IsBlending = false;
 
+    private static string SourceTag = "MusicSource";
+    private static string PrefsString = "MusicMute";
+
     void Awake()
     {
-        GameObject obj = GameObject.FindGameObjectWithTag("MusicSource");
+        GameObject obj = GameObject.FindGameObjectWithTag(SourceTag);
         if(obj)
         {
             Destroy(SourceReference.gameObject);
@@ -32,7 +35,7 @@ public class MusicController : MonoBehaviour
         else
         {
             DontDestroyOnLoad(SourceReference.gameObject);
-            SourceReference.tag = "MusicSource";
+            SourceReference.tag = SourceTag;
         }
         Source1 = SourceReference.GetChild(0).GetComponent<AudioSource>();
         Source2 = SourceReference.GetChild(1).GetComponent<AudioSource>();
@@ -42,6 +45,12 @@ public class MusicController : MonoBehaviour
     {
         Source1.clip = MusicTrack;
         if(!Source1.isPlaying) Source1.Play();
+
+        if (PlayerPrefs.GetInt(PrefsString, 0) == 1)
+        {
+            Source1.mute = true;
+            Source2.mute = true;
+        }
     }
 
     public void ChangeTrackInstantly(AudioClip newTrack)
@@ -83,6 +92,7 @@ public class MusicController : MonoBehaviour
     {
         Source1.mute = mute;
         Source2.mute = mute;
+        PlayerPrefs.SetInt(PrefsString, mute ? 1 : 0);
     }
    
     IEnumerator FadeOutTrack(AudioSource Source)

@@ -19,7 +19,7 @@ public class PlayerInteractions : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonUp(0))
         {
             Interact();
         }

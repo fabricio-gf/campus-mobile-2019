@@ -14,9 +14,12 @@ public class SFXController : MonoBehaviour
     // PRIVATE ATTRIBUTES
     private Dictionary<string, AudioClip> Clips = null;
 
+    private static string SourceTag = "SFXSource";
+    private static string PrefsString = "SFXMute";
+
     void Awake()
     {
-        GameObject obj = GameObject.FindGameObjectWithTag("SFXSource");
+        GameObject obj = GameObject.FindGameObjectWithTag(SourceTag);
         if (obj)
         {
             Destroy(Source.gameObject);
@@ -25,11 +28,19 @@ public class SFXController : MonoBehaviour
         else
         {
             DontDestroyOnLoad(Source.gameObject);
-            Source.tag = "SFXSource";
+            Source.tag = SourceTag;
         }
 
         Clips = new Dictionary<string, AudioClip>();
         FillClips();
+    }
+
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt(PrefsString, 0) == 1)
+        {
+            Source.mute = true;
+        }
     }
 
     void FillClips()
@@ -53,5 +64,6 @@ public class SFXController : MonoBehaviour
     public void ToggleMuteSFX(bool mute)
     {
         Source.mute = mute;
+        PlayerPrefs.SetInt(PrefsString, mute ? 1 : 0);
     }
 }

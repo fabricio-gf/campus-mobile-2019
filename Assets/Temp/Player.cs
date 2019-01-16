@@ -4,33 +4,33 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public GameData data = new GameData();
+    public GameData data;
 
     public void StoreData()
     {
-        data.playerPos = transform.position;
+        data.PlayerPos = transform.position;
     }
 
     public void LoadData()
     {
-        transform.position = data.playerPos;
+        transform.position = data.PlayerPos;
     }
 
     public void ApplyData()
     {
-        SaveData.AddPlayerData(data.playerPos);
+        SaveData.AddPlayerData(data.PlayerPos);
     }
 
     public void OnEnable()
     {
-        SaveData.OnLoaded += LoadData;
+        SaveData.OnPlayerLoaded += LoadData;
         SaveData.OnBeforeSave += StoreData;
         SaveData.OnBeforeSave += ApplyData;
     }
 
     public void OnDisable()
     {
-        SaveData.OnLoaded -= LoadData;
+        SaveData.OnPlayerLoaded -= LoadData;
         SaveData.OnBeforeSave -= StoreData;
         SaveData.OnBeforeSave -= ApplyData;
     }

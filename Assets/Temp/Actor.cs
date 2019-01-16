@@ -6,7 +6,7 @@ using UnityEngine;
 public class Actor : MonoBehaviour
 {
 
-    public ActorData data = new ActorData();
+    /*public ActorData data = new ActorData();
 
     public void StoreData()
     {
@@ -35,7 +35,7 @@ public class Actor : MonoBehaviour
         SaveData.OnLoaded -= LoadData;
         SaveData.OnBeforeSave -= StoreData;
         SaveData.OnBeforeSave -= ApplyData;
-    }
+    }*/
 }
 
 [Serializable]
