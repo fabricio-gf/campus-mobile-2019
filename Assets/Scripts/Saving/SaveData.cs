@@ -60,7 +60,7 @@ public class SaveData
 
         //set codex
         CodexDataManager.SetCodex(gameData.Chapters);
-
+        Debug.Log("entrou");
         OnCodexLoaded();
     }
 

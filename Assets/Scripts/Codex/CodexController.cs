@@ -17,6 +17,8 @@ public class CodexController : MonoBehaviour
 
     [SerializeField] private Button[] BookmarkButtons = null;
 
+    [SerializeField] private Button[] IndexChapterButtons = null;
+
     [SerializeField] private Image ContentImage = null;
 
     [SerializeField] private GameObject PreviousPageButton = null;
@@ -24,6 +26,7 @@ public class CodexController : MonoBehaviour
 
     [SerializeField] private GameObject PageObject = null;
     [SerializeField] private GameObject IndexObject = null;
+
 
     public void PreviousPage(){
         if(CurrentPage == 0){
@@ -76,7 +79,7 @@ public class CodexController : MonoBehaviour
 
     void UpdateBookmarks(int chapterNumber){
         for(int i = 0; i < BookmarkButtons.Length; i++){
-            if(i == chapterNumber){
+            if(i >= codex.UnlockedChapters || i == chapterNumber){
                 BookmarkButtons[i].interactable = false;
             }
             else{
@@ -90,7 +93,8 @@ public class CodexController : MonoBehaviour
     }
 
     void UpdatePageButtons(int chapterNumber, int pageNumber){
-        if(chapterNumber == codex.Chapters.Length-1 && pageNumber == codex.Chapters[chapterNumber].Pages.Length-1){
+        if((chapterNumber == codex.Chapters.Length-1 && pageNumber == codex.Chapters[chapterNumber].Pages.Length-1)||
+            (chapterNumber == codex.UnlockedChapters-1)){
             NextPageButton.SetActive(false);
         }
         else if(chapterNumber == 0 && pageNumber == 0){
@@ -112,6 +116,23 @@ public class CodexController : MonoBehaviour
 
     void UpdateIndex()
     {
+        for(int i = 0; i < codex.UnlockedChapters; i++)
+        {
+            IndexChapterButtons[i].interactable = true;
+        }
 
+        for(int i = codex.UnlockedChapters; i < codex.Chapters.Length; i++)
+        {
+            IndexChapterButtons[i].interactable = false;
+        }
+
+        if(codex.UnlockedChapters == 0)
+        {
+            NextPageButton.SetActive(false);
+        }
+        else
+        {
+            NextPageButton.SetActive(true);
+        }
     }
 }

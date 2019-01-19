@@ -5,11 +5,12 @@ using UnityEngine;
 public class CodexDataManager : DataManager
 {
     //public const string playerPath = "Prefabs/Player";
-    [SerializeField] private static Codex codex;
+    [SerializeField] private Codex codexReference;
+    public static Codex codex;
 
     private void Start()
     {
-        LoadCodex();
+        codex = codexReference;
     }
 
     public static void SetCodex(int chapters)
@@ -20,5 +21,12 @@ public class CodexDataManager : DataManager
     public static void LoadCodex()
     {
         SaveData.LoadCodex(dataPath);
+    }
+
+    public void IncrementChapter()
+    {
+        codex.UnlockedChapters++;
+        print("CODEX INCREMENTED " + codex.UnlockedChapters);
+        Save();
     }
 }

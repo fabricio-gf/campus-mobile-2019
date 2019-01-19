@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class CodexSaving : MonoBehaviour
 {
+
     public GameData data;
     private CodexController codexController;
 
-    public void StoreData()
+    private void Awake()
     {
-        data.Chapters = codexController.codex.UnlockedChapters;
+        codexController = GetComponent<CodexController>();
     }
 
-    public void LoadData()
+    public void StoreData()
     {
-        codexController.GoToIndex();
+        data.Chapters = CodexDataManager.codex.UnlockedChapters;
     }
 
     public void ApplyData()
@@ -24,14 +25,12 @@ public class CodexSaving : MonoBehaviour
 
     public void OnEnable()
     {
-        SaveData.OnCodexLoaded += LoadData;
         SaveData.OnBeforeSave += StoreData;
         SaveData.OnBeforeSave += ApplyData;
     }
 
     public void OnDisable()
     {
-        SaveData.OnCodexLoaded -= LoadData;
         SaveData.OnBeforeSave -= StoreData;
         SaveData.OnBeforeSave -= ApplyData;
     }
