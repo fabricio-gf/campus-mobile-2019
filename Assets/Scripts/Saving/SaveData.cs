@@ -76,6 +76,21 @@ public class SaveData
         gameData.PlayerPos = pos;
     }
 
+    public static void AddCodexData(int chapters)
+    {
+        gameData.Chapters = chapters;
+    }
+
+    public static void AddProgressData(int progress)
+    {
+        gameData.Progress = progress;
+    }
+
+    public static void AddDictionaryProgressData(int dictionaryProgress)
+    {
+        gameData.DictionaryProgress = dictionaryProgress;
+    }
+
     private static GameData LoadFromJson(string path)
     {
         if (!File.Exists(path))

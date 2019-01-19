@@ -16,7 +16,7 @@ public class PlayerDataManager : DataManager {
         GameObject prefab = Resources.Load<GameObject>(path);
 
         GameObject obj = Instantiate(prefab, position, rotation);
-        obj.GetComponent<Player>().data = SaveData.gameData;
+        obj.GetComponent<PlayerSaving>().data = SaveData.gameData;
     }
 
     public void LoadPlayer()

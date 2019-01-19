@@ -17,4 +17,5 @@ public class Codex : ScriptableObject
     }
 
     public Chapter[] Chapters;
+    public int UnlockedChapters;
 }

@@ -8,14 +8,20 @@ public class CodexController : MonoBehaviour
     private int CurrentPage = 0;
     private bool IsInIndex = true;
 
-    // PRIVATE REFERENCES
     [Header("References")]
-    [SerializeField] private Codex codex = null;
+    // PUBLIC REFERENCES
+    public Codex codex = null;
+
+    // PRIVATE REFERENCES
     [SerializeField] private Text TitleText = null;
+
     [SerializeField] private Button[] BookmarkButtons = null;
+
     [SerializeField] private Image ContentImage = null;
+
     [SerializeField] private GameObject PreviousPageButton = null;
     [SerializeField] private GameObject NextPageButton = null;
+
     [SerializeField] private GameObject PageObject = null;
     [SerializeField] private GameObject IndexObject = null;
 
@@ -100,6 +106,12 @@ public class CodexController : MonoBehaviour
 
     public void GoToIndex(){
         PageObject.SetActive(false);
+        UpdateIndex();
         IndexObject.SetActive(true);
+    }
+
+    void UpdateIndex()
+    {
+
     }
 }

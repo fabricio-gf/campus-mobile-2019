@@ -12,6 +12,9 @@ public class PuzzleReferee : MonoBehaviour
     //[HideInInspector]
     public Puzzle CurrentPuzzle;
 
+    public delegate void SerializeAction(bool result);
+    public event SerializeAction OnPuzzleVictory;
+
     // PRIVATE ATTRIBUTES
     private char[] Answer;
     private char[] CurrentAnswer;
@@ -254,6 +257,7 @@ public class PuzzleReferee : MonoBehaviour
         {
             //winner
             print("winner");
+            OnPuzzleVictory(true);
         }
         else
         {
@@ -285,9 +289,13 @@ public class PuzzleReferee : MonoBehaviour
 
     public void ClosePuzzle()
     {
-        // delete objects
-        CurrentPuzzle = null;
-        DestroySlots();
+        ClearPuzzleArea();
         PuzzleObject.SetActive(false);
+    }
+
+    public void ClearPuzzleArea()
+    {
+        // delete objects
+        DestroySlots();
     }
 }
