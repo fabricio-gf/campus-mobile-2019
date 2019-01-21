@@ -91,6 +91,13 @@ public class SaveData
         gameData.DictionaryProgress = dictionaryProgress;
     }
 
+    public static void ResetSave(string path)
+    {
+        gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialDictionaryProgress, InitialChapters);
+
+        SaveToJson(path, gameData);
+    }
+
     private static GameData LoadFromJson(string path)
     {
         if (!File.Exists(path))

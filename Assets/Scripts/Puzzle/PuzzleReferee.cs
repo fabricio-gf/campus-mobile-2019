@@ -30,13 +30,16 @@ public class PuzzleReferee : MonoBehaviour
 
     [SerializeField] private List<Transform> AnswerSlots = null;
     [SerializeField] private List<Transform> CardSlots = null;
+    [SerializeField] private List<GemChangeColor> Gems = null;
 
     [SerializeField] private Transform AnswerArea = null;
+    [SerializeField] private Transform GemsArea = null;
     [SerializeField] private Transform CardsArea = null;
 
 
-    [SerializeField] private GameObject CardPrefab = null;
     [SerializeField] private GameObject SlotPrefab = null;
+    [SerializeField] private GameObject GemPrefab = null;
+    [SerializeField] private GameObject CardPrefab = null;
 
     [SerializeField] private Sprite[] LetterSprites = null;
     [SerializeField] private Sprite[] SignSprites = null;
@@ -70,6 +73,7 @@ public class PuzzleReferee : MonoBehaviour
 
         DestroySlots();
 
+        ShowAnswer();
         InitializeSlots();
         FillNecessaryLetters();
         FillRemainingLetters();
@@ -98,6 +102,18 @@ public class PuzzleReferee : MonoBehaviour
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz");
     }
 
+    void ShowAnswer()
+    {
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+
     void InitializeSlots()
     {
         int slotNumber = CalculateCardSlots();
@@ -108,13 +124,14 @@ public class PuzzleReferee : MonoBehaviour
             obj = Instantiate(SlotPrefab, AnswerArea);
             obj.GetComponent<SlotBehaviour>().Referee = this;
             AnswerSlots.Add(obj.transform);
+
+            obj = Instantiate(GemPrefab, GemsArea);
+            Gems.Add(obj.GetComponent<GemChangeColor>());
         }
         for(int i = 0; i < slotNumber; i++)
         {
             obj = Instantiate(SlotPrefab, CardsArea);
             obj.GetComponent<SlotBehaviour>().Referee = this;
-
-            //change size/parameters of slot
 
             CardSlots.Add(obj.transform);
         }
@@ -132,10 +149,6 @@ public class PuzzleReferee : MonoBehaviour
 
                 obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
 
-                //TEMP
-                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
-                //TEMP
-
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i]-97)];
 
                 //Alphabet.Remove(Answer[i]);
@@ -150,10 +163,6 @@ public class PuzzleReferee : MonoBehaviour
                 CardObjects.Add(obj.transform);
 
                 obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
-
-                //TEMP
-                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Answer[i].ToString().ToUpper();
-                //TEMP
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
 
@@ -176,10 +185,6 @@ public class PuzzleReferee : MonoBehaviour
                 int randomIndex = Random.Range(0, Alphabet.Count);
                 obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
 
-                //TEMP
-                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
-                //TEMP
-
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[randomIndex];
 
 
@@ -197,10 +202,6 @@ public class PuzzleReferee : MonoBehaviour
 
                 int randomIndex = Random.Range(0, Alphabet.Count);
                 obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
-
-                //TEMP
-                //obj.transform.GetChild(0).GetComponent<UnityEngine.UI.Text>().text = Alphabet[randomIndex].ToString().ToUpper();
-                //TEMP
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[randomIndex];
 
@@ -248,8 +249,11 @@ public class PuzzleReferee : MonoBehaviour
             if (Answer[i] != CurrentAnswer[i])
             {
                 incorrectLetters++;
-                //incorrect visual in slot
-                print("wrong in position " + i);
+                Gems[i].ChangeColor(false);
+            }
+            else
+            {
+                Gems[i].ChangeColor(true);
             }
         }
 
@@ -257,18 +261,37 @@ public class PuzzleReferee : MonoBehaviour
         {
             //winner
             print("winner");
-            OnPuzzleVictory(true);
+            OnPuzzleVictory?.Invoke(true);
         }
         else
         {
             //loser sound
+            //lose 1 life
         }
     }
 
     int CalculateCardSlots()
     {
-        // change probably
-        return Answer.Length * 2;
+        GridLayoutGroup grid = CardsArea.GetComponent<GridLayoutGroup>();
+        switch (Answer.Length)
+        {
+            case 3:
+                grid.constraintCount = 3;
+                return 6;
+            case 4:
+                grid.constraintCount = 5;
+                return 10;
+            case 5:
+                grid.constraintCount = 4;
+                return 12;
+            case 6:
+                grid.constraintCount = 5;
+                return 15;
+            default:
+                break;
+        }
+        grid.constraintCount = 3;
+        return 6;
     }
 
     public void HasChanged()

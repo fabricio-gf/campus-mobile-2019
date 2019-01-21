@@ -8,6 +8,7 @@ public class MusicController : MonoBehaviour
     // PUBLIC REFERENCES
     [Header("References")]
     public AudioClip MusicTrack;
+    public float LoopDuration;
 
     // PRIVATE REFERENCES
     [SerializeField] private Transform SourceReference = null;
@@ -26,6 +27,7 @@ public class MusicController : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         GameObject obj = GameObject.FindGameObjectWithTag(SourceTag);
         if(obj)
         {
@@ -44,7 +46,11 @@ public class MusicController : MonoBehaviour
     private void Start()
     {
         Source1.clip = MusicTrack;
-        if(!Source1.isPlaying) Source1.Play();
+        if (!Source1.isPlaying)
+        {
+            Source1.Play();
+            StartCoroutine(LoopTrackAtTime(MusicTrack, Source1, Source2, LoopDuration));
+        }
 
         if (PlayerPrefs.GetInt(PrefsString, 0) == 1)
         {
@@ -53,34 +59,44 @@ public class MusicController : MonoBehaviour
         }
     }
 
-    public void ChangeTrackInstantly(AudioClip newTrack)
+    public void ChangeTrackInstantly(AudioClip newTrack, float loopTime)
     {
         if (CurrentSource == 1)
         {
+            StopAllCoroutines();
             Source1.clip = newTrack;
+            Source1.Play();
+            StartCoroutine(LoopTrackAtTime(newTrack, Source2, Source1, loopTime));
         }
         else if (CurrentSource == 2)
         {
+            StopAllCoroutines();
             Source2.clip = newTrack;
+            Source2.Play();
+            StartCoroutine(LoopTrackAtTime(newTrack, Source1, Source2, loopTime));
         }
     }
 
-    public void ChangeTrackBlend(AudioClip newTrack, float BlendDuration)
+    public void ChangeTrackBlend(AudioClip newTrack, float loopTime, float BlendDuration)
     {
         if (!IsBlending)
         {
             if (CurrentSource == 1)
             {
+                StopAllCoroutines();
                 Source2.clip = newTrack;
                 Source2.Play();
                 StartCoroutine(BlendTracks(Source1, Source2));
+                StartCoroutine(LoopTrackAtTime(newTrack, Source1, Source2, loopTime));
                 CurrentSource = 2;
             }
             else if (CurrentSource == 2)
             {
+                StopAllCoroutines();
                 Source1.clip = newTrack;
                 Source1.Play();
                 StartCoroutine(BlendTracks(Source2, Source1));
+                StartCoroutine(LoopTrackAtTime(newTrack, Source2, Source1, loopTime));
                 CurrentSource = 1;
             }
         }
@@ -136,5 +152,13 @@ public class MusicController : MonoBehaviour
         }
         FadeOutSource.Stop();
         IsBlending = false;
+    }
+
+    IEnumerator LoopTrackAtTime(AudioClip clip, AudioSource currentSource, AudioSource newSource, float time)
+    {
+        yield return new WaitForSeconds(time);
+        newSource.clip = clip;
+        newSource.Play();
+        StartCoroutine(LoopTrackAtTime(clip, newSource, currentSource, time));
     }
 }
