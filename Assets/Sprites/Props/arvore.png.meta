@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 933a5ecc6c6d4c8498f28cfc58a64d38
+guid: 9077c15829c7c8842bbbc2158bc0c2c7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: arvoree_0
-    21300002: arvoree_1
+    21300000: arvore_0
+    21300002: arvore_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arvoree_0
+      name: arvore_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,16 +119,20 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
+        - {x: 64, y: 64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: a32d48bf03d4528438f8fa206d3eb17b
+      spriteID: b71df69a07964dd4d85fba15ff1d4e1e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arvoree_1
+      name: arvore_1
       rect:
         serializedVersion: 2
         x: 0
@@ -140,13 +144,13 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -64, y: 64}
-        - {x: -64, y: -64}
-        - {x: 64, y: -64}
+      - - {x: -64, y: -64}
+        - {x: -64, y: 64}
         - {x: 64, y: 64}
+        - {x: 64, y: -64}
       tessellationDetail: 0
       bones: []
-      spriteID: 71fada7470500bd4eb44520469ae1eb3
+      spriteID: 1fb9e79451b429b478d7dd7f2f7d1c26
       vertices: []
       indices: 
       edges: []
@@ -154,7 +158,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0ecdaedc4f1e57d498859bebf3b8c494
+    spriteID: 3cfd88c1d168ca941b20e89f5954991c
     vertices: []
     indices: 
     edges: []

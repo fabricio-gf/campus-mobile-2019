@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Serialized Attributes")]
     [SerializeField] private float MovementSpeed = 0;
     [SerializeField] private float InputDeadZone = 0;
+    [SerializeField] private float InitialInputDelay = 0;
 
     // PRIVATE ATTRIBUTES
     private Vector3 JoystickDirection;
@@ -38,7 +40,12 @@ public class PlayerMovement : MonoBehaviour
         NextPosition = transform.position;
 
         ImpassableLayerIndex = LayerMask.GetMask("Impassable") | LayerMask.GetMask("Interactable");
-    }   
+    }
+
+    private void Start()
+    {
+        StartCoroutine(WaitForInputDelay(InitialInputDelay));
+    }
 
     // moves the player sprite in the game world
     void FixedUpdate(){
@@ -119,5 +126,12 @@ public class PlayerMovement : MonoBehaviour
         {
             TargetPosition = NextPosition;
         }
+    }
+
+    IEnumerator WaitForInputDelay(float delay)
+    {
+        Joystick.BlockMovement();
+        yield return new WaitForSeconds(delay);
+        Joystick.ResumeMovement();
     }
 }

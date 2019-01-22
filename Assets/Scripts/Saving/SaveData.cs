@@ -17,8 +17,8 @@ public class SaveData
     public static event SerializeAction OnBeforeSave;
 
     // CONSTANT INITIAL VALUES
-    private const float InitialPlayerPosX = 0.5f;
-    private const float InitialPlayerPosY = 0.5f;
+    private const float InitialPlayerPosX = -5.5f;
+    private const float InitialPlayerPosY = -3.5f;
     private const int InitialProgress = 0;
     private const int InitialDictionaryProgress = 0;
     private const int InitialChapters = 0;
@@ -126,5 +126,11 @@ public class SaveData
         writer.Close();
 
         File.WriteAllText(path, json);
+    }
+    
+    public static int CheckProgress(string path)
+    {
+        GameData data = LoadFromJson(path);
+        return data.Progress;
     }
 }
