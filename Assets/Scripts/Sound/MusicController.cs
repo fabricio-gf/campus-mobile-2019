@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
+    public static AudioSource Source1 = null;
+    public static AudioSource Source2 = null;
 
     // PUBLIC REFERENCES
     [Header("References")]
@@ -11,36 +13,34 @@ public class MusicController : MonoBehaviour
     public float LoopDuration;
 
     // PRIVATE REFERENCES
-    [SerializeField] private Transform SourceReference = null;
+    //[SerializeField] private Transform SourceReference = null;
     [SerializeField] private float FadeDuration = 0;
     [SerializeField] private float BlendDuration = 0;
 
     // PRIVATE ATTRIBUTES
-    private AudioSource Source1 = null;
-    private AudioSource Source2 = null;
+    [SerializeField] private AudioSource SourceReference1 = null;
+    [SerializeField] private AudioSource SourceReference2 = null;
+
     private int CurrentSource = 1;
     private bool IsFading = false;
     private bool IsBlending = false;
 
-    private static string SourceTag = "MusicSource";
+    [HideInInspector] public static string SourceTag = "MusicSource";
     private static string PrefsString = "MusicMute";
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
-        GameObject obj = GameObject.FindGameObjectWithTag(SourceTag);
-        if(obj)
+        if (Source1 == null && Source2 == null)
         {
-            Destroy(SourceReference.gameObject);
-            SourceReference = obj.transform;
+            Source1 = SourceReference1;
+            Source2 = SourceReference2;
+
+            DontDestroyOnLoad(SourceReference1.transform.parent.gameObject);
         }
-        else
+        else if (Source1 != SourceReference1 || Source2 != SourceReference2)
         {
-            DontDestroyOnLoad(SourceReference.gameObject);
-            SourceReference.tag = SourceTag;
-        }
-        Source1 = SourceReference.GetChild(0).GetComponent<AudioSource>();
-        Source2 = SourceReference.GetChild(1).GetComponent<AudioSource>();
+            Destroy(SourceReference1.transform.parent.gameObject);
+        }        
     }
 
     private void Start()

@@ -4,33 +4,34 @@ using UnityEngine;
 
 public class SFXController : MonoBehaviour
 {
+    public static AudioSource Source = null;
+
     // PUBLIC REFERENCES
     [Header("References")]
     
 
     // PRIVATE REFERENCES
-    [SerializeField] private AudioSource Source = null;
+    //[SerializeField]
 
     // PRIVATE ATTRIBUTES
     private Dictionary<string, AudioClip> Clips = null;
+    [SerializeField] private AudioSource SourceReference = null;
 
-    private static string SourceTag = "SFXSource";
+    [HideInInspector] public static string SourceTag = "SFXSource";
     private static string PrefsString = "SFXMute";
 
     void Awake()
     {
-        GameObject obj = GameObject.FindGameObjectWithTag(SourceTag);
-        if (obj)
+        if(Source == null)
         {
-            Destroy(Source.gameObject);
-            Source = obj.GetComponent<AudioSource>();
-        }
-        else
-        {
+            Source = SourceReference;
             DontDestroyOnLoad(Source.gameObject);
-            Source.tag = SourceTag;
         }
-
+        else if(Source != SourceReference)
+        {
+            Destroy(SourceReference.gameObject);
+        }
+        
         Clips = new Dictionary<string, AudioClip>();
         FillClips();
     }

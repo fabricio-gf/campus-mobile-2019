@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 372662755}
   m_Layer: 0
   m_Name: MusicSource
-  m_TagString: Untagged
+  m_TagString: MusicSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,7 +1096,7 @@ GameObject:
   - component: {fileID: 588197542}
   m_Layer: 0
   m_Name: SFXSource
-  m_TagString: Untagged
+  m_TagString: SFXSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4595,12 +4595,17 @@ PrefabInstance:
         type: 3}
       propertyPath: Source
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: SourceReference
+      value: 
       objectReference: {fileID: 588197542}
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: MusicTrack
       value: 
-      objectReference: {fileID: 8300000, guid: ebfc301bf33518d4d87c9a363d3fd5d1, type: 3}
+      objectReference: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: SourceReference
@@ -4621,6 +4626,16 @@ PrefabInstance:
       propertyPath: LoopDuration
       value: 154.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: SourceReference1
+      value: 
+      objectReference: {fileID: 1971822720}
+    - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: SourceReference2
+      value: 
+      objectReference: {fileID: 1476344580}
     - target: {fileID: 9005486844301903173, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: m_LocalPosition.x

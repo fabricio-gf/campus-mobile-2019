@@ -85,8 +85,10 @@ public class PuzzleReferee : MonoBehaviour
         for (int i = 0; i < AnswerSlots.Count; i++)
         {
             Destroy(AnswerSlots[i].gameObject);
+            Destroy(Gems[i].gameObject);
         }
         AnswerSlots.Clear();
+        Gems.Clear();
         for (int i = 0; i < CardObjects.Count; i++)
         {
             Destroy(CardObjects[i].gameObject);
