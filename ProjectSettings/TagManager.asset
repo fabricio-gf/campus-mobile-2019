@@ -10,6 +10,8 @@ TagManager:
   - Joystick
   - MusicSource
   - SFXSource
+  - Codex
+  - Puzzle
   layers:
   - Default
   - TransparentFX

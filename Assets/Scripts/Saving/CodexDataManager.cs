@@ -26,7 +26,6 @@ public class CodexDataManager : DataManager
     public void IncrementChapter()
     {
         codex.UnlockedChapters++;
-        print("CODEX INCREMENTED " + codex.UnlockedChapters);
         Save();
     }
 }

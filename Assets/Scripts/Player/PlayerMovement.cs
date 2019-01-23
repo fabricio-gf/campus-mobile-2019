@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    enum Directions
+    public enum Directions
     {
         UP,
         RIGHT,
@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
         LEFT,
         NONE
     }
+
+    [HideInInspector] public Directions FacingDirection;
 
     [Header("References")]
     //[SerializeField]
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private Directions NextDirection;
     private bool CanMove;
     private int ImpassableLayerIndex;
+    private Animator animator;
 
     void Awake()
     {
@@ -35,11 +38,13 @@ public class PlayerMovement : MonoBehaviour
 
         Joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FloatingJoystick>();
 
-        //currentDirection = Directions.UP;
+        FacingDirection = Directions.UP;
         TargetPosition = transform.position;
         NextPosition = transform.position;
 
         ImpassableLayerIndex = LayerMask.GetMask("Impassable") | LayerMask.GetMask("Interactable");
+
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -52,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         if(Vector3.Distance(transform.position, TargetPosition) >= 0.005){
             CanMove = false;
             transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MovementSpeed*Time.deltaTime);
+            Rotate();
         }
         else{
             CanMove = true;
@@ -125,6 +131,34 @@ public class PlayerMovement : MonoBehaviour
         if (CanMove)
         {
             TargetPosition = NextPosition;
+            if(nextDirection != Directions.NONE) FacingDirection = nextDirection;
+        }
+    }
+
+    void Rotate()
+    {
+        switch (FacingDirection)
+        {
+            case PlayerMovement.Directions.UP:
+                animator.SetFloat("Horizontal", 0);
+                animator.SetFloat("Vertical", 1);
+                break;
+            case PlayerMovement.Directions.RIGHT:
+                animator.SetFloat("Horizontal", 1);
+                animator.SetFloat("Vertical", 0);
+                break;
+            case PlayerMovement.Directions.DOWN:
+                animator.SetFloat("Horizontal", 0);
+                animator.SetFloat("Vertical", -1);
+                break;
+            case PlayerMovement.Directions.LEFT:
+                animator.SetFloat("Horizontal", -1);
+                animator.SetFloat("Vertical", 0);
+                break;
+            default:
+                animator.SetFloat("Horizontal", 0);
+                animator.SetFloat("Vertical", 0);
+                break;
         }
     }
 

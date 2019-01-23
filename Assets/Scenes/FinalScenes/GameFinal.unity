@@ -331,10 +331,11 @@ GameObject:
   - component: {fileID: 187167549}
   - component: {fileID: 187167551}
   - component: {fileID: 187167550}
+  - component: {fileID: 187167554}
   - component: {fileID: 187167552}
   m_Layer: 9
   m_Name: Codex
-  m_TagString: Untagged
+  m_TagString: Codex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -347,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187167548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: 4.5, z: -1}
+  m_LocalPosition: {x: 7.5, y: 3.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1092376790}
@@ -363,7 +364,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -440,9 +441,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue:
-    name: Dio
+    name: Kyra
     sentences:
-    - You thought it was a dialogue, but it was me, Dio!
+    - "Ei, o que \xE9 esse livro no ch\xE3o?"
+    - "Hmm, parece que \xE9 sobre uma l\xEDngua de sinais"
+    - "Parece que tem algumas p\xE1ginas faltando... Ser\xE1 que elas est\xE3o por
+      aqui?"
+--- !u!114 &187167554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187167548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119003e2154edc64a9331e3de0e418c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 304215006}
+  ProgressLimit: 2
 --- !u!1 &238054113
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &238054114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -711,6 +729,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraBounds: {fileID: 871813466}
   smoothTime: 0.3
+--- !u!114 &344692354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344692349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1690312454, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &443287839
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &443287840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1196,15 +1230,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: 7, y: 3, z: 0}
-    second:
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_ObjectToInstantiate: {fileID: 0}
-      m_TileFlags: 1
-      m_ColliderType: 1
   - first: {x: -5, y: 4, z: 0}
     second:
       m_TileIndex: 7
@@ -1232,7 +1257,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: dc52dfa2a95e3fb438d83237d77a3afe, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 97eae19906a9f514fabdf35c23701812, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: a23de57f0c4d1ec4a87ee4ffca114aa1, type: 2}
@@ -1253,12 +1278,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 1b05f57b2f9a2d04d84a9d8baf3030c1, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 029619bd0ae184946a4bb723493aa06e, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300002, guid: 9077c15829c7c8842bbbc2158bc0c2c7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 9
+  - m_RefCount: 8
     m_Data:
       e00: 1
       e01: 0
@@ -1277,7 +1302,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 9
+  - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
@@ -1323,10 +1348,10 @@ GameObject:
   - component: {fileID: 683109811}
   - component: {fileID: 683109814}
   - component: {fileID: 683109813}
-  - component: {fileID: 683109812}
+  - component: {fileID: 683109815}
   m_Layer: 9
   m_Name: Panel
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1345,22 +1370,6 @@ Transform:
   m_Father: {fileID: 1092376790}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &683109812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683109810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07eb778d0aa03a64b978079b8b0ebef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogue:
-    name: Dio
-    sentences:
-    - You thought it was a dialogue, but it was me, Dio!
 --- !u!61 &683109813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1385,7 +1394,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!212 &683109814
 SpriteRenderer:
@@ -1435,6 +1444,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &683109815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683109810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957affc074a69244cb2f32cc9d493759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleList:
+  - {fileID: 11400000, guid: bde450bd58a4c464ea4da3d242af3e62, type: 2}
+  - {fileID: 11400000, guid: 1031e3d1406ecc24e8cf40b6f20ee835, type: 2}
+  - {fileID: 11400000, guid: 4c9b170d150b9dc4fab6f6c697f2f371, type: 2}
+  - {fileID: 11400000, guid: 2936fbbb28e26af49a538595e5438e1b, type: 2}
+  - {fileID: 11400000, guid: 735fe86877c67054eb221236c16796c7, type: 2}
+  - {fileID: 11400000, guid: 1e7dc9fff73984048bac9c1a28635966, type: 2}
+  puzzleReferee: {fileID: 1657464991}
+  ProgressLimit: 3
+  Joystick: {fileID: 823352832}
 --- !u!1 &709346403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2182,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 1419460333080702, guid: cdd5474b97f1a9d40bea678ca8dec2bb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224162125889739670, guid: cdd5474b97f1a9d40bea678ca8dec2bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,6 +2314,11 @@ PrefabInstance:
     - target: {fileID: 114240230206024888, guid: cdd5474b97f1a9d40bea678ca8dec2bb,
         type: 3}
       propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114610123882758114, guid: cdd5474b97f1a9d40bea678ca8dec2bb,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2462,6 +2502,18 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &1010378186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6693559437479794713, guid: d29ae42af221cee49b79be6c05c1f0f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5144106344916349902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025684351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,7 +2606,7 @@ MonoBehaviour:
   DialogueName: Initial Dialogue
   DialogueTrigger: {fileID: 1928848668}
   DialogueDelay: 2
-  ProgressLimit: 0
+  ProgressLimit: 1
 --- !u!1 &1066769814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,8 +4870,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1225966708}
   - component: {fileID: 1225966711}
-  - component: {fileID: 1225966710}
-  - component: {fileID: 1225966709}
   m_Layer: 9
   m_Name: Door
   m_TagString: Untagged
@@ -4841,48 +4891,6 @@ Transform:
   m_Father: {fileID: 1092376790}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1225966709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225966707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07eb778d0aa03a64b978079b8b0ebef2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Dialogue:
-    name: Dio
-    sentences:
-    - You thought it was a dialogue, but it was me, Dio!
---- !u!61 &1225966710
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225966707}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1.28, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &1225966711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6192,7 +6200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1766304408778602, guid: cd637ce709efb9b43bd91e893d0d6aa0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224080948002734894, guid: cd637ce709efb9b43bd91e893d0d6aa0,
         type: 3}
@@ -6880,6 +6888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPuzzle: {fileID: 11400000, guid: bde450bd58a4c464ea4da3d242af3e62, type: 2}
   PuzzleObject: {fileID: 103436973568998713}
+  AnswerText: {fileID: 1010378186}
   AnswerSlots: []
   CardSlots: []
   Gems: []
@@ -7163,8 +7172,10 @@ MonoBehaviour:
   Dialogue:
     name: Kyra
     sentences:
-    - Dude, where's my car?
-    - I swear I left it around here somewhere...
+    - "Espera, onde \xE9 que eu to? Eu n\xE3o conhe\xE7o essa parte da floresta."
+    - "E o que \xE9 aquilo ali mais pra frente? Parece ser algum tipo de constru\xE7\xE3o
+      de pedra."
+    - "S\xE3o ru\xEDnas? Ser\xE1 que algu\xE9m j\xE1 viveu aqui?"
 --- !u!61 &1928848673
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7189,7 +7200,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7, y: 1}
+  m_Size: {x: 7, y: 0.8}
   m_EdgeRadius: 0
 --- !u!61 &1928848674
 BoxCollider2D:
@@ -7215,7 +7226,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 3}
+  m_Size: {x: 0.8, y: 3}
   m_EdgeRadius: 0
 --- !u!1001 &1938376288
 PrefabInstance:
@@ -7361,8 +7372,9 @@ MonoBehaviour:
   Dialogue:
     name: Kyra
     sentences:
-    - Dude, where's my car?
-    - I swear I left it around here somewhere...
+    - Ei, onde aquele inseto foi parar? Quero ficar olhando pra ele!
+    - "Ele parece t\xE3o legal. Ser\xE1 que o papai e a mam\xE3e vao deixar eu ficar
+      com ele?"
 --- !u!50 &1938922678
 Rigidbody2D:
   serializedVersion: 4
@@ -7532,7 +7544,7 @@ PrefabInstance:
     - target: {fileID: 2304013117061269746, guid: 79d363629484a7047b8312e6be36fb9c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2304013117061269747, guid: 79d363629484a7047b8312e6be36fb9c,
         type: 3}
@@ -7785,8 +7797,38 @@ PrefabInstance:
       objectReference: {fileID: 1657464991}
     - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1657464991}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 683109815}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableCollider
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29ae42af221cee49b79be6c05c1f0f0, type: 3}

@@ -24,6 +24,7 @@ public class ProgressDataManager : DataManager
             default:
                 break;
         }
+
     }
 
     public void LoadProgress()

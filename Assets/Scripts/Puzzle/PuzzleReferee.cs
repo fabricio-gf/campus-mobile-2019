@@ -28,6 +28,8 @@ public class PuzzleReferee : MonoBehaviour
     // PRIVATE REFERENCES
     [SerializeField] private GameObject PuzzleObject = null;
 
+    [SerializeField] private Text AnswerText = null;
+
     [SerializeField] private List<Transform> AnswerSlots = null;
     [SerializeField] private List<Transform> CardSlots = null;
     [SerializeField] private List<GemChangeColor> Gems = null;
@@ -43,6 +45,7 @@ public class PuzzleReferee : MonoBehaviour
 
     [SerializeField] private Sprite[] LetterSprites = null;
     [SerializeField] private Sprite[] SignSprites = null;
+
     
     private void Awake()
     {
@@ -106,13 +109,13 @@ public class PuzzleReferee : MonoBehaviour
 
     void ShowAnswer()
     {
-        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type2)
         {
-
+            AnswerText.text = "A palavra é: " + CurrentPuzzle.question;
         }
         else
         {
-
+            //colocar sinais
         }
     }
 

@@ -23,6 +23,7 @@ public class CodexController : MonoBehaviour
 
     [SerializeField] private GameObject PreviousPageButton = null;
     [SerializeField] private GameObject NextPageButton = null;
+    [SerializeField] private GameObject IndexPageButton = null;
 
     [SerializeField] private GameObject PageObject = null;
     [SerializeField] private GameObject IndexObject = null;
@@ -90,6 +91,7 @@ public class CodexController : MonoBehaviour
 
     void UpdateContent(int chapterNumber, int pageNumber){
         ContentImage.sprite = codex.Chapters[chapterNumber].Pages[pageNumber].Content;
+        ContentImage.rectTransform.localPosition = new Vector3(0, -500, 0);
     }
 
     void UpdatePageButtons(int chapterNumber, int pageNumber){
@@ -118,6 +120,7 @@ public class CodexController : MonoBehaviour
     {
         for(int i = 0; i < codex.UnlockedChapters; i++)
         {
+            if (i >= codex.Chapters.Length) break;
             IndexChapterButtons[i].interactable = true;
         }
 
@@ -128,11 +131,11 @@ public class CodexController : MonoBehaviour
 
         if(codex.UnlockedChapters == 0)
         {
-            NextPageButton.SetActive(false);
+            IndexPageButton.SetActive(false);
         }
         else
         {
-            NextPageButton.SetActive(true);
+            IndexPageButton.SetActive(true);
         }
     }
 }
