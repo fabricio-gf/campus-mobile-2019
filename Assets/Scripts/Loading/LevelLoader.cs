@@ -13,17 +13,22 @@ public class LevelLoader : MonoBehaviour
     // PRIVATE ATTRIBUTES
     private float time = 0;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoadLevel("MenuFinal");
-        }
-    }
     public void LoadLevel(string SceneName)
     {
         time = 0;
         StartCoroutine(LoadAsynchronously(SceneName));
+    }
+
+    public void LoadCodexScene(string SceneName)
+    {
+        LoadingInfo.CodexReturnToSceneName = SceneManager.GetActiveScene().name;
+        LoadLevel(SceneName);
+    }
+
+    public void LoadPreviousScene()
+    {
+        time = 0;
+        StartCoroutine(LoadAsynchronously(LoadingInfo.CodexReturnToSceneName));
     }
 
     IEnumerator LoadAsynchronously (string SceneName)
@@ -48,7 +53,5 @@ public class LevelLoader : MonoBehaviour
             }
             yield return null;
         }
-
-
     }
 }

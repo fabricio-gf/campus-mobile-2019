@@ -59,7 +59,6 @@ public class SaveData
         gameData = LoadFromJson(path);
 
         //set codex
-        Debug.Log(gameData.Chapters);
         CodexDataManager.SetCodex(gameData.Chapters);
         OnCodexLoaded();
     }
