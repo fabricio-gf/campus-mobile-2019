@@ -8,14 +8,24 @@ public class SoundController : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if(instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
     }
+
+    /*public void MuteMusic(bool mute)
+    {
+        GetComponent<MusicController>().ToggleMuteMusic(mute);
+    }
+
+    public void MuteSFX(bool mute)
+    {
+        GetComponent<SFXController>().ToggleMuteSFX(mute);
+    }*/
 }

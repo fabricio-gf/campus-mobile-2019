@@ -41,7 +41,7 @@ public class SaveData
         //set progress in map/game
         ProgressDataManager.SetProgress(gameData.Progress);
 
-        OnProgressLoaded();
+        OnProgressLoaded?.Invoke();
     }
 
     public static void LoadDictionary(string path)

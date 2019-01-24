@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class GemChangeColor : MonoBehaviour
 {
-    [SerializeField] private Color CorrectColor;
-    [SerializeField] private Color WrongColor;
+    [SerializeField] private Color CorrectColor = Color.black;
+    [SerializeField] private Color WrongColor = Color.black;
 
     private Image GemImage;
 

@@ -30,18 +30,29 @@ public class PuzzleReferee : MonoBehaviour
 
     [SerializeField] private Text AnswerText = null;
 
-    [SerializeField] private List<Transform> AnswerSlots = null;
+    //[SerializeField] private List<Transform> AnswerSlots = null;
+    [SerializeField] private List<Transform> AnswerTopSlots = null;
+    [SerializeField] private List<Transform> AnswerBottomSlots = null;
+
     [SerializeField] private List<Transform> CardSlots = null;
     [SerializeField] private List<GemChangeColor> Gems = null;
 
-    [SerializeField] private Transform AnswerArea = null;
+    //[SerializeField] private Transform AnswerArea = null;
+    [SerializeField] private Transform AnswerTopArea = null;
+    [SerializeField] private Transform AnswerBottomArea = null;
+
     [SerializeField] private Transform GemsArea = null;
     [SerializeField] private Transform CardsArea = null;
 
 
-    [SerializeField] private GameObject SlotPrefab = null;
+    //[SerializeField] private GameObject SlotPrefab = null;
+    [SerializeField] private GameObject SlotTopPrefab = null;
+    [SerializeField] private GameObject SlotBottomPrefab = null;
+
     [SerializeField] private GameObject GemPrefab = null;
-    [SerializeField] private GameObject CardPrefab = null;
+    //[SerializeField] private GameObject CardPrefab = null;
+    [SerializeField] private GameObject CardTopPrefab = null;
+    [SerializeField] private GameObject CardBottomPrefab = null;
 
     [SerializeField] private Sprite[] LetterSprites = null;
     [SerializeField] private Sprite[] SignSprites = null;
@@ -52,7 +63,8 @@ public class PuzzleReferee : MonoBehaviour
         Alphabet = new List<char>();
         ResetAlphabet();
 
-        AnswerSlots = new List<Transform>();
+        AnswerTopSlots = new List<Transform>();
+        AnswerBottomSlots = new List<Transform>();
         CardSlots = new List<Transform>();
         CardObjects = new List<Transform>();
     }
@@ -76,7 +88,6 @@ public class PuzzleReferee : MonoBehaviour
 
         DestroySlots();
 
-        ShowAnswer();
         InitializeSlots();
         FillNecessaryLetters();
         FillRemainingLetters();
@@ -85,13 +96,19 @@ public class PuzzleReferee : MonoBehaviour
 
     void DestroySlots()
     {
-        for (int i = 0; i < AnswerSlots.Count; i++)
+        for (int i = 0; i < AnswerTopSlots.Count; i++)
         {
-            Destroy(AnswerSlots[i].gameObject);
+            Destroy(AnswerTopSlots[i].gameObject);
+            Destroy(AnswerBottomSlots[i].gameObject);
+
             Destroy(Gems[i].gameObject);
         }
-        AnswerSlots.Clear();
+
+        AnswerTopSlots.Clear();
+        AnswerBottomSlots.Clear();
+
         Gems.Clear();
+
         for (int i = 0; i < CardObjects.Count; i++)
         {
             Destroy(CardObjects[i].gameObject);
@@ -107,15 +124,36 @@ public class PuzzleReferee : MonoBehaviour
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz");
     }
 
-    void ShowAnswer()
+    void FillAnswer()
     {
-        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type2)
+        AnswerText.text = CurrentPuzzle.question;
+        GameObject obj;
+
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
         {
-            AnswerText.text = "A palavra é: " + CurrentPuzzle.question;
+            for(int i = 0; i < AnswerTopSlots.Count; i++)
+            {
+                Destroy(AnswerTopSlots[i].GetComponent<SlotBehaviour>());
+
+                obj = Instantiate(CardTopPrefab, AnswerTopSlots[i]);
+
+                Destroy(obj.GetComponent<CardBehaviour>());
+
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
+            }
         }
         else
         {
-            //colocar sinais
+            for (int i = 0; i < AnswerBottomSlots.Count; i++)
+            {
+                Destroy(AnswerBottomSlots[i].GetComponent<SlotBehaviour>());
+
+                obj = Instantiate(CardBottomPrefab, AnswerBottomSlots[i]);
+
+                Destroy(obj.GetComponent<CardBehaviour>());
+
+                obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i] - 97)];
+            }
         }
     }
 
@@ -123,22 +161,46 @@ public class PuzzleReferee : MonoBehaviour
     {
         int slotNumber = CalculateCardSlots();
         GameObject obj;
-        
-        for(int i = 0; i < Answer.Length; i++)
+
+        for (int i = 0; i < Answer.Length; i++)
         {
-            obj = Instantiate(SlotPrefab, AnswerArea);
+            obj = Instantiate(SlotTopPrefab, AnswerTopArea);
             obj.GetComponent<SlotBehaviour>().Referee = this;
-            AnswerSlots.Add(obj.transform);
+            AnswerTopSlots.Add(obj.transform);
+
+            obj = Instantiate(SlotBottomPrefab, AnswerBottomArea);
+            obj.GetComponent<SlotBehaviour>().Referee = this;
+            AnswerBottomSlots.Add(obj.transform);
 
             obj = Instantiate(GemPrefab, GemsArea);
             Gems.Add(obj.GetComponent<GemChangeColor>());
         }
-        for(int i = 0; i < slotNumber; i++)
-        {
-            obj = Instantiate(SlotPrefab, CardsArea);
-            obj.GetComponent<SlotBehaviour>().Referee = this;
 
-            CardSlots.Add(obj.transform);
+        FillAnswer();
+
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
+        {
+            CardsArea.GetComponent<GridLayoutGroup>().cellSize = new Vector2(101.5f,58);
+
+            for (int i = 0; i < slotNumber; i++)
+            {
+                obj = Instantiate(SlotBottomPrefab, CardsArea);
+                obj.GetComponent<SlotBehaviour>().Referee = this;
+
+                CardSlots.Add(obj.transform);
+            }
+        }
+        else
+        {
+            CardsArea.GetComponent<GridLayoutGroup>().cellSize = new Vector2(92.5f, 101.5f);
+
+            for (int i = 0; i < slotNumber; i++)
+            {
+                obj = Instantiate(SlotTopPrefab, CardsArea);
+                obj.GetComponent<SlotBehaviour>().Referee = this;
+
+                CardSlots.Add(obj.transform);
+            }
         }
     }
 
@@ -149,7 +211,7 @@ public class PuzzleReferee : MonoBehaviour
         {
             for (int i = 0; i < Answer.Length; i++)
             {
-                obj = Instantiate(CardPrefab);
+                obj = Instantiate(CardBottomPrefab);
                 CardObjects.Add(obj.transform);
 
                 obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
@@ -164,7 +226,7 @@ public class PuzzleReferee : MonoBehaviour
         {
             for (int i = 0; i < Answer.Length; i++)
             {
-                obj = Instantiate(CardPrefab);
+                obj = Instantiate(CardTopPrefab);
                 CardObjects.Add(obj.transform);
 
                 obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
@@ -184,7 +246,7 @@ public class PuzzleReferee : MonoBehaviour
         {
             for (int i = Answer.Length; i < CardSlots.Count; i++)
             {
-                obj = Instantiate(CardPrefab);
+                obj = Instantiate(CardBottomPrefab);
                 CardObjects.Add(obj.transform);
 
                 int randomIndex = Random.Range(0, Alphabet.Count);
@@ -202,7 +264,7 @@ public class PuzzleReferee : MonoBehaviour
         {
             for (int i = Answer.Length; i < CardSlots.Count; i++)
             {
-                obj = Instantiate(CardPrefab);
+                obj = Instantiate(CardTopPrefab);
                 CardObjects.Add(obj.transform);
 
                 int randomIndex = Random.Range(0, Alphabet.Count);
@@ -301,16 +363,34 @@ public class PuzzleReferee : MonoBehaviour
 
     public void HasChanged()
     {
-        for(int i = 0; i < AnswerSlots.Count; i++)
+        if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
         {
-            GameObject item = AnswerSlots[i].GetComponent<SlotBehaviour>().Item;
-            if (item)
+            for (int i = 0; i < AnswerBottomSlots.Count; i++)
             {
-                AddLetter(i, item.GetComponent<CardBehaviour>().CardValue);
+                GameObject item = AnswerBottomSlots[i].GetComponent<SlotBehaviour>().Item;
+                if (item)
+                {
+                    AddLetter(i, item.GetComponent<CardBehaviour>().CardValue);
+                }
+                else
+                {
+                    RemoveLetter(i);
+                }
             }
-            else
+        }
+        else
+        {
+            for (int i = 0; i < AnswerTopSlots.Count; i++)
             {
-                RemoveLetter(i);
+                GameObject item = AnswerTopSlots[i].GetComponent<SlotBehaviour>().Item;
+                if (item)
+                {
+                    AddLetter(i, item.GetComponent<CardBehaviour>().CardValue);
+                }
+                else
+                {
+                    RemoveLetter(i);
+                }
             }
         }
     }

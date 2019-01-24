@@ -6,7 +6,8 @@ using UnityEngine.EventSystems;
 public class CodexInteractable : Interactable
 {
     private DialogueTrigger dialogue;
-    [SerializeField] private CodexDataManager dataManager;
+    [SerializeField] private CodexDataManager dataManager = null;
+    [SerializeField] private int UnlockedChapter = 0;
 
     [SerializeField] private int ProgressLimit = 0;
 
@@ -28,9 +29,8 @@ public class CodexInteractable : Interactable
     {
         GetComponent<BoxCollider2D>().enabled = false;
         dialogue.TriggerDialogue();
-        dataManager.IncrementChapter();
-        //increment progress?
-
+        CodexDataManager.SetCodex(UnlockedChapter);
+        ProgressDataManager.SetProgress(ProgressLimit + 1);
     }
 
 

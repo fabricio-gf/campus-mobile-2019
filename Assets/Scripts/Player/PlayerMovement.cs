@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
     private bool CanMove;
     private int ImpassableLayerIndex;
     private Animator animator;
-    private bool IsStopped = true;
 
     void Awake()
     {
@@ -98,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
                 if (Mathf.Abs(JoystickDirection.x) > Mathf.Abs(JoystickDirection.y))
                 {
                     NextDirection = (Directions)(2 - (int)Mathf.Sign(JoystickDirection.x) * 1);
-                    IsStopped = false;
                 }
             }
             if (Mathf.Abs(JoystickDirection.y) > InputDeadZone)
@@ -106,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
                 if (Mathf.Abs(JoystickDirection.y) > Mathf.Abs(JoystickDirection.x))
                 {
                     NextDirection = (Directions)(1 - (int)Mathf.Sign(JoystickDirection.y) * 1);
-                    IsStopped = false;
                 }
             }
             if (Mathf.Abs(JoystickDirection.x) <= InputDeadZone && Mathf.Abs(JoystickDirection.y) <= InputDeadZone)

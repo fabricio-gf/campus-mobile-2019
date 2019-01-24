@@ -5,21 +5,20 @@ using UnityEngine;
 public class ProgressSaving : MonoBehaviour
 {
     public GameData data;
-    private CodexController codexController;
 
     public void StoreData()
     {
-        //data.Progress = ;
+        data.Progress = ProgressDataManager.CurrentProgress;
     }
 
     public void LoadData()
     {
-        //codexController.GoToIndex();
+        ProgressDataManager.CurrentProgress = data.Progress;
     }
 
     public void ApplyData()
     {
-        SaveData.AddCodexData(data.Progress);
+        SaveData.AddProgressData(data.Progress);
     }
 
     public void OnEnable()

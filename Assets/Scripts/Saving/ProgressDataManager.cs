@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProgressDataManager : DataManager
 {
     //public const string playerPath = "Prefabs/Player";
+    public static int CurrentProgress;
 
     private void Start()
     {
@@ -13,6 +14,7 @@ public class ProgressDataManager : DataManager
 
     public static void SetProgress(int progress)
     {
+        Debug.Log("current progress is " + CurrentProgress);
         switch (progress)
         {
             case 0:
@@ -24,10 +26,12 @@ public class ProgressDataManager : DataManager
             default:
                 break;
         }
-
+        CurrentProgress = progress;
+        Debug.Log("new progress is " + CurrentProgress);
     }
 
     public void LoadProgress()
     {
+        SaveData.LoadProgress(dataPath);
     }
 }

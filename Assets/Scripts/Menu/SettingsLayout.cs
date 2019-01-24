@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SettingsLayout : MonoBehaviour
 {
-    [SerializeField] private Toggle MuteMusicToggle;
-    [SerializeField] private Toggle MuteSFXToggle;
+    [SerializeField] private Toggle MuteMusicToggle = null;
+    [SerializeField] private Toggle MuteSFXToggle = null;
 
     private static string PrefsMusicString = "MusicMute";
     private static string PrefsSFXString = "SFXMute";

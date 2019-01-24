@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3908561319723448002}
   - component: {fileID: 3908561319723448003}
   m_Layer: 0
-  m_Name: Card
+  m_Name: CardTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 203, y: 301}
+  m_SizeDelta: {x: 203, y: 185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3908561319723448004
 CanvasRenderer:
@@ -143,7 +143,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4f421aed9eefdde4993425e5cde74879, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa954af61a669aa4395f721f6639d7e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

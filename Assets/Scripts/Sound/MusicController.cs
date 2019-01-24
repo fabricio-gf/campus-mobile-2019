@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MusicController : MonoBehaviour
 {
@@ -8,19 +10,19 @@ public class MusicController : MonoBehaviour
     public static AudioSource Source2 = null;
 
     // PUBLIC REFERENCES
+
     [Header("References")]
     public AudioClip MusicTrack;
     public float LoopDuration;
 
+
     // PRIVATE REFERENCES
-    //[SerializeField] private Transform SourceReference = null;
-    [SerializeField] private float FadeDuration = 0;
-    [SerializeField] private float BlendDuration = 0;
+    [SerializeField] private GameObject SourcePrefab = null;
+    private Toggle MusicMuteToggle = null;
 
     // PRIVATE ATTRIBUTES
-    [SerializeField] private AudioSource SourceReference1 = null;
-    [SerializeField] private AudioSource SourceReference2 = null;
-
+    [SerializeField] private float FadeDuration = 0;
+    [SerializeField] private float BlendDuration = 0;
     private int CurrentSource = 1;
     private bool IsFading = false;
     private bool IsBlending = false;
@@ -30,21 +32,20 @@ public class MusicController : MonoBehaviour
 
     void Awake()
     {
-        if (Source1 == null && Source2 == null)
-        {
-            Source1 = SourceReference1;
-            Source2 = SourceReference2;
-
-            DontDestroyOnLoad(SourceReference1.transform.parent.gameObject);
-        }
-        else if (Source1 != SourceReference1 || Source2 != SourceReference2)
-        {
-            Destroy(SourceReference1.transform.parent.gameObject);
-        }        
+        SceneManager.sceneLoaded += AddListenerToMuteButton;
     }
 
     private void Start()
     {
+        if (Source1 == null && Source2 == null)
+        {
+            GameObject obj = Instantiate(SourcePrefab, new Vector3(0, 0, -10), Quaternion.identity);
+            Source1 = obj.transform.GetChild(0).GetComponent<AudioSource>();
+            Source2 = obj.transform.GetChild(1).GetComponent<AudioSource>();
+
+            DontDestroyOnLoad(obj);
+        }
+
         Source1.clip = MusicTrack;
         if (!Source1.isPlaying)
         {
@@ -56,6 +57,16 @@ public class MusicController : MonoBehaviour
         {
             Source1.mute = true;
             Source2.mute = true;
+        }
+    }
+
+    void AddListenerToMuteButton(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MenuFinal")
+        {
+            //MusicMuteToggle = GameObject.FindGameObjectWithTag("MusicMuteToggle").GetComponent<Toggle>();
+            MusicMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[0];
+            MusicMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteMusic(mute));
         }
     }
 

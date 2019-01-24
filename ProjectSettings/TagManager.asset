@@ -12,6 +12,8 @@ TagManager:
   - SFXSource
   - Codex
   - Puzzle
+  - MusicMuteToggle
+  - SFXMuteToggle
   layers:
   - Default
   - TransparentFX

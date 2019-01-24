@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PuzzleInteractable : Interactable
 {
-    [SerializeField] private Puzzle[] puzzleList;
-    [SerializeField] private PuzzleReferee puzzleReferee;
+    [SerializeField] private Puzzle[] puzzleList = null;
+    [SerializeField] private PuzzleReferee puzzleReferee = null;
 
     [SerializeField] private int ProgressLimit = 0;
 
