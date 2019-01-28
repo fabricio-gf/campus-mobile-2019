@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataManager: {fileID: 304215006}
-  UnlockedChapter: 0
+  UnlockedChapter: 1
   ProgressLimit: 2
 --- !u!1 &238054113
 GameObject:

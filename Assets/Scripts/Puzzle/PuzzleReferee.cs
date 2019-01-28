@@ -342,6 +342,8 @@ public class PuzzleReferee : MonoBehaviour
         GridLayoutGroup grid = CardsArea.GetComponent<GridLayoutGroup>();
         switch (Answer.Length)
         {
+            case 1:
+                return 3;
             case 3:
                 grid.constraintCount = 3;
                 return 6;

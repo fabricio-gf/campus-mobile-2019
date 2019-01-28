@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b55466681d33e045b438825850b0310, type: 3}
+  m_Name: Challenge1
+  m_EditorClassIdentifier: 
+  ChallengeName: Vowels
+  Puzzles:
+  - {fileID: 11400000, guid: b96e5344d0b2f2942b396680381a8109, type: 2}
+  - {fileID: 11400000, guid: 585d91375d1b03246b5ff50945b6fdb1, type: 2}
+  - {fileID: 11400000, guid: f5e25201197c63b4da28a72c8353bcfa, type: 2}
+  - {fileID: 11400000, guid: d141f2fa97c79d94fb95fe96bd5c8c92, type: 2}
+  - {fileID: 11400000, guid: fb37518d97bfa704f92d8be0cf0e232f, type: 2}
+  InOrder: 0
+  Unlocked: 0
