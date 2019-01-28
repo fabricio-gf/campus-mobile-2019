@@ -7263,124 +7263,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643200777}
   m_CullTransparentMesh: 0
---- !u!1 &1657464989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1657464990}
-  - component: {fileID: 1657464991}
-  m_Layer: 0
-  m_Name: '@PuzzleReferee'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1657464990
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657464989}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 939796190}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1657464991
+--- !u!114 &1657464991 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3698135203703113151}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657464989}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c91edd9f00cfcc04c96dcc7e9904cdc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentPuzzle: {fileID: 11400000, guid: bde450bd58a4c464ea4da3d242af3e62, type: 2}
-  PuzzleObject: {fileID: 103436973568998713}
-  AnswerText: {fileID: 1010378186}
-  AnswerTopSlots: []
-  AnswerBottomSlots: []
-  CardSlots: []
-  Gems: []
-  AnswerTopArea: {fileID: 5144106344916349904}
-  AnswerBottomArea: {fileID: 5144106344916349903}
-  GemsArea: {fileID: 103436974283406164}
-  CardsArea: {fileID: 103436974283406162}
-  SlotTopPrefab: {fileID: 6341484130336351601, guid: 16ec2ef1a1471fd43a86e077eae7b03c,
-    type: 3}
-  SlotBottomPrefab: {fileID: 6341484130336351601, guid: ca735198914ce854ba177e3b5c129bf8,
-    type: 3}
-  GemPrefab: {fileID: 4883175642748363263, guid: 70db3f24cb572b84381514956f6ac13f,
-    type: 3}
-  CardTopPrefab: {fileID: 3908561319723448009, guid: 88d0eb07a5f357548a394bdc38ca204c,
-    type: 3}
-  CardBottomPrefab: {fileID: 3908561319723448009, guid: 1423fe56662dd8048825d1d0071c4cf9,
-    type: 3}
-  LetterSprites:
-  - {fileID: 21300000, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300002, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300004, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300006, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300008, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300010, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300012, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300014, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300016, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300018, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300020, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300022, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300024, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300026, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300028, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300030, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300032, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300034, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300036, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300038, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300040, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300042, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300044, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300046, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300048, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300050, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  SignSprites:
-  - {fileID: 21300000, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300002, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300004, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300006, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300008, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300010, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300012, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300014, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300016, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300018, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300020, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300022, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300024, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300026, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300028, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300030, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300032, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300034, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300036, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300038, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300040, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300042, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300044, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300046, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300048, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
-  - {fileID: 21300050, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
 --- !u!1 &1680887178
 GameObject:
   m_ObjectHideFlags: 0
@@ -8091,6 +7985,105 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79d363629484a7047b8312e6be36fb9c, type: 3}
+--- !u!1001 &3698135203703113151
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 939796190}
+    m_Modifications:
+    - target: {fileID: 3698135203212799266, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_Name
+      value: '@PuzzleReferee'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PuzzleObject
+      value: 
+      objectReference: {fileID: 103436973568998713}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerText
+      value: 
+      objectReference: {fileID: 1010378186}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerTopArea
+      value: 
+      objectReference: {fileID: 5144106344916349904}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerBottomArea
+      value: 
+      objectReference: {fileID: 5144106344916349903}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: GemsArea
+      value: 
+      objectReference: {fileID: 103436974283406164}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: CardsArea
+      value: 
+      objectReference: {fileID: 103436974283406162}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 617548176f4f6fa4bbaa3fe04660300b, type: 3}
 --- !u!1001 &5144106344916349902
 PrefabInstance:
   m_ObjectHideFlags: 0

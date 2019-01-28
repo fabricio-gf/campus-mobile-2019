@@ -9,11 +9,40 @@ public class PuzzleReferee : MonoBehaviour
     public static GameObject ItemBeingDragged;
     
     // PUBLIC ATTRIBUTES
-    //[HideInInspector]
+    public delegate void SerializeAction(bool result);
+    public event SerializeAction OnPuzzleEnd;
+
+    // PUBLIC REFERENCES
+    [HideInInspector]
     public Puzzle CurrentPuzzle;
 
-    public delegate void SerializeAction(bool result);
-    public event SerializeAction OnPuzzleVictory;
+    // PRIVATE REFERENCES
+    private List<Transform> AnswerTopSlots = null;
+    private List<Transform> AnswerBottomSlots = null;
+
+    private List<Transform> CardSlots = null;
+    private List<GemChangeColor> Gems = null;
+
+    // PRIVATE REFERENCES -- SERIALIZED
+    [SerializeField] private GameObject PuzzleObject = null;
+
+    [SerializeField] private Text AnswerText = null;
+
+    [SerializeField] private Transform AnswerTopArea = null;
+    [SerializeField] private Transform AnswerBottomArea = null;
+
+    [SerializeField] private Transform GemsArea = null;
+    [SerializeField] private Transform CardsArea = null;
+
+    [SerializeField] private GameObject SlotTopPrefab = null;
+    [SerializeField] private GameObject SlotBottomPrefab = null;
+
+    [SerializeField] private GameObject GemPrefab = null;
+    [SerializeField] private GameObject CardTopPrefab = null;
+    [SerializeField] private GameObject CardBottomPrefab = null;
+
+    [SerializeField] private Sprite[] LetterSprites = null;
+    [SerializeField] private Sprite[] SignSprites = null;
 
     // PRIVATE ATTRIBUTES
     private char[] Answer;
@@ -25,39 +54,8 @@ public class PuzzleReferee : MonoBehaviour
 
     private int TriesLeft = 5;
 
-    // PRIVATE REFERENCES
-    [SerializeField] private GameObject PuzzleObject = null;
+    // PRIVATE METHODS
 
-    [SerializeField] private Text AnswerText = null;
-
-    //[SerializeField] private List<Transform> AnswerSlots = null;
-    [SerializeField] private List<Transform> AnswerTopSlots = null;
-    [SerializeField] private List<Transform> AnswerBottomSlots = null;
-
-    [SerializeField] private List<Transform> CardSlots = null;
-    [SerializeField] private List<GemChangeColor> Gems = null;
-
-    //[SerializeField] private Transform AnswerArea = null;
-    [SerializeField] private Transform AnswerTopArea = null;
-    [SerializeField] private Transform AnswerBottomArea = null;
-
-    [SerializeField] private Transform GemsArea = null;
-    [SerializeField] private Transform CardsArea = null;
-
-
-    //[SerializeField] private GameObject SlotPrefab = null;
-    [SerializeField] private GameObject SlotTopPrefab = null;
-    [SerializeField] private GameObject SlotBottomPrefab = null;
-
-    [SerializeField] private GameObject GemPrefab = null;
-    //[SerializeField] private GameObject CardPrefab = null;
-    [SerializeField] private GameObject CardTopPrefab = null;
-    [SerializeField] private GameObject CardBottomPrefab = null;
-
-    [SerializeField] private Sprite[] LetterSprites = null;
-    [SerializeField] private Sprite[] SignSprites = null;
-
-    
     private void Awake()
     {
         Alphabet = new List<char>();
@@ -65,16 +63,17 @@ public class PuzzleReferee : MonoBehaviour
 
         AnswerTopSlots = new List<Transform>();
         AnswerBottomSlots = new List<Transform>();
+        Gems = new List<GemChangeColor>();
         CardSlots = new List<Transform>();
         CardObjects = new List<Transform>();
     }
 
+    // PUZZLE INITIALIZATION
     public void StartPuzzle(Puzzle newPuzzle)
     {
         PuzzleObject.SetActive(true);
 
         CurrentPuzzle = newPuzzle;
-
         Answer = CurrentPuzzle.answer;
         CurrentAnswer = new char[Answer.Length];
 
@@ -94,6 +93,9 @@ public class PuzzleReferee : MonoBehaviour
         ShuffleLetters();
     }
 
+    /// <summary>
+    /// Destroys the slot and card objects on the scene
+    /// </summary>
     void DestroySlots()
     {
         for (int i = 0; i < AnswerTopSlots.Count; i++)
@@ -124,6 +126,9 @@ public class PuzzleReferee : MonoBehaviour
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz");
     }
 
+    /// <summary>
+    /// Places the respective sprites for the expected answer to the puzzle
+    /// </summary>
     void FillAnswer()
     {
         AnswerText.text = CurrentPuzzle.question;
@@ -157,9 +162,13 @@ public class PuzzleReferee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawn slots for the answer and cards to stay
+    /// </summary>
     void InitializeSlots()
     {
         int slotNumber = CalculateCardSlots();
+
         GameObject obj;
 
         for (int i = 0; i < Answer.Length; i++)
@@ -204,6 +213,9 @@ public class PuzzleReferee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Fills the card selection with the necessary letters for the current puzzle
+    /// </summary>
     void FillNecessaryLetters()
     {
         GameObject obj;
@@ -239,6 +251,9 @@ public class PuzzleReferee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Fills the rest of the card selection with random letters
+    /// </summary>
     void FillRemainingLetters()
     {
         GameObject obj;
@@ -298,45 +313,26 @@ public class PuzzleReferee : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Sets a letter for the current answer in defined position
+    /// </summary>
     void AddLetter(int position, char letter)
     {
         CurrentAnswer[position] = letter;
     }
 
+    /// <summary>
+    /// Removes a letter for the current answer on the defined position
+    /// </summary>
     void RemoveLetter(int position)
     {
         CurrentAnswer[position] = ' ';
     }
-
-    public void CheckAnswer()
-    {
-        int incorrectLetters = 0;
-        for(int i = 0; i < Answer.Length; i++)
-        {
-            if (Answer[i] != CurrentAnswer[i])
-            {
-                incorrectLetters++;
-                Gems[i].ChangeColor(false);
-            }
-            else
-            {
-                Gems[i].ChangeColor(true);
-            }
-        }
-
-        if(incorrectLetters == 0)
-        {
-            //winner
-            print("winner");
-            OnPuzzleVictory?.Invoke(true);
-        }
-        else
-        {
-            //loser sound
-            //lose 1 life
-        }
-    }
-
+    
+    /// <summary>
+    /// Manual calculation for the number of letters offered to the puzzle answer
+    /// </summary>
+    /// <returns></returns>
     int CalculateCardSlots()
     {
         GridLayoutGroup grid = CardsArea.GetComponent<GridLayoutGroup>();
@@ -363,6 +359,42 @@ public class PuzzleReferee : MonoBehaviour
         return 6;
     }
 
+    // PUBLIC METHODS
+
+    /// <summary>
+    /// Checks if the current answer is correct
+    /// </summary>
+    public void CheckAnswer()
+    {
+        int incorrectLetters = 0;
+        for (int i = 0; i < Answer.Length; i++)
+        {
+            if (Answer[i] != CurrentAnswer[i])
+            {
+                incorrectLetters++;
+                Gems[i].ChangeColor(false);
+            }
+            else
+            {
+                Gems[i].ChangeColor(true);
+            }
+        }
+
+        if (incorrectLetters == 0)
+        {
+            //winner
+            OnPuzzleEnd?.Invoke(true);
+        }
+        else
+        {
+            //loser sound
+            //lose 1 life
+        }
+    }
+
+    /// <summary>
+    /// Is called whenever an answer slot content is changed
+    /// </summary>
     public void HasChanged()
     {
         if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
@@ -408,4 +440,5 @@ public class PuzzleReferee : MonoBehaviour
         // delete objects
         DestroySlots();
     }
+
 }

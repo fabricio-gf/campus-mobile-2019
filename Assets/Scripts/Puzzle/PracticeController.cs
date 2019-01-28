@@ -13,7 +13,7 @@ public class PracticeController : MonoBehaviour
     private void Start()
     {
         Referee = GetComponent<PuzzleReferee>();
-        Referee.OnPuzzleVictory += FinishPuzzle;
+        Referee.OnPuzzleEnd += FinishPuzzle;
     }
 
     public void StartAnotherPuzzle()
