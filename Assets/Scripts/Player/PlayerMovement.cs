@@ -54,13 +54,21 @@ public class PlayerMovement : MonoBehaviour
 
     // moves the player sprite in the game world
     void FixedUpdate(){
-        if(Vector3.Distance(transform.position, TargetPosition) >= 0.005){
+        if (Vector3.Distance(transform.position, TargetPosition) >= 0.005)
+        {
             CanMove = false;
-            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MovementSpeed*Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, TargetPosition, MovementSpeed * Time.deltaTime);
             Rotate();
+            animator.SetBool("IsWalking", true);
         }
-        else{
+        else
+        {
             CanMove = true;
+            //check analog
+            Vector2 analog = (Vector3.right * Joystick.Horizontal + Vector3.up * Joystick.Vertical);
+            if (Mathf.Abs(analog.x) <= InputDeadZone && Mathf.Abs(analog.y) <= InputDeadZone) { 
+                animator.SetBool("IsWalking", false);
+            }
         }
     }
 
@@ -153,18 +161,22 @@ public class PlayerMovement : MonoBehaviour
             case PlayerMovement.Directions.UP:
                 animator.SetFloat("Horizontal", 0);
                 animator.SetFloat("Vertical", 1);
+                animator.SetFloat("Facing", 1);
                 break;
             case PlayerMovement.Directions.RIGHT:
                 animator.SetFloat("Horizontal", 1);
                 animator.SetFloat("Vertical", 0);
+                animator.SetFloat("Facing", 0.7f);
                 break;
             case PlayerMovement.Directions.DOWN:
                 animator.SetFloat("Horizontal", 0);
                 animator.SetFloat("Vertical", -1);
+                animator.SetFloat("Facing", 0);
                 break;
             case PlayerMovement.Directions.LEFT:
                 animator.SetFloat("Horizontal", -1);
                 animator.SetFloat("Vertical", 0);
+                animator.SetFloat("Facing", 0.3f);
                 break;
             default:
                 animator.SetFloat("Horizontal", 0);

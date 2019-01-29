@@ -54,6 +54,7 @@ public class PuzzleReferee : MonoBehaviour
     private List<char> Alphabet;
 
     private int TriesLeft = 5;
+    [HideInInspector] public bool CarryOverTries = false;
 
     // PRIVATE METHODS
 
@@ -100,7 +101,10 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
-        TriesLeft = CurrentPuzzle.tries;
+        if (!CarryOverTries)
+        {
+            TriesLeft = CurrentPuzzle.tries;
+        }
         TriesText.text = "Tentativas: " + TriesLeft;
 
         DestroySlots();
@@ -487,6 +491,11 @@ public class PuzzleReferee : MonoBehaviour
     {
         // delete objects
         DestroySlots();
+    }
+
+    public void SetTriesLeft(int tries)
+    {
+        TriesLeft = tries;
     }
 
 }
