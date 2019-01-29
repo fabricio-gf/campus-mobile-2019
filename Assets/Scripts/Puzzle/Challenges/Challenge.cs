@@ -8,4 +8,8 @@ public class Challenge : ScriptableObject
     public int CompletedPuzzles;
     public bool InOrder;
     public bool Unlocked;
+    public int ProgressToUnlock;
+
+    public bool VowelOnly;
+    public bool ConsonantOnly;
 }

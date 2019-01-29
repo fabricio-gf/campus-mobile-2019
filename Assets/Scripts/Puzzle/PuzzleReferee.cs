@@ -27,6 +27,7 @@ public class PuzzleReferee : MonoBehaviour
     [SerializeField] private GameObject PuzzleObject = null;
 
     [SerializeField] private Text AnswerText = null;
+    [SerializeField] private Text TriesText = null;
 
     [SerializeField] private Transform AnswerTopArea = null;
     [SerializeField] private Transform AnswerBottomArea = null;
@@ -78,12 +79,29 @@ public class PuzzleReferee : MonoBehaviour
         CurrentAnswer = new char[Answer.Length];
 
         SetupPuzzle();
+
+        ResetAlphabet();
+    }
+
+    public void StartPuzzle(Puzzle newPuzzle, bool VowelOnly, bool ConsonantOnly)
+    {
+        if (VowelOnly && !ConsonantOnly)
+        {
+            SetupVowelAlphabet();
+        }
+        else if (ConsonantOnly && !VowelOnly)
+        {
+            SetupConsonantAlphabet();
+        }
+
+        StartPuzzle(newPuzzle);
     }
 
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
         TriesLeft = CurrentPuzzle.tries;
+        TriesText.text = "Tentativas: " + TriesLeft;
 
         DestroySlots();
 
@@ -124,6 +142,18 @@ public class PuzzleReferee : MonoBehaviour
     {
         Alphabet.Clear();
         Alphabet.AddRange("abcdefghijklmnopqrstuvwxyz");
+    }
+
+    void SetupVowelAlphabet()
+    {
+        Alphabet.Clear();
+        Alphabet.AddRange("a---e---i-----o-----u-----");
+    }
+
+    void SetupConsonantAlphabet()
+    {
+        Alphabet.Clear();
+        Alphabet.AddRange("-bcd-fgh-jklmn-pqrst-vwxyz");
     }
 
     /// <summary>
@@ -230,8 +260,12 @@ public class PuzzleReferee : MonoBehaviour
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i]-97)];
 
+                if (CurrentPuzzle.noRepetition)
+                {
+                    int letterIndex = Alphabet.IndexOf(Answer[i]);
+                    Alphabet[letterIndex] = '-';
+                }
                 //Alphabet.Remove(Answer[i]);
-
             }
         }
         else
@@ -245,8 +279,12 @@ public class PuzzleReferee : MonoBehaviour
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
 
-                //Alphabet.Remove(Answer[i]);
-
+                if (CurrentPuzzle.noRepetition)
+                {
+                    int letterIndex = Alphabet.IndexOf(Answer[i]);
+                    Alphabet[letterIndex] = '-';
+                }
+                //if(CurrentPuzzle.noRepetition) Alphabet.Remove(Answer[i]);
             }
         }
     }
@@ -264,15 +302,16 @@ public class PuzzleReferee : MonoBehaviour
                 obj = Instantiate(CardBottomPrefab);
                 CardObjects.Add(obj.transform);
 
-                int randomIndex = Random.Range(0, Alphabet.Count);
-                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
+                int randomIndex = 0;
+                randomIndex = Random.Range(0, Alphabet.Count);
+                while (Alphabet[randomIndex] == '-') { 
+                    randomIndex = Random.Range(0, Alphabet.Count);
+                }
 
+                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[randomIndex];
 
-
-                //Alphabet.RemoveAt(randomIndex);
-
-
+                if (CurrentPuzzle.noRepetition) Alphabet[randomIndex] = '-';
             }
         }
         else 
@@ -282,14 +321,18 @@ public class PuzzleReferee : MonoBehaviour
                 obj = Instantiate(CardTopPrefab);
                 CardObjects.Add(obj.transform);
 
-                int randomIndex = Random.Range(0, Alphabet.Count);
+                int randomIndex = 0;
+                randomIndex = Random.Range(0, Alphabet.Count);
+                while (Alphabet[randomIndex] == '-')
+                {
+                    randomIndex = Random.Range(0, Alphabet.Count);
+                }
+
                 obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[randomIndex];
 
-
-                //Alphabet.RemoveAt(randomIndex);
-
+                if (CurrentPuzzle.noRepetition) Alphabet[randomIndex] = '-';
             }
         }
     }
@@ -387,8 +430,13 @@ public class PuzzleReferee : MonoBehaviour
         }
         else
         {
-            //loser sound
-            //lose 1 life
+            TriesLeft--;
+            TriesText.text = "Tentativas: " + TriesLeft;
+            if (TriesLeft <= 0)
+            {
+                OnPuzzleEnd?.Invoke(false);
+                ClosePuzzle();
+            }
         }
     }
 

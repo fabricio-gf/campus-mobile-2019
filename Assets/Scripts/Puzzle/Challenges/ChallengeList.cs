@@ -28,6 +28,10 @@ public class ChallengeList : MonoBehaviour
             obj.transform.GetComponentInChildren<Text>().text = Challenges[i].ChallengeName;
             
             Buttons.Add(obj.GetComponent<Button>());
+            if (!Challenges[i].Unlocked && Challenges[i].ProgressToUnlock <= ProgressDataManager.CurrentChallengeProgress)
+            {
+                Challenges[i].Unlocked = true;
+            }
             if (Challenges[i].Unlocked)
             {
                 Buttons[i].interactable = true;
@@ -39,35 +43,48 @@ public class ChallengeList : MonoBehaviour
                 completionText.text = Challenges[i].CompletedPuzzles + " / " + Challenges[i].Puzzles.Length;
 
                 int index = i;
+                Buttons[i].onClick.RemoveAllListeners();
                 Buttons[i].onClick.AddListener(() => OpenChallenge(index));
+            }
+            else
+            {
+                Challenges[i].CompletedPuzzles = 0;
             }
         }
     }
 
     public void OpenChallenge(int challengeIndex)
     {
-        print("hello " + challengeIndex);
-        puzzleSequence.StartPuzzleSequence(Challenges[challengeIndex].Puzzles);
+        puzzleSequence.StartPuzzleSequence(Challenges[challengeIndex]);
     }
 
-    void UpdateButtonsState()
+    public void UpdateButtonsState()
     {
         for(int i = 0; i < Challenges.Length; i++)
         {
+            if (!Challenges[i].Unlocked && Challenges[i].ProgressToUnlock <= ProgressDataManager.CurrentChallengeProgress)
+            {
+                Challenges[i].Unlocked = true;
+            }
             if (Challenges[i].Unlocked)
             {
                 Buttons[i].interactable = true;
-                //change lock sprite
-                //hide puzzle count
-            }
-            else
-            {
 
+                Transform child = Buttons[i].transform.GetChild(1);
+                child.GetComponent<Image>().sprite = UnlockedIcon;
+
+                Text completionText = child.GetChild(0).GetComponent<Text>();
+                completionText.text = Challenges[i].CompletedPuzzles + " / " + Challenges[i].Puzzles.Length;
+
+                int index = i;
+                Buttons[i].onClick.RemoveAllListeners();
+                Buttons[i].onClick.AddListener(() => OpenChallenge(index));
             }
         }
     }
 
     void CloseWindow() {
+        
     }
 
 }

@@ -209,6 +209,11 @@ PrefabInstance:
       propertyPath: CardsArea
       value: 
       objectReference: {fileID: 566254871}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: TriesText
+      value: 
+      objectReference: {fileID: 951430661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 617548176f4f6fa4bbaa3fe04660300b, type: 3}
 --- !u!1001 &566254870
@@ -468,6 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a6672d6ccc6f24da1616ab897ce58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  challengesList: {fileID: 871004296}
 --- !u!114 &752456744 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
@@ -486,6 +492,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4185231583519460622}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &871004296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4185231583235945863, guid: 5d535c69a296c3040b2c15fc6a5be389,
+    type: 3}
+  m_PrefabInstance: {fileID: 4185231583519460622}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871004294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e12f84351d8c94485c0602098e85e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &951430661 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 871955436155905712, guid: d29ae42af221cee49b79be6c05c1f0f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 566254870}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &976850559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -606,6 +636,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d855d0f18cf881a439e9102dc00188e1, type: 3}
+--- !u!1 &2011101001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2011101002}
+  - component: {fileID: 2011101003}
+  - component: {fileID: 2011101004}
+  m_Layer: 0
+  m_Name: '@ProgressManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2011101002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011101001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 976850560}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011101003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011101001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269878e63ea479f4a9e6d0ba251eab6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    PlayerPos: {x: 0, y: 0}
+    Progress: 0
+    ChallengeProgress: 0
+    DictionaryProgress: 0
+    Chapters: 0
+--- !u!114 &2011101004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011101001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb8f92fa1110d024aa7db0f3884b12f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2137782389
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class SaveData
     private const float InitialPlayerPosX = -5.5f;
     private const float InitialPlayerPosY = -3.5f;
     private const int InitialProgress = 0;
+    private const int InitialChallengeProgress = 0;
     private const int InitialDictionaryProgress = 0;
     private const int InitialChapters = 0;
     //private const int[] InitialPages = 
@@ -40,6 +41,7 @@ public class SaveData
 
         //set progress in map/game
         ProgressDataManager.SetProgress(gameData.Progress);
+        ProgressDataManager.SetChallengeProgress(gameData.ChallengeProgress);
 
         OnProgressLoaded?.Invoke();
     }
@@ -80,9 +82,10 @@ public class SaveData
         gameData.Chapters = chapters;
     }
 
-    public static void AddProgressData(int progress)
+    public static void AddProgressData(int progress, int challengeProgress)
     {
         gameData.Progress = progress;
+        gameData.ChallengeProgress = challengeProgress;
     }
 
     public static void AddDictionaryProgressData(int dictionaryProgress)
@@ -92,7 +95,7 @@ public class SaveData
 
     public static void ResetSave(string path)
     {
-        gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialDictionaryProgress, InitialChapters);
+        gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialChallengeProgress, InitialDictionaryProgress, InitialChapters);
 
         SaveToJson(path, gameData);
     }
@@ -103,7 +106,7 @@ public class SaveData
         {
             Debug.Log("it does not exist");
             //initialize a new game data with initial values
-            gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialDictionaryProgress, InitialChapters);
+            gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialChallengeProgress, InitialDictionaryProgress, InitialChapters);
 
             SaveToJson(path, gameData);
             if (File.Exists(path))
@@ -131,5 +134,11 @@ public class SaveData
     {
         GameData data = LoadFromJson(path);
         return data.Progress;
+    }
+
+    public static int CheckChallengeProgress(string path)
+    {
+        GameData data = LoadFromJson(path);
+        return data.ChallengeProgress;
     }
 }

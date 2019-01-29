@@ -21,4 +21,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb37518d97bfa704f92d8be0cf0e232f, type: 2}
   CompletedPuzzles: 0
   InOrder: 0
-  Unlocked: 1
+  Unlocked: 0
+  ProgressToUnlock: 0
+  VowelOnly: 1
+  ConsonantOnly: 0

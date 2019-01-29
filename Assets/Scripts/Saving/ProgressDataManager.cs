@@ -6,6 +6,7 @@ public class ProgressDataManager : DataManager
 {
     //public const string playerPath = "Prefabs/Player";
     public static int CurrentProgress;
+    public static int CurrentChallengeProgress;
 
     private void Start()
     {
@@ -28,6 +29,13 @@ public class ProgressDataManager : DataManager
         }
         CurrentProgress = progress;
         Debug.Log("new progress is " + CurrentProgress);
+    }
+
+    public static void SetChallengeProgress(int progress)
+    {
+        Debug.Log("current challenge progress is " + CurrentChallengeProgress);
+        CurrentChallengeProgress = progress;
+        Debug.Log("new challenge progress is " + CurrentChallengeProgress);
     }
 
     public void LoadProgress()

@@ -16,3 +16,4 @@ MonoBehaviour:
   question: 
   answer: 7900
   tries: 3
+  noRepetition: 1

@@ -28,3 +28,6 @@ MonoBehaviour:
   CompletedPuzzles: 0
   InOrder: 0
   Unlocked: 0
+  ProgressToUnlock: 2
+  VowelOnly: 0
+  ConsonantOnly: 1
