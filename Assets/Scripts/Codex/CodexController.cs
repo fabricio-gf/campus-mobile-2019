@@ -7,6 +7,7 @@ public class CodexController : MonoBehaviour
     private int CurrentChapter = 0;
     private int CurrentPage = 0;
     private bool IsInIndex = true;
+    private GameObject CurrentObject = null;
 
     [Header("References")]
     // PUBLIC REFERENCES
@@ -27,6 +28,7 @@ public class CodexController : MonoBehaviour
 
     [SerializeField] private GameObject PageObject = null;
     [SerializeField] private GameObject IndexObject = null;
+    [SerializeField] private GameObject ChallengesObject = null;
 
 
     public void PreviousPage(){
@@ -61,6 +63,7 @@ public class CodexController : MonoBehaviour
         if(IsInIndex){
             IndexObject.SetActive(false);
             PageObject.SetActive(true);
+            CurrentObject = PageObject;
         }
         CurrentChapter = chapterNumber;
         CurrentPage = 0;
@@ -111,7 +114,7 @@ public class CodexController : MonoBehaviour
     // METHODS FOR INDEX CHAPTER
 
     public void GoToIndex(){
-        PageObject.SetActive(false);
+        CurrentObject?.SetActive(false);
         UpdateIndex();
         IndexObject.SetActive(true);
     }
@@ -137,5 +140,14 @@ public class CodexController : MonoBehaviour
         {
             IndexPageButton.SetActive(true);
         }
+    }
+
+    // METHODS FOR CHALLENGE CHAPTER
+
+    public void GoToChallenges()
+    {
+        IndexObject.SetActive(false);
+        ChallengesObject.SetActive(true);
+        CurrentObject = ChallengesObject;
     }
 }

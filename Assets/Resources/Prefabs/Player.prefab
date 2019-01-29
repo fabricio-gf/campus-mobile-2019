@@ -96,9 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd598505e89606643a41eb6a8a345ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 5
+  FacingDirection: 0
+  MovementSpeed: 2.5
   InputDeadZone: 0.25
-  InitialInputDelay: 1
+  InitialInputDelay: 0.5
 --- !u!114 &692709694827373338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,7 @@ MonoBehaviour:
   data:
     PlayerPos: {x: 0, y: 0}
     Progress: 0
+    ChallengeProgress: 0
     DictionaryProgress: 0
     Chapters: 0
 --- !u!61 &4856878018924089134
