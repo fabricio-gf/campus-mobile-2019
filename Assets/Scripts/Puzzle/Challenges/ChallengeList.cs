@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class ChallengeList : MonoBehaviour
 {
     private List<Button> Buttons;
-    [SerializeField] private GameObject ButtonPrefab;
-    [SerializeField] private Sprite UnlockedIcon;
+    [SerializeField] private GameObject ButtonPrefab = null;
+    [SerializeField] private Sprite UnlockedIcon = null;
 
-    [SerializeField] private Challenge[] Challenges;
+    [SerializeField] private Challenge[] Challenges = null;
 
-    [SerializeField] private PuzzleSequence puzzleSequence;
+    [SerializeField] private PuzzleSequence puzzleSequence = null;
 
     void Awake()
     {

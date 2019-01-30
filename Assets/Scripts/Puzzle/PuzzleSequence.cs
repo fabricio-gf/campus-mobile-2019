@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PuzzleSequence : MonoBehaviour
 {
-    private PuzzleReferee Referee;
-    private int PuzzleIndex;
-    private Challenge challenge;
-    private Puzzle[] Puzzles;
-    [SerializeField] private ChallengeList challengesList;
+    private PuzzleReferee Referee = null;
+    private int PuzzleIndex = 0;
+    private Challenge challenge = null;
+    private Puzzle[] Puzzles = null;
+    [SerializeField] private ChallengeList challengesList = null;
 
     private void Awake()
     {

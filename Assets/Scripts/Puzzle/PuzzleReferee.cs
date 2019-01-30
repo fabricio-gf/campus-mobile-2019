@@ -223,8 +223,6 @@ public class PuzzleReferee : MonoBehaviour
 
         if (CurrentPuzzle.type == Puzzle.PuzzleType.Type1)
         {
-            CardsArea.GetComponent<GridLayoutGroup>().cellSize = new Vector2(101.5f,58);
-
             for (int i = 0; i < slotNumber; i++)
             {
                 obj = Instantiate(SlotBottomPrefab, CardsArea);
@@ -235,8 +233,6 @@ public class PuzzleReferee : MonoBehaviour
         }
         else
         {
-            CardsArea.GetComponent<GridLayoutGroup>().cellSize = new Vector2(92.5f, 101.5f);
-
             for (int i = 0; i < slotNumber; i++)
             {
                 obj = Instantiate(SlotTopPrefab, CardsArea);
@@ -260,7 +256,9 @@ public class PuzzleReferee : MonoBehaviour
                 obj = Instantiate(CardBottomPrefab);
                 CardObjects.Add(obj.transform);
 
-                obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.CardValue = Answer[i];
+                cb.SetCardSize(Answer.Length, (int)CurrentPuzzle.type);
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i]-97)];
 
@@ -279,7 +277,9 @@ public class PuzzleReferee : MonoBehaviour
                 obj = Instantiate(CardTopPrefab);
                 CardObjects.Add(obj.transform);
 
-                obj.GetComponent<CardBehaviour>().CardValue = Answer[i];
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.CardValue = Answer[i];
+                cb.SetCardSize(Answer.Length, (int)CurrentPuzzle.type);
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
 
@@ -312,7 +312,10 @@ public class PuzzleReferee : MonoBehaviour
                     randomIndex = Random.Range(0, Alphabet.Count);
                 }
 
-                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.CardValue = Alphabet[randomIndex];
+                cb.SetCardSize(Answer.Length, (int)CurrentPuzzle.type);
+
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[randomIndex];
 
                 if (CurrentPuzzle.noRepetition) Alphabet[randomIndex] = '-';
@@ -332,7 +335,9 @@ public class PuzzleReferee : MonoBehaviour
                     randomIndex = Random.Range(0, Alphabet.Count);
                 }
 
-                obj.GetComponent<CardBehaviour>().CardValue = Alphabet[randomIndex];
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.CardValue = Alphabet[randomIndex];
+                cb.SetCardSize(Answer.Length, (int)CurrentPuzzle.type);
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[randomIndex];
 
@@ -382,27 +387,33 @@ public class PuzzleReferee : MonoBehaviour
     /// <returns></returns>
     int CalculateCardSlots()
     {
-        GridLayoutGroup grid = CardsArea.GetComponent<GridLayoutGroup>();
+        GridBehaviour grid = CardsArea.GetComponent<GridBehaviour>();
         switch (Answer.Length)
         {
             case 1:
+                grid.ChangeGridParameters(1, (int)CurrentPuzzle.type);
                 return 3;
             case 3:
-                grid.constraintCount = 3;
+                grid.ChangeGridParameters(3, (int)CurrentPuzzle.type);
+                //grid.constraintCount = 3;
                 return 6;
             case 4:
-                grid.constraintCount = 5;
-                return 10;
+                grid.ChangeGridParameters(4, (int)CurrentPuzzle.type);
+                //grid.constraintCount = 5;
+                return 9;
             case 5:
-                grid.constraintCount = 4;
+                grid.ChangeGridParameters(5, (int)CurrentPuzzle.type);
+                //grid.constraintCount = 4;
                 return 12;
             case 6:
-                grid.constraintCount = 5;
+                grid.ChangeGridParameters(6, (int)CurrentPuzzle.type);
+                //grid.constraintCount = 5;
                 return 15;
             default:
                 break;
         }
-        grid.constraintCount = 3;
+        grid.ChangeGridParameters(3, (int)CurrentPuzzle.type);
+        //grid.constraintCount = 3;
         return 6;
     }
 

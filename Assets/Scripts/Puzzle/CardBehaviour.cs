@@ -36,7 +36,7 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
 #if UNITY_ANDROID
-        //transform.position = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, ZPosition);
+        transform.position = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, ZPosition);
 #endif
 #if UNITY_EDITOR
         transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ZPosition);
@@ -57,5 +57,45 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void UpdatePosition(){
         transform.localPosition = Vector3.zero;
+    }
+
+    public void SetCardSize(int caseNumber, int cardType)
+    {
+        if (cardType == 0)
+        {
+            switch (caseNumber)
+            {
+                case 1:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (cardType == 1)
+        {
+            switch (caseNumber)
+            {
+                case 1:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
