@@ -36,11 +36,13 @@ public class PracticeController : MonoBehaviour
 
     Puzzle GetRandomPuzzle(Puzzle oldPuzzle)
     {
-        if(PuzzleList.Count <= 0)
+        if (oldPuzzle != null) PuzzleList.Remove(oldPuzzle);
+        if (PuzzleList.Count <= 0)
         {
             PuzzleList = new List<Puzzle>(OriginalPuzzleList);
         }
-        if(oldPuzzle != null) PuzzleList.Remove(oldPuzzle);
+        //if (oldPuzzle != null) PuzzleList.Remove(oldPuzzle);
+
         Puzzle newPuzzle = PuzzleList[Random.Range(0, PuzzleList.Count)];
         return newPuzzle;
     }

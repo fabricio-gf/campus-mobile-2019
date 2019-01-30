@@ -880,51 +880,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CheckAnswer
       objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 565901500076216947, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -935,31 +890,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ClosePuzzle
       objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+    - target: {fileID: 4021305908255887504, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+    - target: {fileID: 4619487589682642874, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1712325643}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: UpdateButtonsState
-      objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1805415263}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29ae42af221cee49b79be6c05c1f0f0, type: 3}
 --- !u!224 &760009231 stripped
@@ -1787,6 +1727,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: '@PuzzleReferee'
       objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PuzzleObject
+      value: 
+      objectReference: {fileID: 760009237}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerText
+      value: 
+      objectReference: {fileID: 760009235}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: TriesText
+      value: 
+      objectReference: {fileID: 760009236}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerTopArea
+      value: 
+      objectReference: {fileID: 760009234}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: AnswerBottomArea
+      value: 
+      objectReference: {fileID: 760009233}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: GemsArea
+      value: 
+      objectReference: {fileID: 760009232}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: CardsArea
+      value: 
+      objectReference: {fileID: 760009231}
     - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1842,41 +1817,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: PuzzleObject
-      value: 
-      objectReference: {fileID: 760009237}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: AnswerText
-      value: 
-      objectReference: {fileID: 760009235}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: TriesText
-      value: 
-      objectReference: {fileID: 760009236}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: AnswerTopArea
-      value: 
-      objectReference: {fileID: 760009234}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: AnswerBottomArea
-      value: 
-      objectReference: {fileID: 760009233}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: GemsArea
-      value: 
-      objectReference: {fileID: 760009232}
-    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
-        type: 3}
-      propertyPath: CardsArea
-      value: 
-      objectReference: {fileID: 760009231}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 617548176f4f6fa4bbaa3fe04660300b, type: 3}
 --- !u!1 &1805415263 stripped
@@ -3083,7 +3023,7 @@ PrefabInstance:
     - target: {fileID: 2283119191413435823, guid: 0e2a9c76ead3ae64e80f6063438953f4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 68.599976
+      value: 68.59985
       objectReference: {fileID: 0}
     - target: {fileID: 2283119190394482332, guid: 0e2a9c76ead3ae64e80f6063438953f4,
         type: 3}

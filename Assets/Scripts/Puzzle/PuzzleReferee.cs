@@ -176,7 +176,9 @@ public class PuzzleReferee : MonoBehaviour
 
                 obj = Instantiate(CardTopPrefab, AnswerTopSlots[i]);
 
-                Destroy(obj.GetComponent<CardBehaviour>());
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.SetCardSize(Answer.Length, 1);
+                Destroy(cb);
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = SignSprites[(int)(Answer[i] - 97)];
             }
@@ -189,7 +191,9 @@ public class PuzzleReferee : MonoBehaviour
 
                 obj = Instantiate(CardBottomPrefab, AnswerBottomSlots[i]);
 
-                Destroy(obj.GetComponent<CardBehaviour>());
+                CardBehaviour cb = obj.GetComponent<CardBehaviour>();
+                cb.SetCardSize(Answer.Length, 0);
+                Destroy(cb);
 
                 obj.transform.GetChild(0).GetComponent<Image>().sprite = LetterSprites[(int)(Answer[i] - 97)];
             }
@@ -204,16 +208,24 @@ public class PuzzleReferee : MonoBehaviour
         int slotNumber = CalculateCardSlots();
 
         GameObject obj;
+        SlotBehaviour sb;
+        AnswerTopArea.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 1);
+        AnswerBottomArea.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 0);
 
         for (int i = 0; i < Answer.Length; i++)
         {
             obj = Instantiate(SlotTopPrefab, AnswerTopArea);
-            obj.GetComponent<SlotBehaviour>().Referee = this;
             AnswerTopSlots.Add(obj.transform);
+            sb = obj.GetComponent<SlotBehaviour>();
+            sb.Referee = this;
+            sb.ChangeSize(Answer.Length, 1);
 
             obj = Instantiate(SlotBottomPrefab, AnswerBottomArea);
-            obj.GetComponent<SlotBehaviour>().Referee = this;
             AnswerBottomSlots.Add(obj.transform);
+            sb = obj.GetComponent<SlotBehaviour>();
+            sb.Referee = this;
+            sb.ChangeSize(Answer.Length, 0);
+
 
             obj = Instantiate(GemPrefab, GemsArea);
             Gems.Add(obj.GetComponent<GemChangeColor>());
@@ -388,6 +400,7 @@ public class PuzzleReferee : MonoBehaviour
     int CalculateCardSlots()
     {
         GridBehaviour grid = CardsArea.GetComponent<GridBehaviour>();
+
         switch (Answer.Length)
         {
             case 1:

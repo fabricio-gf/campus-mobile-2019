@@ -36,7 +36,7 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
 #if UNITY_ANDROID
-        transform.position = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, ZPosition);
+        //transform.position = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, ZPosition);
 #endif
 #if UNITY_EDITOR
         transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, ZPosition);
@@ -61,19 +61,25 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void SetCardSize(int caseNumber, int cardType)
     {
+        RectTransform MyTransform = GetComponent<RectTransform>();
         if (cardType == 0)
         {
             switch (caseNumber)
             {
                 case 1:
+                    MyTransform.sizeDelta = new Vector2(145.25f, 83);
                     break;
                 case 3:
+                    MyTransform.sizeDelta = new Vector2(145.25f, 83);
                     break;
                 case 4:
+                    MyTransform.sizeDelta = new Vector2(117, 54.25f);
                     break;
                 case 5:
+                    MyTransform.sizeDelta = new Vector2(111, 63);
                     break;
                 case 6:
+                    MyTransform.sizeDelta = new Vector2(89, 51.75f);
                     break;
                 default:
                     break;
@@ -84,14 +90,19 @@ public class CardBehaviour : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             switch (caseNumber)
             {
                 case 1:
+                    MyTransform.sizeDelta = new Vector2(145.25f, 130);
                     break;
                 case 3:
+                    MyTransform.sizeDelta = new Vector2(145.25f, 130);
                     break;
                 case 4:
+                    MyTransform.sizeDelta = new Vector2(117, 105);
                     break;
                 case 5:
+                    MyTransform.sizeDelta = new Vector2(111, 100);
                     break;
                 case 6:
+                    MyTransform.sizeDelta = new Vector2(89, 80);
                     break;
                 default:
                     break;
