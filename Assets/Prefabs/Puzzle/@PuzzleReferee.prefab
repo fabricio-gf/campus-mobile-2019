@@ -46,10 +46,7 @@ MonoBehaviour:
   CurrentPuzzle: {fileID: 11400000, guid: bde450bd58a4c464ea4da3d242af3e62, type: 2}
   PuzzleObject: {fileID: 0}
   AnswerText: {fileID: 0}
-  AnswerTopSlots: []
-  AnswerBottomSlots: []
-  CardSlots: []
-  Gems: []
+  TriesText: {fileID: 0}
   AnswerTopArea: {fileID: 0}
   AnswerBottomArea: {fileID: 0}
   GemsArea: {fileID: 0}
@@ -66,30 +63,30 @@ MonoBehaviour:
     type: 3}
   LetterSprites:
   - {fileID: 21300000, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300002, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300002, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300004, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300006, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300006, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300008, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300010, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300012, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300014, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300016, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300018, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300020, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300020, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300022, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300024, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300026, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300024, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
+  - {fileID: 21300026, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300028, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300030, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300032, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300034, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300036, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300038, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300038, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300040, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   - {fileID: 21300042, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300044, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300044, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300046, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
-  - {fileID: 21300048, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
+  - {fileID: 21300048, guid: ee14b4726700d0b4095fb42f2fe58140, type: 3}
   - {fileID: 21300050, guid: 53ba53d7c7b1efe4caf02797c51a70d5, type: 3}
   SignSprites:
   - {fileID: 21300000, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
@@ -118,3 +115,4 @@ MonoBehaviour:
   - {fileID: 21300046, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
   - {fileID: 21300048, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
   - {fileID: 21300050, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
+  CarryOverTries: 0
