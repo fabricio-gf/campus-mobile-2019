@@ -47,6 +47,11 @@ public class LevelLoader : MonoBehaviour
         StartCoroutine(LoadAsynchronously(SceneName));
     }
 
+    public void LoadLevelNow(string SceneName)
+    {
+        SceneManager.LoadScene(SceneName);
+    }
+
     public void LoadCodexScene(string SceneName)
     {
         LoadingInfo.CodexReturnToSceneName = SceneManager.GetActiveScene().name;
@@ -61,6 +66,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadAsynchronously (string SceneName)
     {
+        print("loading");
         LoadingAnimator.SetTrigger("Loading");
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneName);
         operation.allowSceneActivation = false;
@@ -70,6 +76,7 @@ public class LevelLoader : MonoBehaviour
         {
             if (operation.progress >= 0.9f && time >= EnterClip.length)
             {
+                print("allow");
                 operation.allowSceneActivation = true;
             }
             time += Time.deltaTime;
