@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle15
   m_EditorClassIdentifier: 
   type: 0
-  question: "A palavra \xE9:"
+  question: "A sigla \xE9:"
   answer: 6f006e007500
   tries: 3
   noRepetition: 1
