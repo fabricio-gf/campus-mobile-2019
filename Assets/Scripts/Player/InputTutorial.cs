@@ -8,9 +8,7 @@ public class InputTutorial : MonoBehaviour
     [SerializeField] private int ProgressLimit = 0;
     private static string dataPath = string.Empty;
 
-
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
         if (ProgressLimit > SaveData.CheckProgress(dataPath))

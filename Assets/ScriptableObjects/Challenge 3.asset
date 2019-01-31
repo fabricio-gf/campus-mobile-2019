@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b55466681d33e045b438825850b0310, type: 3}
   m_Name: Challenge 3
   m_EditorClassIdentifier: 
-  ChallengeName: Consonants 2
+  ChallengeName: Consoantes 2
   Puzzles:
   - {fileID: 11400000, guid: 4f9ae33d156bad24280f4516c8c9ff10, type: 2}
   - {fileID: 11400000, guid: f8ccb0b6ba3c45348967fba967137b89, type: 2}
@@ -26,7 +26,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d93d7e8dd0b1ade469bbc7fb9a51d55e, type: 2}
   - {fileID: 11400000, guid: 24db14b5f4e25b64e9161c3d344effe2, type: 2}
   CompletedPuzzles: 0
-  InOrder: 0
   Unlocked: 0
   ProgressToUnlock: 2
   VowelOnly: 0

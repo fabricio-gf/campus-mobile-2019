@@ -39,7 +39,8 @@ public class PlayerInteraction : MonoBehaviour
     private void Interact()
     {
         Vector2 raycastDirection;
-
+        print("entrou");
+        print(" direction " + playerMovement.FacingDirection);
         switch (playerMovement.FacingDirection)
         {
             case PlayerMovement.Directions.UP:

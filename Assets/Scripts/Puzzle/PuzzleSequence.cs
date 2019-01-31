@@ -13,6 +13,7 @@ public class PuzzleSequence : MonoBehaviour
     private void Awake()
     {
         Referee = GetComponent<PuzzleReferee>();
+        Referee.NoTries = true;
     }
 
     public void StartPuzzleSequence(Challenge challenge)

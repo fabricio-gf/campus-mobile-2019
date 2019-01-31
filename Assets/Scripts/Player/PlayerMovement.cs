@@ -121,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
 
             SetNextMovement(NextDirection);
         }
+        Debug.Log("facing " + FacingDirection);
     }
 
     // updates the next position the player should move
