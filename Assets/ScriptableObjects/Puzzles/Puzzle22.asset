@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 088ffd58153daa04da64f8f3a88b0b94, type: 3}
-  m_Name: Puzzle10
+  m_Name: Puzzle22
   m_EditorClassIdentifier: 
-  type: 0
-  question: "Que palavra \xE9 esta?"
-  answer: 61007200610072006100
+  type: 1
+  question: CPU
+  answer: 630070007500
   tries: 3
   noRepetition: 0

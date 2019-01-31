@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b55466681d33e045b438825850b0310, type: 3}
+  m_Name: Challenge4
+  m_EditorClassIdentifier: 
+  ChallengeName: Siglas
+  Puzzles:
+  - {fileID: 11400000, guid: 8b1dee03c83bd934fa98cad0d4ec3bb2, type: 2}
+  - {fileID: 11400000, guid: 2aa04454530c86f428284c336c465650, type: 2}
+  - {fileID: 11400000, guid: 908e6c92486a27a46910d67712247907, type: 2}
+  - {fileID: 11400000, guid: a5a6f99278513824fb32e2bfdf9c3627, type: 2}
+  - {fileID: 11400000, guid: d3f58084846073046a558e6b1000d514, type: 2}
+  - {fileID: 11400000, guid: 96eb8f23def88af4fb10f4e99b1a3b2e, type: 2}
+  - {fileID: 11400000, guid: 106af126751fa83488cbb9f4515b81bb, type: 2}
+  - {fileID: 11400000, guid: d61874e8be5c4aa44a50e41fde98b977, type: 2}
+  - {fileID: 11400000, guid: 1505adfe237ef1c4dbb9ea0b3f0dae1a, type: 2}
+  - {fileID: 11400000, guid: 34d3d7042c3ed7e409debe38ec17548a, type: 2}
+  - {fileID: 11400000, guid: 31feff9f06198494694857b10c13a1cc, type: 2}
+  CompletedPuzzles: 0
+  Unlocked: 0
+  ProgressToUnlock: 0
+  VowelOnly: 0
+  ConsonantOnly: 0
