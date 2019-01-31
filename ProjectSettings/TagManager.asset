@@ -14,6 +14,7 @@ TagManager:
   - Puzzle
   - MusicMuteToggle
   - SFXMuteToggle
+  - LevelLoader
   layers:
   - Default
   - TransparentFX

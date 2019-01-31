@@ -16,7 +16,7 @@ public class PracticeController : MonoBehaviour
     [SerializeField] private Text RecordText = null;
     [SerializeField] private int PracticeTries = 5;
     [SerializeField] private GameObject EndScreen = null;
-    //[SerializeField] private GameObject MainScreen = null;
+    [SerializeField] private GameObject MainScreen = null;
     [SerializeField] private GameObject PuzzleObject = null;
 
     private void Start()
@@ -68,20 +68,28 @@ public class PracticeController : MonoBehaviour
                 RecordText.text = "Recorde: " + PuzzleCounter;
                 PuzzleCounter = 0;
             }
-            EndScreen.SetActive(true);
+            GoToEndScreen();
         }
+    }
+
+    public void GoToEndScreen()
+    {
+        Referee.ClosePuzzle();
+        EndScreen.SetActive(true);
     }
 
     public void GoToMain()
     {
         EndScreen.SetActive(false);
-        //MainScreen.SetActive(true);
+        MainScreen.SetActive(true);
+
     }
 
     public void StartPuzzleSequence()
     {
-        //MainScreen.SetActive(false);
+        EndScreen.SetActive(false);
+        MainScreen.SetActive(false);
         PuzzleObject.SetActive(true);
-        //start first puzzle
+        StartAnotherPuzzle();
     }
 }

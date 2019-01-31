@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: e019e24b752d7dc42a1911875cd88c32
+guid: 96e5b8e5a5a0f854b961818f56093af3
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Play_Button_0
+    21300002: Play_Button_1
+    21300004: Play_Button_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.6658202, y: 0.31195596}
-  spritePixelsToUnits: 192
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,11 +107,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Play_Button_1
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 16
+        width: 335
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8080bc2670d51cd43a2a896e9066bd75
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Play_Button_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 15
+        width: 335
+        height: 166
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacf0f49522357a4b821e6602fc03300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a96c9583b3c80ce429c43a665f46f4d1
+    spriteID: 25f308f26725f154ea0caca701b28e46
     vertices: []
     indices: 
     edges: []
