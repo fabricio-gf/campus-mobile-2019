@@ -1,7 +1,8 @@
 fileFormatVersion: 2
-guid: decf7c07298cbac4ba24757976a3e02f
+guid: 4630900411b6fb34389adf2e31b844e9
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Window-60__0
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -40,13 +41,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 16, y: 25, z: 17, w: 22}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -104,11 +105,31 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Window-60__0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 269
+        height: 474
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 85, y: 125, z: 85, w: 124}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c2fedfbe36e8c449fcea4ba852af53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 67d320b53b4bebd46b99a68681334adb
+    spriteID: 35ae74a3617271646bc23e1450bdb6f5
     vertices: []
     indices: 
     edges: []

@@ -5,9 +5,9 @@ public class Challenge : ScriptableObject
 {
     public string ChallengeName;
     public Puzzle[] Puzzles;
-    public int CompletedPuzzles;
+    [HideInInspector] public int CompletedPuzzles;
     //public bool InOrder;
-    public bool Unlocked;
+    [HideInInspector] public bool Unlocked;
     public int ProgressToUnlock;
 
     public bool VowelOnly;
