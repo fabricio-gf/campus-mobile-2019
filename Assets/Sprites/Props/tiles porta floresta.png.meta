@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: e7091e07d7a31df47a1d56f72168d579
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tiles porta floresta_0
+    21300002: tiles porta floresta_2
+    21300004: tiles porta floresta_3
+    21300006: tiles porta floresta_4
+    21300008: tiles porta floresta_5
+    21300010: tiles porta floresta_6
+    21300012: tiles porta floresta_7
+    21300014: tiles porta floresta_8
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tiles porta floresta_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 199
+        width: 154
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bffa739cd1696942a140bd47f159ee9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 99
+        width: 21
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80484a1668502f49b2faf773fbc4075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030e8409d7ba7da4dbeb5bf70514446a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_4
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 99
+        width: 108
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459ca3ed7ed0add43857d63c3210f69f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 99
+        width: 108
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8a75bd06fa8f04ca110caacf2312dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_6
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 108
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9392f514350908e4599aee634400a26b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_7
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 21
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8545d3d39a9e844ab4d753b8d9048b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiles porta floresta_8
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 108
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfb126ff5b667648be573355d578c7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape:
+    - - {x: -0.5, y: -113}
+      - {x: -108.5, y: -113}
+      - {x: -108.5, y: -15}
+      - {x: -0.5, y: -15}
+      - {x: -0.5, y: -15}
+    - - {x: -109.5, y: -113}
+      - {x: -133.5, y: -113}
+      - {x: -133.5, y: -111}
+      - {x: -133.5, y: -15}
+      - {x: -109.5, y: -15}
+    - - {x: -133.5, y: -14}
+      - {x: -133.5, y: 85}
+      - {x: -109.5, y: 85}
+      - {x: -109.5, y: -14}
+    - - {x: -132.5, y: 86}
+      - {x: -132.5, y: 113}
+      - {x: 20.5, y: 113}
+      - {x: 20.5, y: 86}
+    - - {x: 25.5, y: -14}
+      - {x: 25.5, y: 85}
+      - {x: 133.5, y: 85}
+      - {x: 133.5, y: -14}
+    - - {x: 25.5, y: -113}
+      - {x: 25.5, y: -15}
+      - {x: 133.5, y: -15}
+      - {x: 133.5, y: -113}
+    - - {x: 0.5, y: -113}
+      - {x: 0.5, y: -15}
+      - {x: 21.5, y: -15}
+      - {x: 21.5, y: -113}
+    - - {x: 0.5, y: -14}
+      - {x: 0.5, y: 85}
+      - {x: 21.5, y: 85}
+      - {x: 21.5, y: -14}
+    - - {x: -108.5, y: -14}
+      - {x: -108.5, y: 85}
+      - {x: -0.5, y: 85}
+      - {x: -0.5, y: -14}
+    bones: []
+    spriteID: 789f7c29d4060454fa7892229fbbc24e
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
