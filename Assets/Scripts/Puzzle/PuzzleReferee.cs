@@ -236,6 +236,7 @@ public class PuzzleReferee : MonoBehaviour
 
 
             obj = Instantiate(GemPrefab, GemsArea);
+            obj.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 2);
             Gems.Add(obj.GetComponent<GemChangeColor>());
         }
 
