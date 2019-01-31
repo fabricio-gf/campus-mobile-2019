@@ -51,7 +51,7 @@ public class SlotBehaviour : MonoBehaviour, IDropHandler
                     MyTransform.sizeDelta = new Vector2(145.25f, 83);
                     break;
                 case 4:
-                    MyTransform.sizeDelta = new Vector2(117, 54.25f);
+                    MyTransform.sizeDelta = new Vector2(117, 67);
                     break;
                 case 5:
                     MyTransform.sizeDelta = new Vector2(111, 63);

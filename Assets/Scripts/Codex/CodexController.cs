@@ -98,11 +98,12 @@ public class CodexController : MonoBehaviour
     }
 
     void UpdatePageButtons(int chapterNumber, int pageNumber){
+        print("chapter number " + chapterNumber + " page number " + pageNumber);
         if((chapterNumber == codex.Chapters.Length-1 && pageNumber == codex.Chapters[chapterNumber].Pages.Length-1)||
             (chapterNumber == codex.UnlockedChapters-1)){
             NextPageButton.SetActive(false);
         }
-        else if(chapterNumber == 0 && pageNumber == 0){
+        if(chapterNumber == 0 && pageNumber == 0){
             PreviousPageButton.SetActive(false);
         }
         else{

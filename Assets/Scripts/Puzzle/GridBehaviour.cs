@@ -64,12 +64,12 @@ public class GridBehaviour : MonoBehaviour
                     break;
                 case 3:
                     grid.cellSize = new Vector2(145.25f, 130);
-                    grid.spacing = new Vector2(20, 40);
+                    grid.spacing = new Vector2(25, 40);
                     grid.constraintCount = 3;
                     break;
                 case 4:
                     grid.cellSize = new Vector2(117, 105);
-                    grid.spacing = new Vector2(50, 40);
+                    grid.spacing = new Vector2(40, 10);
                     grid.constraintCount = 3;
                     break;
                 case 5:
@@ -132,7 +132,7 @@ public class GridBehaviour : MonoBehaviour
                     horizontal.spacing = 40;
                     break;
                 case 4:
-                    MyTransform.anchoredPosition = new Vector2(0, 199.625f);
+                    MyTransform.anchoredPosition = new Vector2(0, 206);
                     horizontal.spacing = 20;
                     break;
                 case 5:
@@ -147,5 +147,133 @@ public class GridBehaviour : MonoBehaviour
                     break;
             }
         }
+        else if(caseType == 2){
+            switch (caseNumber)
+            {
+                case 1:
+                    MyTransform.anchoredPosition = new Vector2(0, 325);
+                    break;
+                case 3:
+                    MyTransform.anchoredPosition = new Vector2(0, 325);
+                    horizontal.spacing = 40;
+                    break;
+                case 4:
+                    MyTransform.anchoredPosition = new Vector2(0, 285);
+                    horizontal.spacing = 20;
+                    break;
+                case 5:
+                    MyTransform.anchoredPosition = new Vector2(0, 275);
+                    horizontal.spacing = 5;
+                    break;
+                case 6:
+                    MyTransform.anchoredPosition = new Vector2(0, 250);
+                    horizontal.spacing = 5;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    [ContextMenu("GridParameters 1, Top type")]
+    public void GridParameters1()
+    {
+        grid = GetComponent<GridLayoutGroup>();
+        ChangeGridParameters(1, 1);
+    }
+    [ContextMenu("GridParameters 3, Top type")]
+    public void GridParameters3()
+    {
+        grid = GetComponent<GridLayoutGroup>();
+        ChangeGridParameters(3, 1);
+    }
+    [ContextMenu("GridParameters 4, Top type")]
+    public void GridParameters4()
+    {
+        grid = GetComponent<GridLayoutGroup>();
+        ChangeGridParameters(4, 1);
+    }
+    [ContextMenu("GridParameters 5, Top type")]
+    public void GridParameters5()
+    {
+        grid = GetComponent<GridLayoutGroup>();
+        ChangeGridParameters(5, 1);
+    }
+    [ContextMenu("GridParameters 6, Top type")]
+    public void GridParameters6()
+    {
+        grid = GetComponent<GridLayoutGroup>();
+        ChangeGridParameters(6, 1);
+    }
+
+    [ContextMenu("ChangePosition 1, Top answer")]
+    public void ChangePosition1()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(1, 1);
+    }
+    [ContextMenu("ChangePosition 3, Top answer")]
+    public void ChangePosition3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(3, 1);
+    }
+    [ContextMenu("ChangePosition 4, Top answer")]
+    public void ChangePosition4()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(4, 1);
+    }
+    [ContextMenu("ChangePosition 5, Top answer")]
+    public void ChangePosition5()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(5, 1);
+    }
+    [ContextMenu("ChangePosition 6, Top answer")]
+    public void ChangePosition6()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(6, 1);
+    }
+    [ContextMenu("ChangePosition 1, Bottom answer")]
+    public void ChangePosition1_2()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(1, 0);
+    }
+    [ContextMenu("ChangePosition 3, Bottom answer")]
+    public void ChangePosition3_2()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(3, 0);
+    }
+    [ContextMenu("ChangePosition 4, Bottom answer")]
+    public void ChangePosition4_2()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(4, 0);
+    }
+    [ContextMenu("ChangePosition 5, Bottom answer")]
+    public void ChangePosition5_2()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(5, 0);
+    }
+    [ContextMenu("ChangePosition 6, Bottom answer")]
+    public void ChangePosition6_2()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(6, 0);
     }
 }

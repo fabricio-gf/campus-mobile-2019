@@ -96,6 +96,9 @@ public class SaveData
     public static void ResetSave(string path)
     {
         gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialChallengeProgress, InitialDictionaryProgress, InitialChapters);
+        PlayerPrefs.SetInt("SFXMute", 0);
+        PlayerPrefs.SetInt("MusicMute", 0);
+        PlayerPrefs.SetInt("PracticeRecord", 0);
 
         SaveToJson(path, gameData);
     }
