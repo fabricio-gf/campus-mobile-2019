@@ -219,6 +219,7 @@ public class PuzzleReferee : MonoBehaviour
         SlotBehaviour sb;
         AnswerTopArea.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 1);
         AnswerBottomArea.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 0);
+        GemsArea.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 2);
 
         for (int i = 0; i < Answer.Length; i++)
         {
@@ -236,7 +237,6 @@ public class PuzzleReferee : MonoBehaviour
 
 
             obj = Instantiate(GemPrefab, GemsArea);
-            obj.GetComponent<GridBehaviour>().ChangePosition(Answer.Length, 2);
             Gems.Add(obj.GetComponent<GemChangeColor>());
         }
 

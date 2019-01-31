@@ -725,6 +725,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CheckAnswer
       objectReference: {fileID: 0}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1805415266}
+    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ClosePuzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619487589682642874, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1805415263}
+    - target: {fileID: 4021305908255887504, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -161
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417993641413261561, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3542520435183119578, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
       propertyPath: m_Color.a
@@ -745,36 +775,6 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.18867922
       objectReference: {fileID: 0}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1805415266}
-    - target: {fileID: 5162794676369142887, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePuzzle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -161
-      objectReference: {fileID: 0}
-    - target: {fileID: 4417993641413261561, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4021305908255887504, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4619487589682642874, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1805415263}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29ae42af221cee49b79be6c05c1f0f0, type: 3}
 --- !u!224 &760009231 stripped
@@ -982,6 +982,7 @@ GameObject:
   - component: {fileID: 1556566615}
   - component: {fileID: 1556566614}
   - component: {fileID: 1556566616}
+  - component: {fileID: 1556566617}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -1098,6 +1099,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1556566617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556566612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 1
+  SceneToLoad: 
 --- !u!1 &1591780343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2283119191413435808, guid: 0e2a9c76ead3ae64e80f6063438953f4,
@@ -2227,31 +2242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3b2247321e2a048880e5283b7585ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &3990764020648163300 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3990764020648163300, guid: 0e2a9c76ead3ae64e80f6063438953f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 2283119190857715287}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &3990764020648163301
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3990764020648163300}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 16956ee8a359dfd4a90ace3df6b833f2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &4133485057915122907
 PrefabInstance:
   m_ObjectHideFlags: 0

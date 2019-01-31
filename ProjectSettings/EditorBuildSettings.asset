@@ -17,10 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/CodexFinal.unity
     guid: bc8df0f58cbb64941bd3a8e9383e1eeb
+  - enabled: 0
+    path: Assets/Scenes/TestScenes/GameMichelle.unity
+    guid: a03e54269a993e24ca498d32e19bec4a
+  - enabled: 0
+    path: Assets/Scenes/TestScenes/PracticeMichelle.unity
+    guid: 8e2f290138fdfd24f9a0bfb1b154a70f
   - enabled: 1
     path: Assets/Scenes/FinalScenes/GameFinal.unity
-    guid: a03e54269a993e24ca498d32e19bec4a
+    guid: f229131f666738f4a98843d9b8049c57
   - enabled: 1
     path: Assets/Scenes/FinalScenes/PracticeFinal.unity
-    guid: 8e2f290138fdfd24f9a0bfb1b154a70f
+    guid: 23b175fc77ea080439d4edd32b9fdd35
   m_configObjects: {}

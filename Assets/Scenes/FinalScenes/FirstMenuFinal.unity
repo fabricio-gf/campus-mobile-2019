@@ -490,6 +490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: '@LevelLoader'
       objectReference: {fileID: 0}
+    - target: {fileID: 4119314303107215579, guid: 9f4827339bc9bb048a7840b683e8ffdd,
+        type: 3}
+      propertyPath: m_TagString
+      value: LevelLoader
+      objectReference: {fileID: 0}
     - target: {fileID: 4119314303107215578, guid: 9f4827339bc9bb048a7840b683e8ffdd,
         type: 3}
       propertyPath: m_LocalPosition.x
