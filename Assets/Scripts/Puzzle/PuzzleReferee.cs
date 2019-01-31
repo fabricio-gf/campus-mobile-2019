@@ -55,6 +55,7 @@ public class PuzzleReferee : MonoBehaviour
 
     private int TriesLeft = 5;
     [HideInInspector] public bool CarryOverTries = false;
+    [HideInInspector] public bool NoTries = false;
 
     // PRIVATE METHODS
 
@@ -101,11 +102,18 @@ public class PuzzleReferee : MonoBehaviour
     [ContextMenu("Setup Puzzle")]
     void SetupPuzzle()
     {
-        if (!CarryOverTries)
+        if (NoTries)
         {
-            TriesLeft = CurrentPuzzle.tries;
+            TriesText.text = "";
         }
-        TriesText.text = "Tentativas: " + TriesLeft;
+        else
+        {
+            if (!CarryOverTries)
+            {
+                TriesLeft = CurrentPuzzle.tries;
+            }
+            TriesText.text = "Tentativas: " + TriesLeft;
+        }
 
         DestroySlots();
 
@@ -458,12 +466,15 @@ public class PuzzleReferee : MonoBehaviour
         }
         else
         {
-            TriesLeft--;
-            TriesText.text = "Tentativas: " + TriesLeft;
-            if (TriesLeft <= 0)
+            if (!NoTries)
             {
-                OnPuzzleEnd?.Invoke(false);
-                ClosePuzzle();
+                TriesLeft--;
+                TriesText.text = "Tentativas: " + TriesLeft;
+                if (TriesLeft <= 0)
+                {
+                    OnPuzzleEnd?.Invoke(false);
+                    ClosePuzzle();
+                }
             }
         }
     }

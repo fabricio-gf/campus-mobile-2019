@@ -59,17 +59,17 @@ public class GridBehaviour : MonoBehaviour
             {
                 case 1:
                     grid.cellSize = new Vector2(145.25f, 130);
-                    grid.spacing = new Vector2(25, 25);
+                    grid.spacing = new Vector2(40, 25);
                     grid.constraintCount = 3;
                     break;
                 case 3:
                     grid.cellSize = new Vector2(145.25f, 130);
-                    grid.spacing = new Vector2(20, 40);
+                    grid.spacing = new Vector2(40, 40);
                     grid.constraintCount = 3;
                     break;
                 case 4:
                     grid.cellSize = new Vector2(117, 105);
-                    grid.spacing = new Vector2(50, 40);
+                    grid.spacing = new Vector2(40, 10);
                     grid.constraintCount = 3;
                     break;
                 case 5:

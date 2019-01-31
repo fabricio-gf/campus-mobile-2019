@@ -4,14 +4,42 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public static LevelLoader instance;
 
     // PRIVATE REFERENCES
     [Header("References")]
-    [SerializeField] private Animator LoadingAnimator = null;
-    [SerializeField] private AnimationClip LoadingClip = null;
+    [SerializeField] private AnimationClip EnterClip = null;
+    [SerializeField] private GameObject LoadingPrefab = null;
 
     // PRIVATE ATTRIBUTES
+    private Animator LoadingAnimator = null;
     private float time = 0;
+    private bool firstTime = true;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        GameObject obj = Instantiate(LoadingPrefab);
+        DontDestroyOnLoad(obj);
+        LoadingAnimator = obj.GetComponent<Animator>();
+
+        SceneManager.sceneLoaded += StartLoadAnimation;
+    }
+
+    private void StartLoadAnimation(Scene scene, LoadSceneMode mode)
+    {
+        if (firstTime) firstTime = false;
+        else StartCoroutine(WaitToLoad(1f));
+    }
 
     public void LoadLevel(string SceneName)
     {
@@ -40,7 +68,7 @@ public class LevelLoader : MonoBehaviour
         
         while (!operation.isDone)
         {
-            if (operation.progress >= 0.9f && time >= LoadingClip.length)
+            if (operation.progress >= 0.9f && time >= EnterClip.length)
             {
                 operation.allowSceneActivation = true;
             }
@@ -53,5 +81,11 @@ public class LevelLoader : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    IEnumerator WaitToLoad(float loadDelay)
+    {
+        yield return new WaitForSeconds(loadDelay);
+        LoadingAnimator.SetTrigger("FinishedLoading");
     }
 }
