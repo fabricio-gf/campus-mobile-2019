@@ -41,196 +41,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/CodexButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/CodexButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/DictionaryButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/DictionaryButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/OptionsButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/OptionsButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PlayButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PlayButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PracticeButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PracticeButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -255,13 +65,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/BackButton
+    path: _SettingsButtons/SettingsWindow/Plaque
     classID: 114
     script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -274,13 +84,203 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/BackButton/Text
+    path: _SettingsButtons/SettingsWindow/ResetProgressButton
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/MusicMuteToggle/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/LeftRightHanded/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/SFXMuteToggle/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/Credits
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/SFXMuteToggle/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/LeftRightHanded/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/MusicMuteToggle/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/BackButton
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/ResetProgressButton/Text
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -293,32 +293,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/HighQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/HighQualityButton/Text
+    path: _SettingsButtons/SettingsWindow/Credits/Text
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -331,146 +312,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/LowQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/LowQualityButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MedQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MedQualityButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteMusic
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteMusic/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteSounds
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteSounds/Text
+    path: _SettingsButtons/SettingsWindow/Plaque/Title
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_PPtrCurves: []
@@ -489,76 +337,6 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2897744015
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2501817532
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 544668167
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2706211518
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2225383424
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 906953012
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3328482727
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1612575206
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3189488217
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 314004686
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
       path: 2406785705
       attribute: 2086281974
       script: {fileID: 0}
@@ -566,84 +344,98 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4106249446
+      path: 3038409339
       attribute: 304273561
       script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3454105855
+      path: 990031452
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3737109915
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 691377817
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3695293663
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 909444931
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1730469916
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 3414562844
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1966550903
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1896664550
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 350480383
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 1345318791
       attribute: 304273561
       script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2963718690
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1631276462
+      path: 1507438794
       attribute: 304273561
       script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1317855350
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 427183125
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2637698374
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1638781462
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3578090765
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2970869117
-      attribute: 304273561
-      script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 428066229
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 3733523900
+      path: 1965781919
       attribute: 304273561
       script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
       typeID: 114
@@ -695,196 +487,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/CodexButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/CodexButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/DictionaryButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/DictionaryButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/OptionsButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/OptionsButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PlayButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PlayButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PracticeButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _MainButtons/PracticeButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -909,13 +511,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/BackButton
+    path: _SettingsButtons/SettingsWindow/Plaque
     classID: 114
     script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -928,13 +530,203 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/BackButton/Text
+    path: _SettingsButtons/SettingsWindow/ResetProgressButton
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/MusicMuteToggle/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/LeftRightHanded/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/SFXMuteToggle/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/Credits
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/SFXMuteToggle/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/LeftRightHanded/Background/Checkmark
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/MusicMuteToggle/Background
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/BackButton
+    classID: 114
+    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: _SettingsButtons/SettingsWindow/ResetProgressButton/Text
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -947,32 +739,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/HighQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/HighQualityButton/Text
+    path: _SettingsButtons/SettingsWindow/Credits/Text
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   - curve:
@@ -985,146 +758,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
         weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Color.a
-    path: _SettingsButtons/LowQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/LowQualityButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MedQualityButton
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MedQualityButton/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteMusic
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteMusic/Text
-    classID: 114
-    script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteSounds
-    classID: 114
-    script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Color.a
-    path: _SettingsButtons/MuteSounds/Text
+    path: _SettingsButtons/SettingsWindow/Plaque/Title
     classID: 114
     script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_EulerEditorCurves: []
