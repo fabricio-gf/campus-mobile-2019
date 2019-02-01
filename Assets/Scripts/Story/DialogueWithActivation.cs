@@ -8,6 +8,7 @@ public class DialogueWithActivation : MonoBehaviour
     [SerializeField] private GameObject DialogueTrigger = null;
 
     [SerializeField] private int ProgressLimit = 0;
+    [SerializeField] private bool SavePoint = false;
 
     private static string dataPath = string.Empty;
 
@@ -18,8 +19,13 @@ public class DialogueWithActivation : MonoBehaviour
 
     void Start()
     {
-        if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
+            Debug.Log("Is being destroyed");
+
             Destroy(DialogueTrigger.gameObject);
             Destroy(this);
         }
@@ -30,5 +36,6 @@ public class DialogueWithActivation : MonoBehaviour
         DialogueTrigger.SetActive(true);
         Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit + 1);
+        if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
     }
 }

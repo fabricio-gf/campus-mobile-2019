@@ -8671,6 +8671,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 7.0998535
       objectReference: {fileID: 0}
+    - target: {fileID: 4329468775937665063, guid: facff6e15d1477a48be801c46eda797e,
+        type: 3}
+      propertyPath: ProgressLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329468775670544902, guid: facff6e15d1477a48be801c46eda797e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 716401289}
+    - target: {fileID: 4329468775670544902, guid: facff6e15d1477a48be801c46eda797e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ActivateDialogue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: facff6e15d1477a48be801c46eda797e, type: 3}
 --- !u!1 &1604505943
@@ -9107,7 +9122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1720278446
 Transform:
   m_ObjectHideFlags: 0

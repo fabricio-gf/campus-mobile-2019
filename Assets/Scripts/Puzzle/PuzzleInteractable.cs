@@ -11,15 +11,14 @@ public class PuzzleInteractable : Interactable
 
     [SerializeField] private FloatingJoystick Joystick = null;
 
-    private void Awake()
-    {
-        dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
-    }
-
     private void Start()
     {
-        if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
+            Debug.Log("Is being destroyed");
             Destroy(GetComponent<BoxCollider2D>());
         }
     }

@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class ResetSave : MonoBehaviour
 {
+    public static ResetSave instance = null;
     protected static string dataPath = string.Empty;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
