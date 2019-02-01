@@ -16,11 +16,11 @@ public class PuzzleInteractable : Interactable
         //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
         Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
         Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
-        if (ProgressDataManager.CurrentProgress > ProgressLimit)
+        /*if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
             Debug.Log("Is being destroyed");
             Destroy(GetComponent<BoxCollider2D>());
-        }
+        }*/
     }
 
     public override void Interact()

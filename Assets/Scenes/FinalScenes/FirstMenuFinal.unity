@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 493957501}
   - component: {fileID: 493957500}
   - component: {fileID: 493957503}
+  - component: {fileID: 493957504}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -862,6 +863,19 @@ MonoBehaviour:
   ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
   TrackLoop: 154.8
+--- !u!114 &493957504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493957498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1001 &720539403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1177,7 +1191,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 417d612e694246446afe3c2ab0ad85d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60c4df23de17fa64f9f6d28271a3a15e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1680,6 +1694,31 @@ PrefabInstance:
       propertyPath: SFXMuteToggle
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: RightClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a4ba35cc720559447833d8bded53761a, type: 3}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: WrongClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e14234bbf2882a04aa1b3a0e2eb9e9b2, type: 3}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: ClickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ddb74834a5d6c864f8904c7e1fa4bd14, type: 3}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: PageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bab6f8fde901b474badd2a6caa79a908, type: 3}
+    - target: {fileID: 5662513333484570330, guid: 0991890f7a0143f46b8ecb6877aa73dc,
+        type: 3}
+      propertyPath: SwipeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 675ca2bbc5136024286399cb45d030f4, type: 3}
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: MusicTrack

@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 11282514}
   - component: {fileID: 11282513}
   - component: {fileID: 11282512}
+  - component: {fileID: 11282515}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -240,6 +241,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11282510}
   m_CullTransparentMesh: 0
+--- !u!114 &11282515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11282510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &35769402
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +498,7 @@ GameObject:
   - component: {fileID: 83468488}
   - component: {fileID: 83468487}
   - component: {fileID: 83468486}
+  - component: {fileID: 83468489}
   m_Layer: 0
   m_Name: ResetProgressButton
   m_TagString: Untagged
@@ -601,6 +616,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83468484}
   m_CullTransparentMesh: 0
+--- !u!114 &83468489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83468484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &122680382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1163,7 @@ GameObject:
   - component: {fileID: 557707283}
   - component: {fileID: 557707282}
   - component: {fileID: 557707285}
+  - component: {fileID: 557707286}
   m_Layer: 0
   m_Name: PracticeButton
   m_TagString: Untagged
@@ -1253,12 +1282,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LoadPreviousLevel: 0
-  LoadCodexScene: 0
+  LoadCodexScene: 1
   LoadNewGame: 0
   SceneToLoad: PracticeFinal
   ChangeTrackOnLoad: 0
   NewTrack: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
   TrackLoop: 114.28572
+--- !u!114 &557707286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557707280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &723259464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,7 +1371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vers\xE3o 1.0"
+  m_Text: "Vers\xE3o 0.18"
 --- !u!222 &723259467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1567,7 +1609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -162, y: 375}
+  m_AnchoredPosition: {x: -181, y: 341}
   m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854861898
@@ -1693,6 +1735,7 @@ GameObject:
   - component: {fileID: 937859049}
   - component: {fileID: 937859048}
   - component: {fileID: 937859047}
+  - component: {fileID: 937859050}
   m_Layer: 0
   m_Name: Credits
   m_TagString: Untagged
@@ -1810,6 +1853,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 937859045}
   m_CullTransparentMesh: 0
+--- !u!114 &937859050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937859045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1053189267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,6 +1878,7 @@ GameObject:
   - component: {fileID: 1053189271}
   - component: {fileID: 1053189270}
   - component: {fileID: 1053189269}
+  - component: {fileID: 1053189272}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -1938,6 +1995,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053189267}
   m_CullTransparentMesh: 0
+--- !u!114 &1053189272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053189267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1155636580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,6 +2176,7 @@ GameObject:
   - component: {fileID: 1228107830}
   - component: {fileID: 1228107829}
   - component: {fileID: 1228107828}
+  - component: {fileID: 1228107831}
   m_Layer: 0
   m_Name: DictionaryButton
   m_TagString: Untagged
@@ -2211,6 +2282,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228107826}
   m_CullTransparentMesh: 0
+--- !u!114 &1228107831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228107826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1239012180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2599,8 +2683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: 101}
-  m_SizeDelta: {x: 625.2, y: 539.8}
+  m_AnchoredPosition: {x: -2, y: 84.6}
+  m_SizeDelta: {x: 625.2, y: 572.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1301098222
 MonoBehaviour:
@@ -2633,7 +2717,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "PROGRAMA\xC7\xC3O\nFabricio Guedes\n\nARTE\nGabriel Arantes\nMichelle Wingter\n\nM\xDASICA\nMiguel
     Gardini\n\n\nAGRADECIMENTOS\nThe Fellowship of the Game\nEquipe da Campus Mobile"
@@ -2679,7 +2763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 110.00001, y: 360}
+  m_AnchoredPosition: {x: 91, y: 326}
   m_SizeDelta: {x: 590, y: 218}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312771596
@@ -2776,7 +2860,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 417d612e694246446afe3c2ab0ad85d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60c4df23de17fa64f9f6d28271a3a15e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2805,6 +2889,7 @@ GameObject:
   - component: {fileID: 1358506683}
   - component: {fileID: 1358506682}
   - component: {fileID: 1358506681}
+  - component: {fileID: 1358506684}
   m_Layer: 0
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -2921,6 +3006,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358506679}
   m_CullTransparentMesh: 0
+--- !u!114 &1358506684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358506679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1365193573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3147,8 @@ GameObject:
   - component: {fileID: 1436466890}
   - component: {fileID: 1436466889}
   - component: {fileID: 1436466892}
+  - component: {fileID: 1436466893}
+  - component: {fileID: 1436466894}
   m_Layer: 0
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -3174,6 +3274,31 @@ MonoBehaviour:
   ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
   TrackLoop: 154.8
+--- !u!114 &1436466893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436466887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d65c72917b072a45ad39a4f61cf2044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1436466894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436466887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1001 &1482409219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3342,6 +3467,7 @@ GameObject:
   - component: {fileID: 1581188680}
   - component: {fileID: 1581188679}
   - component: {fileID: 1581188682}
+  - component: {fileID: 1581188683}
   m_Layer: 0
   m_Name: ConfirmButton
   m_TagString: Untagged
@@ -3482,6 +3608,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d65c72917b072a45ad39a4f61cf2044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1581188683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581188677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1719450035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,6 +4024,7 @@ GameObject:
   - component: {fileID: 1862626856}
   - component: {fileID: 1862626855}
   - component: {fileID: 1862626858}
+  - component: {fileID: 1862626859}
   m_Layer: 0
   m_Name: CodexButton
   m_TagString: Untagged
@@ -4020,6 +4160,19 @@ MonoBehaviour:
   ChangeTrackOnLoad: 0
   NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
   TrackLoop: 154.8
+--- !u!114 &1862626859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862626853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &1893807052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4236,6 +4389,7 @@ GameObject:
   - component: {fileID: 2050080913}
   - component: {fileID: 2050080912}
   - component: {fileID: 2050080911}
+  - component: {fileID: 2050080914}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -4353,6 +4507,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050080909}
   m_CullTransparentMesh: 0
+--- !u!114 &2050080914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050080909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &2074217827
 GameObject:
   m_ObjectHideFlags: 0
@@ -4448,6 +4615,7 @@ GameObject:
   - component: {fileID: 2109680298}
   - component: {fileID: 2109680297}
   - component: {fileID: 2109680296}
+  - component: {fileID: 2109680299}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -4564,6 +4732,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2109680294}
   m_CullTransparentMesh: 0
+--- !u!114 &2109680299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109680294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &2129243108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,6 +4758,7 @@ GameObject:
   - component: {fileID: 2129243111}
   - component: {fileID: 2129243110}
   - component: {fileID: 2129243113}
+  - component: {fileID: 2129243114}
   m_Layer: 0
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -4713,6 +4895,19 @@ MonoBehaviour:
   ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
   TrackLoop: 154.8
+--- !u!114 &2129243114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129243108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton
 --- !u!1 &2140552222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4725,6 +4920,7 @@ GameObject:
   - component: {fileID: 2140552226}
   - component: {fileID: 2140552225}
   - component: {fileID: 2140552224}
+  - component: {fileID: 2140552227}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -4841,3 +5037,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140552222}
   m_CullTransparentMesh: 0
+--- !u!114 &2140552227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140552222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52d4af1b49d5d44f9e4c4e723187d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effect: PressButton

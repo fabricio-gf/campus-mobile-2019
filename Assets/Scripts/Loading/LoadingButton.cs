@@ -37,11 +37,12 @@ public class LoadingButton : MonoBehaviour
             else if (LoadCodexScene)
             {
                 ThisButton.onClick.AddListener(() => Loader.LoadCodexScene(SceneToLoad));
+                LoadingInfo.PreviousTrack = NewTrack;
+                LoadingInfo.PreviousLoopTime = TrackLoop;
+
                 if (Music && ChangeTrackOnLoad)
                 {
                     ThisButton.onClick.AddListener(() => Music.ChangeTrackBlend(NewTrack, TrackLoop, 1f));
-                    LoadingInfo.PreviousTrack = NewTrack;
-                    LoadingInfo.PreviousLoopTime = TrackLoop;
                 }
             }
             else

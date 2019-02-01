@@ -51,6 +51,8 @@ public class PuzzleReferee : MonoBehaviour
     [SerializeField] private AudioClip PreviousTrack = null;
     [SerializeField] private float PreviousLoopDelay = 0;
 
+    [SerializeField] private FloatingJoystick joystick = null;
+
     // PRIVATE ATTRIBUTES
     private char[] Answer;
     private char[] CurrentAnswer;
@@ -64,12 +66,16 @@ public class PuzzleReferee : MonoBehaviour
     [HideInInspector] public bool NoTries = false;
 
     private MusicController Music = null;
+    private SFXController SFX = null;
 
     // PRIVATE METHODS
 
     private void Awake()
     {
-        Music = GameObject.FindGameObjectWithTag("SoundSource").GetComponent<MusicController>();
+        GameObject obj = GameObject.FindGameObjectWithTag("SoundSource");
+        Music = obj.GetComponent<MusicController>();
+        SFX = obj.GetComponent<SFXController>();
+
         Alphabet = new List<char>();
         ResetAlphabet();
 
@@ -472,7 +478,7 @@ public class PuzzleReferee : MonoBehaviour
 
         if (incorrectLetters == 0)
         {
-            //winner
+            SFX.PlayClip("CorrectAnswer");
             OnPuzzleEnd?.Invoke(true);
         }
         else
@@ -481,6 +487,7 @@ public class PuzzleReferee : MonoBehaviour
             {
                 TriesLeft--;
                 TriesText.text = "Tentativas: " + TriesLeft;
+                SFX.PlayClip("WrongAnswer");
                 if (TriesLeft <= 0)
                 {
                     OnPuzzleEnd?.Invoke(false);
@@ -529,6 +536,10 @@ public class PuzzleReferee : MonoBehaviour
 
     public void ClosePuzzle()
     {
+        //GAMBIARRA ZONE
+        joystick?.ResumeMovement();
+        //GAMBIARRA ZONE
+
         ClearPuzzleArea();
         PuzzleObject.SetActive(false);
         if(ChangeMusic) Music.ChangeTrackBlend(PreviousTrack, PreviousLoopDelay, 0.5f);

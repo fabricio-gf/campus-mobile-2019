@@ -13,7 +13,9 @@ public class PracticeController : MonoBehaviour
 
     [SerializeField] private List<Puzzle> OriginalPuzzleList = null;
     [SerializeField] private Text CounterText = null;
-    [SerializeField] private Text RecordText = null;
+    [SerializeField] private Text EndText = null;
+    [SerializeField] private Text RecordText1 = null;
+    [SerializeField] private Text RecordText2 = null;
     [SerializeField] private int PracticeTries = 5;
     [SerializeField] private GameObject EndScreen = null;
     [SerializeField] private GameObject MainScreen = null;
@@ -25,9 +27,11 @@ public class PracticeController : MonoBehaviour
         Referee.OnPuzzleEnd += FinishPuzzle;
         PuzzleList = new List<Puzzle>(OriginalPuzzleList);
         Referee.CarryOverTries = true;
-        Referee.SetTriesLeft(PracticeTries);
-        PuzzleCounter = 0;
-        RecordText.text = "Recorde: " + PlayerPrefs.GetInt("PracticeRecord", 0);
+
+        ResetEverything();
+
+        RecordText1.text = "Recorde: " + PlayerPrefs.GetInt("PracticeRecord", 0);
+        RecordText2.text = "Seu recorde é de " + PlayerPrefs.GetInt("PracticeRecord", 0) + " desafios";
     }
 
     public void StartAnotherPuzzle()
@@ -57,6 +61,7 @@ public class PracticeController : MonoBehaviour
         {
             PuzzleCounter++;
             CounterText.text = "Contador atual: " + PuzzleCounter;
+            EndText.text = "Você completou " + PuzzleCounter + " desafios";
             StartAnotherPuzzle();
         }
         else
@@ -65,7 +70,8 @@ public class PracticeController : MonoBehaviour
             if (PlayerPrefs.GetInt("PracticeRecord", 0) < PuzzleCounter)
             {
                 PlayerPrefs.SetInt("PracticeRecord", PuzzleCounter);
-                RecordText.text = "Recorde: " + PuzzleCounter;
+                RecordText1.text = "Recorde: " + PuzzleCounter;
+                RecordText2.text = "Seu recorde é de " + PlayerPrefs.GetInt("PracticeRecord", 0) + " desafios";
                 PuzzleCounter = 0;
             }
             GoToEndScreen();
@@ -87,9 +93,16 @@ public class PracticeController : MonoBehaviour
 
     public void StartPuzzleSequence()
     {
+        ResetEverything();
         EndScreen.SetActive(false);
         MainScreen.SetActive(false);
         PuzzleObject.SetActive(true);
         StartAnotherPuzzle();
+    }
+
+     void ResetEverything()
+    {
+        Referee.SetTriesLeft(PracticeTries);
+        PuzzleCounter = 0;
     }
 }

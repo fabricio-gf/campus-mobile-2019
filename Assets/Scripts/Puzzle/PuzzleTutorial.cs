@@ -27,8 +27,8 @@ public class PuzzleTutorial : MonoBehaviour
         //temp
         gameObject.SetActive(false);
         //set animation to close
-        Debug.Log("Up progress ", gameObject);
-        ProgressDataManager.SetProgress(ProgressLimit + 1);
+        //Debug.Log("Up progress ", gameObject);
+        //ProgressDataManager.SetProgress(ProgressLimit + 1);
         if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
     }
 }

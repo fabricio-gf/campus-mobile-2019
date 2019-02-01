@@ -100,7 +100,7 @@ public class SaveData
         PlayerPrefs.SetInt("MusicMute", 0);
         PlayerPrefs.SetInt("PracticeRecord", 0);
 
-        SaveToJson(path, gameData);
+        Save(path, gameData);
     }
 
     private static GameData LoadFromJson(string path)

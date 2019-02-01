@@ -17,7 +17,7 @@ public class SFXController : MonoBehaviour
     [Header("Clips")]
     [SerializeField] private AudioClip ClickClip = null;
     [SerializeField] private AudioClip SwipeClip = null;
-    [SerializeField] private AudioClip WooshClip = null;
+    //[SerializeField] private AudioClip WooshClip = null;
     [SerializeField] private AudioClip RightClip = null;
     [SerializeField] private AudioClip WrongClip = null;
     [SerializeField] private AudioClip PageClip = null;
@@ -77,20 +77,14 @@ public class SFXController : MonoBehaviour
         }
     }
 
-    public void Test()
-    {
-        Debug.Log("TESTING");
-    }
-
     void FillClips()
     {
         Clips.Add("PressButton", ClickClip);
         Clips.Add("ToggleWindow", SwipeClip);
-        Clips.Add("LoadScene", WooshClip);
+        //Clips.Add("LoadScene", WooshClip);
         Clips.Add("CorrectAnswer", RightClip);
         Clips.Add("WrongAnswer", WrongClip);
         Clips.Add("FlipPage", PageClip);
-
     }
 
     public void PlayClip(string key)
