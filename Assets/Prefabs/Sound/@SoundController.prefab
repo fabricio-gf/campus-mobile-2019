@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5662513333484570330}
   m_Layer: 0
   m_Name: '@SoundController'
-  m_TagString: Untagged
+  m_TagString: SoundSource
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,10 +59,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicTrack: {fileID: 0}
   LoopDuration: 0
+  SourcePrefab: {fileID: 0}
   FadeDuration: 0
   BlendDuration: 0
-  Source1: {fileID: 0}
-  Source2: {fileID: 0}
 --- !u!114 &5662513333484570330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,4 +74,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8abc198ddbbb5f74a8a1de6b9b21fafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Source: {fileID: 0}
+  SourcePrefab: {fileID: 0}

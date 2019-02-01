@@ -328,6 +328,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChapterToggles
       objectReference: {fileID: 0}
+    - target: {fileID: 6192866891907875245, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: NewTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a006f89dd873404e96cae50d5538cfa, type: 3}
+    - target: {fileID: 6192866891907875245, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: TrackLoop
+      value: 65.45455
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614408597670599, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.4000015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614408597670599, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.099998474
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614409126124518, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.400009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614409126124518, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.09999466
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614409051881490, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 6.400009
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374614409051881490, guid: 57c1ce4dd92e5404db548b8d80876845,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.09999466
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57c1ce4dd92e5404db548b8d80876845, type: 3}
 --- !u!1 &101258575 stripped
@@ -1179,6 +1219,11 @@ MonoBehaviour:
   - {fileID: 21300046, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
   - {fileID: 21300048, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
   - {fileID: 21300050, guid: 9aad4bc06a095b445a58b0d0899b3765, type: 3}
+  ChangeMusic: 0
+  PuzzleTrack: {fileID: 0}
+  LoopDelay: 0
+  PreviousTrack: {fileID: 0}
+  PreviousLoopDelay: 0
   CarryOverTries: 0
   NoTries: 0
 --- !u!114 &1182445066

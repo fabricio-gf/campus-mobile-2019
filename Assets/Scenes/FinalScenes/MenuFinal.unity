@@ -1256,6 +1256,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: PracticeFinal
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
+  TrackLoop: 114.28572
 --- !u!1 &723259464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,6 +3171,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 1
   SceneToLoad: GameFinal
+  ChangeTrackOnLoad: 1
+  NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+  TrackLoop: 154.8
 --- !u!1001 &1482409219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4011,6 +4017,9 @@ MonoBehaviour:
   LoadCodexScene: 1
   LoadNewGame: 0
   SceneToLoad: CodexFinal
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+  TrackLoop: 154.8
 --- !u!1 &1893807052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,6 +4710,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: GameFinal
+  ChangeTrackOnLoad: 1
+  NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+  TrackLoop: 154.8
 --- !u!1 &2140552222
 GameObject:
   m_ObjectHideFlags: 0

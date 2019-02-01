@@ -537,6 +537,7 @@ MonoBehaviour:
   dataManager: {fileID: 304215006}
   UnlockedChapter: 1
   ProgressLimit: 4
+  SavePoint: 0
 --- !u!1 &235503036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2059,6 +2060,7 @@ MonoBehaviour:
   DialogueName: Initial Dialogue
   DialogueTrigger: {fileID: 1938922674}
   ProgressLimit: 2
+  SavePoint: 0
 --- !u!1 &805905597
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,6 +3481,7 @@ MonoBehaviour:
   DialogueTrigger: {fileID: 1928848668}
   DialogueDelay: 2
   ProgressLimit: 3
+  SavePoint: 0
 --- !u!1 &1053044530
 GameObject:
   m_ObjectHideFlags: 0
@@ -7683,6 +7686,9 @@ MonoBehaviour:
   LoadCodexScene: 1
   LoadNewGame: 0
   SceneToLoad: CodexFinal
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 0}
+  TrackLoop: 0
 --- !u!114 &1371117779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9722,6 +9728,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: 
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 0}
+  TrackLoop: 0
 --- !u!114 &1973825841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10000,6 +10009,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: PracticeFinal
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
+  TrackLoop: 114.28572
 --- !u!114 &2062845858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10134,6 +10146,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: MenuFinal
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 8300000, guid: 5a006f89dd873404e96cae50d5538cfa, type: 3}
+  TrackLoop: 65.45455
 --- !u!114 &2063432972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10278,6 +10293,31 @@ PrefabInstance:
       propertyPath: TriesText
       value: 
       objectReference: {fileID: 5144106344916349905}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PuzzleTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PreviousTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: LoopDelay
+      value: 114.28572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PreviousLoopDelay
+      value: 154.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: ChangeMusic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
         type: 3}
       propertyPath: m_LocalPosition.x

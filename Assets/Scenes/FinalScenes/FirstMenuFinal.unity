@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 493957502}
   - component: {fileID: 493957501}
   - component: {fileID: 493957500}
+  - component: {fileID: 493957503}
   m_Layer: 0
   m_Name: PlayButton
   m_TagString: Untagged
@@ -802,18 +803,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 493957501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1344027404}
-        m_MethodName: LoadLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GameFinal
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &493957501
@@ -853,6 +843,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493957498}
   m_CullTransparentMesh: 0
+--- !u!114 &493957503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493957498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 0
+  LoadCodexScene: 0
+  LoadNewGame: 0
+  SceneToLoad: GameFinal
+  ChangeTrackOnLoad: 1
+  NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+  TrackLoop: 154.8
 --- !u!1001 &720539403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1675,7 +1684,7 @@ PrefabInstance:
         type: 3}
       propertyPath: MusicTrack
       value: 
-      objectReference: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+      objectReference: {fileID: 8300000, guid: 5a006f89dd873404e96cae50d5538cfa, type: 3}
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: SourceReference
@@ -1694,7 +1703,7 @@ PrefabInstance:
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}
       propertyPath: LoopDuration
-      value: 154.8
+      value: 65.45455
       objectReference: {fileID: 0}
     - target: {fileID: 7429934594692710825, guid: 0991890f7a0143f46b8ecb6877aa73dc,
         type: 3}

@@ -10,17 +10,24 @@ public class SFXController : MonoBehaviour
 
     // PUBLIC REFERENCES
 
+    // PRIVATE REFERENCES
     [Header("References")]
     [SerializeField] private GameObject SourcePrefab = null;
-    private Toggle SFXMuteToggle = null;
 
-    // PRIVATE REFERENCES
-    //[SerializeField]
+    [Header("Clips")]
+    [SerializeField] private AudioClip ClickClip = null;
+    [SerializeField] private AudioClip SwipeClip = null;
+    [SerializeField] private AudioClip WooshClip = null;
+    [SerializeField] private AudioClip RightClip = null;
+    [SerializeField] private AudioClip WrongClip = null;
+    [SerializeField] private AudioClip PageClip = null;
+
+    private Toggle SFXMuteToggle = null;
 
     // PRIVATE ATTRIBUTES
     private Dictionary<string, AudioClip> Clips = null;
 
-    [HideInInspector] public static string SourceTag = "SFXSource";
+    private static string SourceTag = "SFXSource";
     private static string PrefsString = "SFXMute";
 
     void Awake()
@@ -54,8 +61,8 @@ public class SFXController : MonoBehaviour
             //print(GameObject.Find("SFXMuteToggle").name);
             //SFXMuteToggle = GameObject.FindGameObjectWithTag("SFXMuteToggle").GetComponent<Toggle>();
 
-            System.GC.Collect();
-            System.GC.WaitForPendingFinalizers();
+            //System.GC.Collect();
+            //System.GC.WaitForPendingFinalizers();
             SFXMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[0];
             SFXMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteSFX(mute));
 
@@ -63,8 +70,8 @@ public class SFXController : MonoBehaviour
         else if (scene.name == "GameFinal")
         {
 
-            System.GC.Collect();
-            System.GC.WaitForPendingFinalizers();
+            //System.GC.Collect();
+            //System.GC.WaitForPendingFinalizers();
             SFXMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[2];
             SFXMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteSFX(mute));
         }
@@ -77,10 +84,16 @@ public class SFXController : MonoBehaviour
 
     void FillClips()
     {
-        // fill dictionary here
+        Clips.Add("PressButton", ClickClip);
+        Clips.Add("ToggleWindow", SwipeClip);
+        Clips.Add("LoadScene", WooshClip);
+        Clips.Add("CorrectAnswer", RightClip);
+        Clips.Add("WrongAnswer", WrongClip);
+        Clips.Add("FlipPage", PageClip);
+
     }
 
-    void PlayClip(string key)
+    public void PlayClip(string key)
     {
         AudioClip clip;
         if(Clips.TryGetValue(key, out clip))

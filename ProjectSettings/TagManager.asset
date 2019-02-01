@@ -16,6 +16,7 @@ TagManager:
   - SFXMuteToggle
   - LevelLoader
   - ResetSave
+  - SoundSource
   layers:
   - Default
   - TransparentFX

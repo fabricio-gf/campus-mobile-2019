@@ -1115,6 +1115,9 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: 
+  ChangeTrackOnLoad: 0
+  NewTrack: {fileID: 0}
+  TrackLoop: 0
 --- !u!1 &1591780343 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2283119191413435808, guid: 0e2a9c76ead3ae64e80f6063438953f4,
@@ -1534,6 +1537,31 @@ PrefabInstance:
       propertyPath: CardsArea
       value: 
       objectReference: {fileID: 760009231}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: ChangeMusic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PuzzleTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PreviousTrack
+      value: 
+      objectReference: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: LoopDelay
+      value: 114.28572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698135203212799264, guid: 617548176f4f6fa4bbaa3fe04660300b,
+        type: 3}
+      propertyPath: PreviousLoopDelay
+      value: 154.8
+      objectReference: {fileID: 0}
     - target: {fileID: 3698135203212799265, guid: 617548176f4f6fa4bbaa3fe04660300b,
         type: 3}
       propertyPath: m_LocalPosition.x

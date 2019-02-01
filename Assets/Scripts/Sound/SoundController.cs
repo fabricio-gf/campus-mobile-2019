@@ -19,13 +19,4 @@ public class SoundController : MonoBehaviour
         }
     }
 
-    /*public void MuteMusic(bool mute)
-    {
-        GetComponent<MusicController>().ToggleMuteMusic(mute);
-    }
-
-    public void MuteSFX(bool mute)
-    {
-        GetComponent<SFXController>().ToggleMuteSFX(mute);
-    }*/
 }

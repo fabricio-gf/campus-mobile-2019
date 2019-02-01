@@ -45,6 +45,12 @@ public class PuzzleReferee : MonoBehaviour
     [SerializeField] private Sprite[] LetterSprites = null;
     [SerializeField] private Sprite[] SignSprites = null;
 
+    [SerializeField] private bool ChangeMusic = false;
+    [SerializeField] private AudioClip PuzzleTrack = null;
+    [SerializeField] private float LoopDelay = 0;
+    [SerializeField] private AudioClip PreviousTrack = null;
+    [SerializeField] private float PreviousLoopDelay = 0;
+
     // PRIVATE ATTRIBUTES
     private char[] Answer;
     private char[] CurrentAnswer;
@@ -57,10 +63,13 @@ public class PuzzleReferee : MonoBehaviour
     [HideInInspector] public bool CarryOverTries = false;
     [HideInInspector] public bool NoTries = false;
 
+    private MusicController Music = null;
+
     // PRIVATE METHODS
 
     private void Awake()
     {
+        Music = GameObject.FindGameObjectWithTag("SoundSource").GetComponent<MusicController>();
         Alphabet = new List<char>();
         ResetAlphabet();
 
@@ -75,6 +84,7 @@ public class PuzzleReferee : MonoBehaviour
     public void StartPuzzle(Puzzle newPuzzle)
     {
         PuzzleObject.SetActive(true);
+        if(ChangeMusic) Music.ChangeTrackBlend(PuzzleTrack, LoopDelay, 0.5f);
 
         CurrentPuzzle = newPuzzle;
         Answer = CurrentPuzzle.answer;
@@ -521,6 +531,7 @@ public class PuzzleReferee : MonoBehaviour
     {
         ClearPuzzleArea();
         PuzzleObject.SetActive(false);
+        if(ChangeMusic) Music.ChangeTrackBlend(PreviousTrack, PreviousLoopDelay, 0.5f);
     }
 
     public void ClearPuzzleArea()
