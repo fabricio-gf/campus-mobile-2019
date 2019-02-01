@@ -32,7 +32,7 @@ public class SaveData
         //spawn player at pos
         PlayerDataManager.SpawnPlayer(PlayerDataManager.playerPath, gameData.PlayerPos, Quaternion.identity);
 
-        OnPlayerLoaded();
+        OnPlayerLoaded?.Invoke();
     }
 
     public static void LoadProgress(string path)
@@ -53,7 +53,7 @@ public class SaveData
         //set dictionary
         DictionaryDataManager.SetDictionary(gameData.DictionaryProgress);
 
-        OnDictionaryLoaded();
+        OnDictionaryLoaded?.Invoke();
     }
 
     public static void LoadCodex(string path)
@@ -62,12 +62,12 @@ public class SaveData
 
         //set codex
         CodexDataManager.SetCodex(gameData.Chapters);
-        OnCodexLoaded();
+        OnCodexLoaded?.Invoke();
     }
 
     public static void Save(string path, GameData data)
     {
-        OnBeforeSave();
+        OnBeforeSave?.Invoke();
 
         SaveToJson(path, data);
     }
@@ -107,17 +107,17 @@ public class SaveData
     {
         if (!File.Exists(path))
         {
-            Debug.Log("it does not exist");
+            //Debug.Log("it does not exist");
             //initialize a new game data with initial values
             gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialChallengeProgress, InitialDictionaryProgress, InitialChapters);
 
             SaveToJson(path, gameData);
             if (File.Exists(path))
             {
-                Debug.Log("it exists now");
+                //Debug.Log("it exists now");
             }
         }
-        Debug.Log("it exists");
+        //Debug.Log("it exists");
         string json = File.ReadAllText(path);
 
         return JsonUtility.FromJson<GameData>(json);
@@ -136,6 +136,7 @@ public class SaveData
     public static int CheckProgress(string path)
     {
         GameData data = LoadFromJson(path);
+        if (data == null) Debug.Log("null");
         return data.Progress;
     }
 

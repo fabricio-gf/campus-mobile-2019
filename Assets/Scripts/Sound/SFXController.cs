@@ -53,7 +53,19 @@ public class SFXController : MonoBehaviour
         {
             //print(GameObject.Find("SFXMuteToggle").name);
             //SFXMuteToggle = GameObject.FindGameObjectWithTag("SFXMuteToggle").GetComponent<Toggle>();
-            SFXMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[1];
+
+            System.GC.Collect();
+            System.GC.WaitForPendingFinalizers();
+            SFXMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[0];
+            SFXMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteSFX(mute));
+
+        }
+        else if (scene.name == "GameFinal")
+        {
+
+            System.GC.Collect();
+            System.GC.WaitForPendingFinalizers();
+            SFXMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[2];
             SFXMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteSFX(mute));
         }
     }

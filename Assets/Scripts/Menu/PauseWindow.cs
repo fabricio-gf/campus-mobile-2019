@@ -1,28 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseWindow : MonoBehaviour
 {
-    private GameObject Window = null;
-    private GameObject PauseButton = null;
+    private Animator animator = null;
+    [SerializeField] private Toggle MusicToggle = null;
+    [SerializeField] private Toggle SFXToggle = null;
+    [SerializeField] private Toggle HandToggle = null;
+
+    private static string PrefsMusicString = "MusicMute";
+    private static string PrefsSFXString = "SFXMute";
 
     public void Awake()
     {
-        PauseButton = transform.GetChild(0).gameObject;
-        Window = transform.GetChild(1).gameObject;
+        animator = GetComponent<Animator>();
     }
 
     public void OpenPauseWindow()
     {
-        //animation
-        PauseButton.SetActive(false);
-        Window.SetActive(true);
+        animator.SetTrigger("OpenWindow");
+        if (PlayerPrefs.GetInt(PrefsMusicString) == 1)
+        {
+            MusicToggle.isOn = true;
+        }
+        if (PlayerPrefs.GetInt(PrefsSFXString) == 1)
+        {
+            SFXToggle.isOn = true;
+        }
     }
 
     public void ClosePauseWindow()
     {
-        PauseButton.SetActive(true);
-        Window.SetActive(false);
+        animator.SetTrigger("CloseWindow");
     }
 }

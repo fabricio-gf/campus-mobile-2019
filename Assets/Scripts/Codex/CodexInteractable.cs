@@ -30,6 +30,7 @@ public class CodexInteractable : Interactable
         GetComponent<BoxCollider2D>().enabled = false;
         dialogue.TriggerDialogue();
         CodexDataManager.SetCodex(UnlockedChapter);
+        Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit + 1);
     }
 

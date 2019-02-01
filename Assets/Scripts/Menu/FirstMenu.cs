@@ -12,7 +12,8 @@ public class FirstMenu : MonoBehaviour
     void Start()
     {
         dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
-        print("progress" + SaveData.CheckProgress(dataPath));
+        //SaveData.Save(dataPath, SaveData.gameData);
+
         if (SaveData.CheckProgress(dataPath) > ProgressLimit)
         {
             
@@ -21,12 +22,10 @@ public class FirstMenu : MonoBehaviour
         else
         {
             //do something
+            //Debug.Log("Up progress ", gameObject);
+            //SaveData.AddProgressData(ProgressLimit+1, SaveData.gameData.ChallengeProgress);
+            //SaveData.Save(dataPath, SaveData.gameData);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -26,6 +26,7 @@ public class InputTutorial : MonoBehaviour
         //temp
         gameObject.SetActive(false);
         //set animation to close
+        Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit+1);
     }
 }

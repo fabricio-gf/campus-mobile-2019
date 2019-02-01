@@ -28,6 +28,7 @@ public class DialogueWithActivation : MonoBehaviour
     public void ActivateDialogue()
     {
         DialogueTrigger.SetActive(true);
+        Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit + 1);
     }
 }

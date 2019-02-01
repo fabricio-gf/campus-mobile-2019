@@ -62,11 +62,22 @@ public class MusicController : MonoBehaviour
 
     void AddListenerToMuteButton(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "MenuFinal")
+        if (scene.name == "GameFinal")
         {
             //MusicMuteToggle = GameObject.FindGameObjectWithTag("MusicMuteToggle").GetComponent<Toggle>();
-            MusicMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[0];
+            //System.GC.Collect();
+            //System.GC.WaitForPendingFinalizers();
+            MusicMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[1];
             MusicMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteMusic(mute));
+
+        }
+        else if(scene.name == "MenuFinal")
+        {
+            //System.GC.Collect();
+            //System.GC.WaitForPendingFinalizers();
+            MusicMuteToggle = Resources.FindObjectsOfTypeAll<Toggle>()[1];
+            MusicMuteToggle.onValueChanged.AddListener((bool mute) => ToggleMuteMusic(mute));
+
         }
     }
 

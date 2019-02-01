@@ -35,6 +35,7 @@ public class DialogueWithDelay : MonoBehaviour
     {
         yield return new WaitForSeconds(DialogueDelay);
         DialogueTrigger.SetActive(true);
+        Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit+1);
     }
 }

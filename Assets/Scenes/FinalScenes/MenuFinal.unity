@@ -632,8 +632,8 @@ RectTransform:
   m_Children:
   - {fileID: 42665706}
   - {fileID: 1719450036}
-  - {fileID: 798321181}
   - {fileID: 2074217828}
+  - {fileID: 798321181}
   - {fileID: 937859046}
   - {fileID: 83468485}
   - {fileID: 2109680295}
@@ -1134,6 +1134,7 @@ GameObject:
   - component: {fileID: 557707284}
   - component: {fileID: 557707283}
   - component: {fileID: 557707282}
+  - component: {fileID: 557707285}
   m_Layer: 0
   m_Name: PracticeButton
   m_TagString: Untagged
@@ -1199,18 +1200,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557707283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PracticeFinal
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &557707283
@@ -1250,6 +1240,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557707280}
   m_CullTransparentMesh: 0
+--- !u!114 &557707285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557707280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 0
+  LoadCodexScene: 0
+  LoadNewGame: 0
+  SceneToLoad: PracticeFinal
 --- !u!1 &723259464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1396,7 +1402,7 @@ RectTransform:
   m_Children:
   - {fileID: 1243138869}
   m_Father: {fileID: 122680383}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3039,6 +3045,7 @@ GameObject:
   - component: {fileID: 1436466891}
   - component: {fileID: 1436466890}
   - component: {fileID: 1436466889}
+  - component: {fileID: 1436466892}
   m_Layer: 0
   m_Name: NewGameButton
   m_TagString: Untagged
@@ -3105,29 +3112,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1436466890}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: LoadLevel
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GameFinal
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: ResetSaveData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1436466890
@@ -3167,6 +3152,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436466887}
   m_CullTransparentMesh: 0
+--- !u!114 &1436466892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436466887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 0
+  LoadCodexScene: 0
+  LoadNewGame: 1
+  SceneToLoad: GameFinal
 --- !u!1001 &1482409219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,6 +3843,7 @@ GameObject:
   - component: {fileID: 1862626857}
   - component: {fileID: 1862626856}
   - component: {fileID: 1862626855}
+  - component: {fileID: 1862626858}
   m_Layer: 0
   m_Name: CodexButton
   m_TagString: Untagged
@@ -3958,6 +3960,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862626853}
   m_CullTransparentMesh: 0
+--- !u!114 &1862626858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862626853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 0
+  LoadCodexScene: 1
+  LoadNewGame: 0
+  SceneToLoad: CodexFinal
 --- !u!1 &1893807052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,7 +4339,7 @@ RectTransform:
   m_Children:
   - {fileID: 802209079}
   m_Father: {fileID: 122680383}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -4514,6 +4532,7 @@ GameObject:
   - component: {fileID: 2129243112}
   - component: {fileID: 2129243111}
   - component: {fileID: 2129243110}
+  - component: {fileID: 2129243113}
   m_Layer: 0
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -4631,6 +4650,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129243108}
   m_CullTransparentMesh: 0
+--- !u!114 &2129243113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129243108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c97b0fad5d42a41a1b1e1059303f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadPreviousLevel: 0
+  LoadCodexScene: 0
+  LoadNewGame: 0
+  SceneToLoad: GameFinal
 --- !u!1 &2140552222
 GameObject:
   m_ObjectHideFlags: 0

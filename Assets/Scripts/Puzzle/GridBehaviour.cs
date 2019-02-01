@@ -155,19 +155,19 @@ public class GridBehaviour : MonoBehaviour
                     break;
                 case 3:
                     MyTransform.anchoredPosition = new Vector2(0, 325);
-                    horizontal.spacing = 40;
+                    horizontal.spacing = 120;
                     break;
                 case 4:
                     MyTransform.anchoredPosition = new Vector2(0, 285);
-                    horizontal.spacing = 20;
+                    horizontal.spacing = 97.5f;
                     break;
                 case 5:
                     MyTransform.anchoredPosition = new Vector2(0, 275);
-                    horizontal.spacing = 5;
+                    horizontal.spacing = 77.5f;
                     break;
                 case 6:
                     MyTransform.anchoredPosition = new Vector2(0, 250);
-                    horizontal.spacing = 5;
+                    horizontal.spacing = 55;
                     break;
                 default:
                     break;
@@ -275,5 +275,40 @@ public class GridBehaviour : MonoBehaviour
         MyTransform = GetComponent<RectTransform>();
         HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
         ChangePosition(6, 0);
+    }
+    [ContextMenu("ChangePosition 1, Gems")]
+    public void ChangePosition1_3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(1, 2);
+    }
+    [ContextMenu("ChangePosition 3, Gems")]
+    public void ChangePosition3_3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(3, 2);
+    }
+    [ContextMenu("ChangePosition 4, Gems")]
+    public void ChangePosition4_3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(4, 2);
+    }
+    [ContextMenu("ChangePosition 5, Gems")]
+    public void ChangePosition5_3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(5, 2);
+    }
+    [ContextMenu("ChangePosition 6, Gems")]
+    public void ChangePosition6_3()
+    {
+        MyTransform = GetComponent<RectTransform>();
+        HorizontalLayoutGroup horizontal = GetComponent<HorizontalLayoutGroup>();
+        ChangePosition(6, 2);
     }
 }

@@ -15,7 +15,7 @@ public class ProgressDataManager : DataManager
 
     public static void SetProgress(int progress)
     {
-        Debug.Log("current progress is " + CurrentProgress);
+        //Debug.Log("current progress is " + CurrentProgress);
         switch (progress)
         {
             case 0:
@@ -28,14 +28,14 @@ public class ProgressDataManager : DataManager
                 break;
         }
         CurrentProgress = progress;
-        Debug.Log("new progress is " + CurrentProgress);
+        //Debug.Log("new progress is " + CurrentProgress);
     }
 
     public static void SetChallengeProgress(int progress)
     {
-        Debug.Log("current challenge progress is " + CurrentChallengeProgress);
+        //Debug.Log("current challenge progress is " + CurrentChallengeProgress);
         CurrentChallengeProgress = progress;
-        Debug.Log("new challenge progress is " + CurrentChallengeProgress);
+        //Debug.Log("new challenge progress is " + CurrentChallengeProgress);
     }
 
     public void LoadProgress()
