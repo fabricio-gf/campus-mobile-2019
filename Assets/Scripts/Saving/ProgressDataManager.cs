@@ -4,18 +4,34 @@ using UnityEngine;
 
 public class ProgressDataManager : DataManager
 {
+    public static ProgressDataManager instance = null;
+
     //public const string playerPath = "Prefabs/Player";
     public static int CurrentProgress;
     public static int CurrentChallengeProgress;
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if(instance != this)
+        {
+            Destroy(gameObject);
+        }
+        dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
+        LoadProgress();
+    }
+
     private void Start()
     {
-        LoadProgress();
     }
 
     public static void SetProgress(int progress)
     {
-        //Debug.Log("current progress is " + CurrentProgress);
+        Debug.Log("current progress is " + CurrentProgress);
         switch (progress)
         {
             case 0:
@@ -28,7 +44,7 @@ public class ProgressDataManager : DataManager
                 break;
         }
         CurrentProgress = progress;
-        //Debug.Log("new progress is " + CurrentProgress);
+        Debug.Log("new progress is " + CurrentProgress);
     }
 
     public static void SetChallengeProgress(int progress)

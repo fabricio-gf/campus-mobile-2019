@@ -6,12 +6,12 @@ public class InputTutorial : MonoBehaviour
 {
 
     [SerializeField] private int ProgressLimit = 0;
-    private static string dataPath = string.Empty;
+    [SerializeField] private bool SavePoint = false;
 
     void Start()
     {
-        dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
-        if (ProgressLimit > SaveData.CheckProgress(dataPath))
+        //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
             Destroy(gameObject);
         }
@@ -23,10 +23,12 @@ public class InputTutorial : MonoBehaviour
 
     public void CloseTutorial()
     {
+        ProgressDataManager.SetProgress(ProgressLimit + 1);
+        if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
+
         //temp
         gameObject.SetActive(false);
         //set animation to close
-        Debug.Log("Up progress ", gameObject);
-        ProgressDataManager.SetProgress(ProgressLimit+1);
+
     }
 }

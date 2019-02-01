@@ -43,12 +43,14 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadLevel(string SceneName)
     {
+        SaveData.Save(DataPath.Path, SaveData.gameData);
         time = 0;
         StartCoroutine(LoadAsynchronously(SceneName));
     }
 
     public void LoadLevelNow(string SceneName)
     {
+        SaveData.Save(DataPath.Path, SaveData.gameData);
         SceneManager.LoadScene(SceneName);
     }
 
@@ -60,6 +62,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadPreviousScene()
     {
+        SaveData.Save(DataPath.Path, SaveData.gameData);
         time = 0;
         StartCoroutine(LoadAsynchronously(LoadingInfo.CodexReturnToSceneName));
     }

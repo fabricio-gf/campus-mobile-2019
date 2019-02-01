@@ -85,6 +85,8 @@ public class PlayerInteraction : MonoBehaviour
         {
             Joystick.BlockMovement();
             collision.GetComponent<DialogueTrigger>().TriggerDialogue();
+            DialogueWithDelay d = collision.transform.parent.GetComponent<DialogueWithDelay>();
+            if (d != null) d.AddProgress();
         }
     }
 }

@@ -10,17 +10,22 @@ public class CodexInteractable : Interactable
     [SerializeField] private int UnlockedChapter = 0;
 
     [SerializeField] private int ProgressLimit = 0;
+    [SerializeField] private bool SavePoint = false;
 
     void Awake()
     {
         dialogue = GetComponent<DialogueTrigger>();
-        dataPath = System.IO.Path.Combine(Application.persistentDataPath, "gameData.json");
     }
 
     private void Start()
     {
-        if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
+            Debug.Log("Is being destroyed");
+
             Destroy(gameObject);
         }
     }
@@ -30,8 +35,9 @@ public class CodexInteractable : Interactable
         GetComponent<BoxCollider2D>().enabled = false;
         dialogue.TriggerDialogue();
         CodexDataManager.SetCodex(UnlockedChapter);
-        Debug.Log("Up progress ", gameObject);
         ProgressDataManager.SetProgress(ProgressLimit + 1);
+        if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
+        SaveData.Save(DataPath.Path, SaveData.gameData);
     }
 
 

@@ -99,7 +99,7 @@ MonoBehaviour:
   FacingDirection: 0
   MovementSpeed: 2.5
   InputDeadZone: 0.25
-  InitialInputDelay: 0.5
+  InitialInputDelay: 0
 --- !u!114 &692709694827373338
 MonoBehaviour:
   m_ObjectHideFlags: 0

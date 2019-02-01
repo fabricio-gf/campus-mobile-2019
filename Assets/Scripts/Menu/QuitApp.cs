@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuitApp : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -15,6 +16,7 @@ public class QuitApp : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            SaveData.Save(DataPath.Path, SaveData.gameData);
             Application.Quit();
         }
     }

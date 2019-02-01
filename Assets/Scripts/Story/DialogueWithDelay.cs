@@ -9,6 +9,7 @@ public class DialogueWithDelay : MonoBehaviour
     [SerializeField] private float DialogueDelay = 0;
 
     [SerializeField] private int ProgressLimit = 0;
+    [SerializeField] private bool SavePoint = false;
 
     private static string dataPath = string.Empty;
 
@@ -20,14 +21,18 @@ public class DialogueWithDelay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (SaveData.CheckProgress(dataPath) <= ProgressLimit)
+        //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
+        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
-            StartCoroutine(StartDelay());
+            Debug.Log("Is being destroyed");
+            Destroy(DialogueTrigger.gameObject);
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(DialogueTrigger.gameObject);
-            Destroy(this);
+            StartCoroutine(StartDelay());
         }
     }
 
@@ -35,7 +40,11 @@ public class DialogueWithDelay : MonoBehaviour
     {
         yield return new WaitForSeconds(DialogueDelay);
         DialogueTrigger.SetActive(true);
-        Debug.Log("Up progress ", gameObject);
-        ProgressDataManager.SetProgress(ProgressLimit+1);
+    }
+
+    public void AddProgress()
+    {
+        ProgressDataManager.SetProgress(ProgressLimit + 1);
+        if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
     }
 }

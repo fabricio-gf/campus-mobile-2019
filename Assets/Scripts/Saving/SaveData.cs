@@ -120,11 +120,16 @@ public class SaveData
         //Debug.Log("it exists");
         string json = File.ReadAllText(path);
 
+        Debug.Log("LOAD FROM JSON");
+        //SaveData.DebugGameData(JsonUtility.FromJson<GameData>(json));
+
         return JsonUtility.FromJson<GameData>(json);
     }
 
     private static void SaveToJson(string path, GameData data)
     {
+        Debug.Log("SAVE TO JSON");
+        //SaveData.DebugGameData(data);
         string json = JsonUtility.ToJson(data);
 
         StreamWriter writer = File.CreateText(path);
@@ -144,5 +149,10 @@ public class SaveData
     {
         GameData data = LoadFromJson(path);
         return data.ChallengeProgress;
+    }
+
+    public static void DebugGameData(GameData gameData)
+    {
+        Debug.Log("GAME DATA: -- Player Position: " + gameData.PlayerPos + " -- Progress: " + gameData.Progress + " -- ChallengeProgress: " + gameData.ChallengeProgress + " -- Chapters: " + gameData.Chapters);
     }
 }
