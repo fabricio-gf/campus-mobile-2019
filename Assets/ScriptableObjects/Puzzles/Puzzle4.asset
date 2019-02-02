@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle4
   m_EditorClassIdentifier: 
   type: 1
-  question: folha
+  question: Folha
   answer: 66006f006c0068006100
   tries: 3
+  noRepetition: 0

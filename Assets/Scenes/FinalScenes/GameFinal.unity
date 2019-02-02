@@ -388,7 +388,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -896,6 +896,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 20239916182506164, guid: 5599eefc638f2d1498f0653546aee33c,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.11320752
+      objectReference: {fileID: 0}
+    - target: {fileID: 20239916182506164, guid: 5599eefc638f2d1498f0653546aee33c,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.11320752
+      objectReference: {fileID: 0}
+    - target: {fileID: 20239916182506164, guid: 5599eefc638f2d1498f0653546aee33c,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.11320752
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5599eefc638f2d1498f0653546aee33c, type: 3}
 --- !u!1 &344692349 stripped
@@ -1136,7 +1151,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -1982,11 +1997,38 @@ MonoBehaviour:
   puzzleList:
   - {fileID: 11400000, guid: bde450bd58a4c464ea4da3d242af3e62, type: 2}
   - {fileID: 11400000, guid: 1031e3d1406ecc24e8cf40b6f20ee835, type: 2}
-  - {fileID: 11400000, guid: 4c9b170d150b9dc4fab6f6c697f2f371, type: 2}
   - {fileID: 11400000, guid: 2936fbbb28e26af49a538595e5438e1b, type: 2}
   - {fileID: 11400000, guid: 735fe86877c67054eb221236c16796c7, type: 2}
   - {fileID: 11400000, guid: 1e7dc9fff73984048bac9c1a28635966, type: 2}
   - {fileID: 11400000, guid: a3356a2465d7e6544bb408cee61f4f89, type: 2}
+  - {fileID: 11400000, guid: 27c8ce990eb225d4ea046663b85b8798, type: 2}
+  - {fileID: 11400000, guid: 441ee5a8760ddae4e8b19b36b40cf7d9, type: 2}
+  - {fileID: 11400000, guid: eabb0b19d85037149bf09278fb5861c3, type: 2}
+  - {fileID: 11400000, guid: d299a1da7b2490348b97b76090fb0210, type: 2}
+  - {fileID: 11400000, guid: f20e1d166f891bd42b87f3aef59ca5d7, type: 2}
+  - {fileID: 11400000, guid: 9ed7daac10d747d45af4377c2cce6c5b, type: 2}
+  - {fileID: 11400000, guid: 00830ff4edf28b749a6999e5dbf02268, type: 2}
+  - {fileID: 11400000, guid: 8b1dee03c83bd934fa98cad0d4ec3bb2, type: 2}
+  - {fileID: 11400000, guid: 2aa04454530c86f428284c336c465650, type: 2}
+  - {fileID: 11400000, guid: 908e6c92486a27a46910d67712247907, type: 2}
+  - {fileID: 11400000, guid: a5a6f99278513824fb32e2bfdf9c3627, type: 2}
+  - {fileID: 11400000, guid: d3f58084846073046a558e6b1000d514, type: 2}
+  - {fileID: 11400000, guid: 96eb8f23def88af4fb10f4e99b1a3b2e, type: 2}
+  - {fileID: 11400000, guid: 106af126751fa83488cbb9f4515b81bb, type: 2}
+  - {fileID: 11400000, guid: d61874e8be5c4aa44a50e41fde98b977, type: 2}
+  - {fileID: 11400000, guid: 1505adfe237ef1c4dbb9ea0b3f0dae1a, type: 2}
+  - {fileID: 11400000, guid: 34d3d7042c3ed7e409debe38ec17548a, type: 2}
+  - {fileID: 11400000, guid: 31feff9f06198494694857b10c13a1cc, type: 2}
+  - {fileID: 11400000, guid: a4f47bb74e11e784093af69d2695b1bc, type: 2}
+  - {fileID: 11400000, guid: c00841ccf285ce341b910e9bbfd94eda, type: 2}
+  - {fileID: 11400000, guid: 1b07b88b35ed3ca4baea12b82550987b, type: 2}
+  - {fileID: 11400000, guid: df8db2b46cb2e964ea911591120e0322, type: 2}
+  - {fileID: 11400000, guid: d387d9784dccf0940ac96263fbacf3a1, type: 2}
+  - {fileID: 11400000, guid: 1fa8a8eb20dab3f45b9cae45496554c5, type: 2}
+  - {fileID: 11400000, guid: ee7c09279427e7b41be863e214d2ad65, type: 2}
+  - {fileID: 11400000, guid: c9bd1e3f2e24f6a419b42dc00995907e, type: 2}
+  - {fileID: 11400000, guid: a1817a94716a9b1468af475083c8ba52, type: 2}
+  - {fileID: 11400000, guid: 3679e2a51e07d064eb63f806c7de58fe, type: 2}
   puzzleReferee: {fileID: 1657464991}
   ProgressLimit: 5
   Joystick: {fileID: 823352832}
@@ -2048,7 +2090,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -3147,7 +3189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871813464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1938376290}
@@ -3177,7 +3219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20, y: 12}
+  m_Size: {x: 20, y: 14}
   m_EdgeRadius: 0
 --- !u!1 &873860970
 GameObject:
@@ -6184,7 +6226,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -7693,7 +7735,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -8015,6 +8057,12 @@ PrefabInstance:
       propertyPath: m_FontData.m_MinSize
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114528110465300512, guid: cd637ce709efb9b43bd91e893d0d6aa0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11,
+        type: 3}
     - target: {fileID: 114634867333281724, guid: cd637ce709efb9b43bd91e893d0d6aa0,
         type: 3}
       propertyPath: m_Color.r
@@ -8040,6 +8088,12 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 114634867333281724, guid: cd637ce709efb9b43bd91e893d0d6aa0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11,
+        type: 3}
     - target: {fileID: 114501412144373508, guid: cd637ce709efb9b43bd91e893d0d6aa0,
         type: 3}
       propertyPath: m_Color.r
@@ -8161,6 +8215,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114889473798557244, guid: cd637ce709efb9b43bd91e893d0d6aa0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd637ce709efb9b43bd91e893d0d6aa0, type: 3}
 --- !u!114 &1376206089 stripped
@@ -8901,7 +8961,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -8980,7 +9040,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
@@ -10338,7 +10398,7 @@ MonoBehaviour:
   LoadCodexScene: 0
   LoadNewGame: 0
   SceneToLoad: MenuFinal
-  ChangeTrackOnLoad: 0
+  ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 5a006f89dd873404e96cae50d5538cfa, type: 3}
   TrackLoop: 65.45455
 --- !u!114 &2063432972
@@ -11194,6 +11254,28 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Puzzle, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -152
+      objectReference: {fileID: 0}
+    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6693559437479794713, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11,
+        type: 3}
+    - target: {fileID: 871955436155905712, guid: d29ae42af221cee49b79be6c05c1f0f0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11,
+        type: 3}
     - target: {fileID: 4021305908255887504, guid: d29ae42af221cee49b79be6c05c1f0f0,
         type: 3}
       propertyPath: m_IsActive
@@ -11773,16 +11855,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -152
-      objectReference: {fileID: 0}
-    - target: {fileID: 1012039137661153133, guid: d29ae42af221cee49b79be6c05c1f0f0,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 478
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29ae42af221cee49b79be6c05c1f0f0, type: 3}

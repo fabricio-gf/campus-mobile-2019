@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088ffd58153daa04da64f8f3a88b0b94, type: 3}
   m_Name: Puzzle1
   m_EditorClassIdentifier: 
-  type: 1
-  question: libras
+  type: 0
+  question: "A palavra \xE9:"
   answer: 6c0069006200720061007300
   tries: 3
+  noRepetition: 0

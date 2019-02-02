@@ -20,8 +20,8 @@ public class DialogueWithActivation : MonoBehaviour
     void Start()
     {
         //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
-        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
-        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        //Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        //Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
         if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
             Debug.Log("Is being destroyed");
@@ -34,7 +34,7 @@ public class DialogueWithActivation : MonoBehaviour
     public void ActivateDialogue()
     {
         DialogueTrigger.SetActive(true);
-        Debug.Log("Up progress ", gameObject);
+
         ProgressDataManager.SetProgress(ProgressLimit + 1);
         if (SavePoint) SaveData.Save(DataPath.Path, SaveData.gameData);
     }

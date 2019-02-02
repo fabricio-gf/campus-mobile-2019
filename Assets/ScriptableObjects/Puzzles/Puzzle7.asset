@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle7
   m_EditorClassIdentifier: 
   type: 0
-  question: 
+  question: "Que palavra \xE9 essa?"
   answer: 6d0075007300690063006100
   tries: 3
   noRepetition: 0

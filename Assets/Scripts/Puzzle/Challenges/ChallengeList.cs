@@ -39,7 +39,7 @@ public class ChallengeList : MonoBehaviour
                 Transform child = obj.transform.GetChild(1);
                 child.GetComponent<Image>().sprite = UnlockedIcon;
 
-                Text completionText = child.GetChild(0).GetComponent<Text>();
+                Text completionText = obj.transform.GetChild(2).GetComponent<Text>();
                 completionText.text = Challenges[i].CompletedPuzzles + " / " + Challenges[i].Puzzles.Length;
 
                 int index = i;

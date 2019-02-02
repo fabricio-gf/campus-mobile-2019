@@ -96,6 +96,10 @@ public class SaveData
     public static void ResetSave(string path)
     {
         gameData = new GameData(new Vector2(InitialPlayerPosX, InitialPlayerPosY), InitialProgress, InitialChallengeProgress, InitialDictionaryProgress, InitialChapters);
+        ProgressDataManager.SetProgress(gameData.Progress);
+        ProgressDataManager.SetChallengeProgress(gameData.ChallengeProgress);
+        //CodexDataManager.SetCodex(gameData.Chapters);
+
         PlayerPrefs.SetInt("SFXMute", 0);
         PlayerPrefs.SetInt("MusicMute", 0);
         PlayerPrefs.SetInt("PracticeRecord", 0);
@@ -120,7 +124,7 @@ public class SaveData
         //Debug.Log("it exists");
         string json = File.ReadAllText(path);
 
-        Debug.Log("LOAD FROM JSON");
+        //Debug.Log("LOAD FROM JSON");
         //SaveData.DebugGameData(JsonUtility.FromJson<GameData>(json));
 
         return JsonUtility.FromJson<GameData>(json);
@@ -128,7 +132,7 @@ public class SaveData
 
     private static void SaveToJson(string path, GameData data)
     {
-        Debug.Log("SAVE TO JSON");
+        //Debug.Log("SAVE TO JSON");
         //SaveData.DebugGameData(data);
         string json = JsonUtility.ToJson(data);
 

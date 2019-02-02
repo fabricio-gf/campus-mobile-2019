@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChallengeName: Consoantes 2
   Puzzles:
-  - {fileID: 11400000, guid: 4f9ae33d156bad24280f4516c8c9ff10, type: 2}
-  - {fileID: 11400000, guid: f8ccb0b6ba3c45348967fba967137b89, type: 2}
-  - {fileID: 11400000, guid: 4c434eccdfa787d4a977c411ab13344d, type: 2}
   - {fileID: 11400000, guid: 915821e7b1ac6394a85ba9edcf63e752, type: 2}
-  - {fileID: 11400000, guid: c6dbac21e9e55a14c92dc926732196ef, type: 2}
   - {fileID: 11400000, guid: 2ff8b49969a7f7b4e9832a7571ab2592, type: 2}
-  - {fileID: 11400000, guid: c1231b396beac274f99fcc47da3b8bb9, type: 2}
-  - {fileID: 11400000, guid: bf28c9d4af31b274ba3e9426540deabf, type: 2}
   - {fileID: 11400000, guid: dcdbc37b34298fb4fb93d96121372c65, type: 2}
-  - {fileID: 11400000, guid: d93d7e8dd0b1ade469bbc7fb9a51d55e, type: 2}
   - {fileID: 11400000, guid: 24db14b5f4e25b64e9161c3d344effe2, type: 2}
+  - {fileID: 11400000, guid: f8ccb0b6ba3c45348967fba967137b89, type: 2}
+  - {fileID: 11400000, guid: d93d7e8dd0b1ade469bbc7fb9a51d55e, type: 2}
+  - {fileID: 11400000, guid: bf28c9d4af31b274ba3e9426540deabf, type: 2}
+  - {fileID: 11400000, guid: c6dbac21e9e55a14c92dc926732196ef, type: 2}
+  - {fileID: 11400000, guid: 4f9ae33d156bad24280f4516c8c9ff10, type: 2}
+  - {fileID: 11400000, guid: c1231b396beac274f99fcc47da3b8bb9, type: 2}
+  - {fileID: 11400000, guid: 4c434eccdfa787d4a977c411ab13344d, type: 2}
   CompletedPuzzles: 0
   Unlocked: 0
   ProgressToUnlock: 2

@@ -25,10 +25,6 @@ public class ProgressDataManager : DataManager
         LoadProgress();
     }
 
-    private void Start()
-    {
-    }
-
     public static void SetProgress(int progress)
     {
         Debug.Log("current progress is " + CurrentProgress);

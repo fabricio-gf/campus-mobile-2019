@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle2
   m_EditorClassIdentifier: 
   type: 1
-  question: livro
+  question: Livro
   answer: 6c006900760072006f00
   tries: 3
+  noRepetition: 0

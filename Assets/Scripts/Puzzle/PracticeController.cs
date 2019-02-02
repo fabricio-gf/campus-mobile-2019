@@ -61,7 +61,6 @@ public class PracticeController : MonoBehaviour
         {
             PuzzleCounter++;
             CounterText.text = "Contador atual: " + PuzzleCounter;
-            EndText.text = "Você completou " + PuzzleCounter + " desafios";
             StartAnotherPuzzle();
         }
         else
@@ -80,6 +79,7 @@ public class PracticeController : MonoBehaviour
 
     public void GoToEndScreen()
     {
+        EndText.text = "Você completou " + PuzzleCounter + " desafios";
         Referee.ClosePuzzle();
         EndScreen.SetActive(true);
     }

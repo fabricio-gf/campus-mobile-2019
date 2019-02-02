@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b55466681d33e045b438825850b0310, type: 3}
-  m_Name: Challenge4
+  m_Name: Challenge 4
   m_EditorClassIdentifier: 
   ChallengeName: Siglas
   Puzzles:
@@ -27,6 +27,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 31feff9f06198494694857b10c13a1cc, type: 2}
   CompletedPuzzles: 0
   Unlocked: 0
-  ProgressToUnlock: 0
+  ProgressToUnlock: 3
   VowelOnly: 0
   ConsonantOnly: 0

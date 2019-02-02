@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle6
   m_EditorClassIdentifier: 
   type: 1
-  question: jojo
+  question: Jojo
   answer: 6a006f006a006f00
   tries: 3
+  noRepetition: 0

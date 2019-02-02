@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Puzzle24
   m_EditorClassIdentifier: 
   type: 0
-  question: "Que sigla \xE9 essa?"
+  question: "Que sigla \xE9 esta?"
   answer: 660061006f00
   tries: 3
   noRepetition: 0

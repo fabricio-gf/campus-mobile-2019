@@ -768,7 +768,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 1
@@ -994,7 +994,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   LoadCodexScene: 1
   LoadNewGame: 0
   SceneToLoad: PracticeFinal
-  ChangeTrackOnLoad: 0
+  ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 3c68f49a6eed55544a434ef5c6cb936b, type: 3}
   TrackLoop: 114.28572
 --- !u!114 &557707286
@@ -1359,7 +1359,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -1371,7 +1371,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Vers\xE3o 0.18"
+  m_Text: "Vers\xE3o 1.1"
 --- !u!222 &723259467
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1586,6 +1586,8 @@ GameObject:
   - component: {fileID: 854861897}
   - component: {fileID: 854861899}
   - component: {fileID: 854861898}
+  - component: {fileID: 854861901}
+  - component: {fileID: 854861900}
   m_Layer: 0
   m_Name: "Bras\xE3o-FoG"
   m_TagString: Untagged
@@ -1649,6 +1651,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854861896}
   m_CullTransparentMesh: 0
+--- !u!114 &854861900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854861896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb14d6da8d98c140b35f720b483ecc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &854861901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854861896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 854861898}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 854861900}
+        m_MethodName: OpenExternalLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://www.facebook.com/fogicmc/
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &927713948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2066,7 +2133,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2353,7 +2420,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2507,7 +2574,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2707,7 +2774,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -2720,7 +2787,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "PROGRAMA\xC7\xC3O\nFabricio Guedes\n\nARTE\nGabriel Arantes\nMichelle Wingter\n\nM\xDASICA\nMiguel
-    Gardini\n\n\nAGRADECIMENTOS\nThe Fellowship of the Game\nEquipe da Campus Mobile"
+    Gardini\n\n\nAGRADECIMENTOS\nFellowship of the Game\nEquipe da Campus Mobile"
 --- !u!222 &1301098223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2740,6 +2807,8 @@ GameObject:
   - component: {fileID: 1312771595}
   - component: {fileID: 1312771597}
   - component: {fileID: 1312771596}
+  - component: {fileID: 1312771599}
+  - component: {fileID: 1312771598}
   m_Layer: 0
   m_Name: Logo-Campus-Mobile
   m_TagString: Untagged
@@ -2803,6 +2872,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312771594}
   m_CullTransparentMesh: 0
+--- !u!114 &1312771598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312771594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb14d6da8d98c140b35f720b483ecc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1312771599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312771594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1312771596}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1312771598}
+        m_MethodName: OpenExternalLink
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: https://www.institutonetclaroembratel.org.br/educacao/nossos-projetos/campus-mobile/
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1324309669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3211,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -3147,7 +3281,6 @@ GameObject:
   - component: {fileID: 1436466890}
   - component: {fileID: 1436466889}
   - component: {fileID: 1436466892}
-  - component: {fileID: 1436466893}
   - component: {fileID: 1436466894}
   m_Layer: 0
   m_Name: NewGameButton
@@ -3274,18 +3407,6 @@ MonoBehaviour:
   ChangeTrackOnLoad: 1
   NewTrack: {fileID: 8300000, guid: 95404c90f10f86643800a0f0574045de, type: 3}
   TrackLoop: 154.8
---- !u!114 &1436466893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436466887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d65c72917b072a45ad39a4f61cf2044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1436466894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3762,7 +3883,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
@@ -3990,7 +4111,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 1
@@ -4231,7 +4352,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4c5518165b9fb4f489a45d2c2f79f91a, type: 3}
+    m_Font: {fileID: 12800000, guid: 5b90d185cf611fa4b87ab78720cffd11, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1

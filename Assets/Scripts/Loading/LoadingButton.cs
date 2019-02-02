@@ -26,6 +26,12 @@ public class LoadingButton : MonoBehaviour
 
         if (Loader != null)
         {
+
+            if (LoadNewGame)
+            {
+                ThisButton.onClick.AddListener(() => GameObject.FindGameObjectWithTag("ResetSave").GetComponent<ResetSave>().ResetSaveData());
+            }
+
             if (LoadPreviousLevel)
             {
                 ThisButton.onClick.AddListener(() => Loader.LoadPreviousScene());
@@ -54,10 +60,6 @@ public class LoadingButton : MonoBehaviour
                 }
             }
 
-            if (LoadNewGame)
-            {
-                ThisButton.onClick.AddListener(() => GameObject.FindGameObjectWithTag("ResetSave").GetComponent<ResetSave>().ResetSaveData());
-            }
         }
     }
 }

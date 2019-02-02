@@ -28,5 +28,6 @@ public class ResetSave : MonoBehaviour
     public void ResetSaveData()
     {
         SaveData.ResetSave(dataPath);
+        ProgressDataManager.SetProgress(SaveData.gameData.Progress);
     }
 }

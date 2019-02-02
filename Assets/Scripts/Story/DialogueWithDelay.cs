@@ -22,8 +22,8 @@ public class DialogueWithDelay : MonoBehaviour
     void Start()
     {
         //if (SaveData.CheckProgress(dataPath) > ProgressLimit)
-        Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
-        Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
+        //Debug.Log("Current Progress at " + name + ": " + ProgressDataManager.CurrentProgress);
+        //Debug.Log("Progress limit at " + name + ": " + ProgressLimit);
         if (ProgressDataManager.CurrentProgress > ProgressLimit)
         {
             Debug.Log("Is being destroyed");
